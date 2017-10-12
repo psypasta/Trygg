@@ -11,6 +11,7 @@ public class Test {
 		
 		System.out.println(a + b);
 		System.out.println(c);
+		// Detta är coolt
 	}
 
 }
