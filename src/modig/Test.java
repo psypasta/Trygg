@@ -13,4 +13,15 @@ public class Test {
 		b = valB;
 		c = valC;
 	}
+	
+	public int[] getVal() {
+		
+		int[] temp;
+		temp = new int[3];
+		temp[0] = a;
+		temp[1] = b;
+		temp[2] = c;
+		
+		return temp;
+	}
 }
