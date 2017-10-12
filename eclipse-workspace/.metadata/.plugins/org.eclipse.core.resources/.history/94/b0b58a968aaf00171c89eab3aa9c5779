@@ -13,7 +13,6 @@ import javax.swing.JTextField;
 public class UIFrame extends JFrame {
 	
 	//konstanter för fönster storlek
-	
 	private static final int FRAME_WIDTH = 300;
 	private static final int FRAME_HEIGHT = 100;
 	
