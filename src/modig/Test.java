@@ -2,7 +2,7 @@ package modig;
 
 public class Test {
 	private int a, b ,c, d, e , f = 0;
-	//private int d, e , f = 0; 
+	
 	
 	
 	public Test() {
