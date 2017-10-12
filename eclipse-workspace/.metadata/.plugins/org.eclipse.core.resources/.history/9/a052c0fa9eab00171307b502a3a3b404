@@ -1,9 +1,0 @@
-import javax.swing.JFrame;
-
-public class UIFrame extends JFrame {
-	
-	private static final int FRAME_WIDTH = 300;
-	private static final int FRAME_HEIGHT = 100;
-	
-
-}

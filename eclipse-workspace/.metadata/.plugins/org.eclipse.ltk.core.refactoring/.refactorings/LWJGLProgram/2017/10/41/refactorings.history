@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;LWJGLProgram/libraries&apos; to &apos;library&apos;" description="Rename resource &apos;libraries&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="libraries" name="library" stamp="1507739473878" updateReferences="true"/>
-</session>
