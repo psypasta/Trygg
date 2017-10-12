@@ -1,0 +1,4 @@
+En miniräknare 
+
+Vi behöver kunna "storea" user-input.
+En user kan skriva in /*-+, en int, 
