@@ -18,6 +18,7 @@ public class Test {
 		
 		int[] temp;
 		temp = new int[3];
+		
 		temp[0] = a;
 		temp[1] = b;
 		temp[2] = c;
