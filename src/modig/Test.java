@@ -1,18 +1,16 @@
 package modig;
 
 public class Test {
+	private int a, b ,c = 0;
 	
-	public static void main(String args[]) {
-		int a, b ,c = 0;
+	
+	public Test() {
 		
-		a = 1;
-		b = 3;
-		c = 4;
-		
-		System.out.println(a + b);
-		System.out.println(c);
-		// Detta är coolt
-		// eller hur max
 	}
-
+	
+	public Test(int valA, int valB, int valC) {
+		a = valA;
+		b = valB;
+		c = valC;
+	}
 }
