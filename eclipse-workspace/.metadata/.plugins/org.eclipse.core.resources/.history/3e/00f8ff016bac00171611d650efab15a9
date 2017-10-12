@@ -1,0 +1,41 @@
+package jdbcdemo;
+
+import java.sql.*;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		try {
+			// 1. Get a connection to the database
+			
+			Connection myCon = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "max", "1994max");
+			
+			// 2. Create a statement
+			
+			Statement myStmt = myCon.createStatement();
+			
+			// 3. Execute SQL query
+			
+			ResultSet myRs = myStmt.executeQuery("select * from employees");			
+			
+			// 4. Process result set
+			
+			
+			
+		} catch(Exception exc) {
+			exc.printStackTrace();
+		}
+
+	}
+	
+	public void display(ResultSet rs) {
+		try {
+			while(rs.next()) {
+				System.out.println(rs.getString("last_name") + ", " + rs.getString("first_name"));
+			} 
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

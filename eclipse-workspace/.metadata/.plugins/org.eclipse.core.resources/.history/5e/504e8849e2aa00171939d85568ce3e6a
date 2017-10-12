@@ -1,0 +1,17 @@
+
+public class Student extends Person {
+	
+	private String courses = " ";
+	
+	public Student() {
+		
+	}
+	
+	public Student(int i) {
+		super(i);
+	}
+	public Student(int i) {
+		super(i);
+	}
+	
+}

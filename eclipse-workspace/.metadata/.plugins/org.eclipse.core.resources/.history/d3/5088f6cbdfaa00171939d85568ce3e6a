@@ -1,0 +1,12 @@
+
+public class Person extends Species {
+	
+	public Person() {
+		
+	}
+	
+	public Animal(int i) {
+		id = i;
+	}
+
+}

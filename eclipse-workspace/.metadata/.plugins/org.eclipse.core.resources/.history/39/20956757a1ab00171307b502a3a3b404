@@ -1,0 +1,10 @@
+
+public class Calculator {
+
+	private double a, b, result;
+	
+	public Calculator() {
+		
+	}
+	
+}

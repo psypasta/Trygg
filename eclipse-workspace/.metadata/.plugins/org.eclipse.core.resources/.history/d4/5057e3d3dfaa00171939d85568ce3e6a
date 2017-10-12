@@ -1,0 +1,13 @@
+
+public class Student extends Person {
+	
+	public Animal() {
+		
+	}
+	
+	public Animal(int i) {
+		id = i;
+	}
+	
+	
+}

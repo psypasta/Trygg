@@ -1,0 +1,11 @@
+
+public class Lion extends Animal {
+	
+	public Animal() {
+		
+	}
+	
+	public Animal(int i) {
+		id = i;
+	}
+}

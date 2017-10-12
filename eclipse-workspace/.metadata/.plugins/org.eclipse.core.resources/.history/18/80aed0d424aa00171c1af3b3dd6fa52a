@@ -1,0 +1,6 @@
+
+public class Company {
+
+	Collection foo = new List();
+	
+}

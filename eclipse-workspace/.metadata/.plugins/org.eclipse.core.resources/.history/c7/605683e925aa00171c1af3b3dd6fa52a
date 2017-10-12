@@ -1,0 +1,12 @@
+import java.util.Random;
+
+public class Employee {
+	
+	private int age = 0;
+	private Random r = new Random();
+	
+	public Employee() {
+		age = r.nextInt(20);
+	}
+	
+}

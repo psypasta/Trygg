@@ -1,0 +1,8 @@
+
+public class Animal extends Species{
+	
+	public Animal() {
+		
+	}
+
+}

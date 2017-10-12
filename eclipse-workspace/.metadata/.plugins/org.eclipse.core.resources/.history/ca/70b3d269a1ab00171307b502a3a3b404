@@ -1,0 +1,16 @@
+
+public class Calculator {
+
+	private double a, b, result;
+	
+	public Calculator() {
+		a = 0;
+		b = 0;
+		result = 0;
+	}
+	
+	public void calculate() {
+		
+	}
+	
+}

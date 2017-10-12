@@ -1,0 +1,14 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Object [] obj = new Object[10];
+		obj[0] = new Person();
+		obj[1] = new Animal();
+		
+		
+		
+	}
+
+}

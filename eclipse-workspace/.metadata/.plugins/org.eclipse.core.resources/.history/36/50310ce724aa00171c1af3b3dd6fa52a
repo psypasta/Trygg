@@ -1,0 +1,9 @@
+import java.util.Collection;
+import java.util.List;
+public class Company {
+
+	Collection hire() {
+		Collection foo = new List();
+	}
+	
+}

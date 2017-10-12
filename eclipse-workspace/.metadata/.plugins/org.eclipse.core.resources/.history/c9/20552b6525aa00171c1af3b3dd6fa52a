@@ -1,0 +1,16 @@
+import java.util.Collection;
+import java.util.ArrayList;
+public class Company {
+
+	
+	Collection<Employee> hire(int n) {
+		Collection<Employee> foo = new ArrayList<Employee>();
+		
+		for(int i = 0; i < n; i++) {
+			Employee e = new Employee();
+		}
+		
+		return foo;
+	}
+	
+}

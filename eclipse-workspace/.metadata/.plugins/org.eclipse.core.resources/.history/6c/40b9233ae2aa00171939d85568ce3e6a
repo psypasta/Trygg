@@ -1,0 +1,13 @@
+
+public class Student extends Person {
+	
+	public Student() {
+		
+	}
+	
+	public Student(int i) {
+		super(i);
+	}
+	
+	
+}

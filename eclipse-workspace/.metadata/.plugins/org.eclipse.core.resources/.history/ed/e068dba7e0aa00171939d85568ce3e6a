@@ -1,0 +1,22 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Object [] obj = new Object[10];
+		obj[0] = new Person(0);
+		obj[1] = new Animal(0);
+		obj[2] = new Student(0);
+		obj[3] = new Employee(0);
+		obj[4] = new Tiger(0);
+		obj[5] = new Lion(0);
+		
+		Animal a = new Animal(1);
+		
+		System.out.println("test it yolo");
+		
+		System.out.println(obj[0].);
+		System.out.println(obj[1].getAge());
+	}
+
+}
