@@ -30,5 +30,6 @@
 	<classpathentry kind="lib" path="library/lwjgl-stb-sources.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-stb.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl.jar"/>
+	<classpathentry kind="lib" path="library"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
