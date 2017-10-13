@@ -12,13 +12,13 @@ public class Main {
 		}
 
 		glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
-		long window = glfwCreateWindow(640, 480, "MYLWJGLProgram", 0, 0);
+		long window = glfwCreateWindow(640, 480, "MYLWJGL Program", 0, 0);
 		if(window == 0) {
 			throw new IllegalStateException("Failed to create window");
 		}
 		
 		GLFWVidMode videoMode = glfwGetVideoMode(glfwGetPrimaryMonitor());	
-		glfwSetWindowPos(window, (videoMode.width() - 640) / 2, (videoMode.width() - 480) / 2);
+		glfwSetWindowPos(window, (videoMode.width() - 640) / 2, (videoMode.height() - 480) / 2);
 		
 		glfwShowWindow(window);
 		
