@@ -24,14 +24,11 @@ public class Reader {
 		// long has a width of 64
 		long myLongValue = 9_223_372_036_854_775_807L;
 		*/
+		float myFloatValue = 0.5f;
+		double myDoubleLowValue = 1D;
+		double myDoubleValue = 3D; 
+		System.out.println(myFloatValue + myDoubleLowValue / myDoubleValue);
 		
-		byte anyValidByteNumber = 10;
-		short anyValidShortNumber = 20;
-		int anyInt = 50;
-		
-		long variableLong = 50000L + 10L * (anyValidByteNumber + anyValidShortNumber + anyInt);
-		
-		System.out.println(variableLong);
 		
 		
 	}
