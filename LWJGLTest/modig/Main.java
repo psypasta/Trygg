@@ -32,13 +32,27 @@ public class Main {
 		
 		glfwShowWindow(window);
 		
+		Mesh testMesh = new Mesh();
+		testMesh.create(new float[] {
+						-1,-1,0,
+						0,1,0,
+						1,-1,0
+		});
+		
+		
 		while(!glfwWindowShouldClose(window)) {
 			glfwPollEvents();
 			
 			glClear(GL_COLOR_BUFFER_BIT);
 			
+			
+			testMesh.draw();
+			
+			
 			glfwSwapBuffers(window);
 		}
+		
+		testMesh.destroy();
 		
 		glfwTerminate();
 		
