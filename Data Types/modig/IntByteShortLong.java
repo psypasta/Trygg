@@ -1,6 +1,6 @@
 package modig;
 
-public class Reader {
+public class IntByteShortLong {
 	
 	
 	public static void main(String[] args) {
@@ -25,21 +25,6 @@ public class Reader {
 		long myLongValue = 9_223_372_036_854_775_807L;
 		*/
 			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		// 1 pound = 0.45359237 kilogram
