@@ -1,6 +1,6 @@
 package modig;
 
-public class Main {
+public class Main2 {
 
 	public static void main(String[] args) {
 		ITelephone timsPhone;

@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Interface lecture"/>
 	<classpathentry kind="src" path="Data Types"/>
+	<classpathentry kind="src" path="LWJGLTest"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-javadoc.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-natives-windows.jar"/>
@@ -29,5 +30,6 @@
 	<classpathentry kind="lib" path="library/lwjgl-stb-sources.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-stb.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl.jar"/>
+	<classpathentry kind="lib" path="library"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
