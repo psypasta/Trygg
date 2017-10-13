@@ -30,6 +30,7 @@ public class Reader {
 		int anyInt = 50;
 		
 		long variableLong = 50000L + 10L * (anyValidByteNumber + anyValidShortNumber + anyInt);
+		
 		System.out.println(variableLong);
 		
 		
