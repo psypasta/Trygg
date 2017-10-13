@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Interface lecture"/>
 	<classpathentry kind="src" path="Data Types - Float and Double"/>
+	<classpathentry kind="src" path="Data Types - Char and Boolean"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

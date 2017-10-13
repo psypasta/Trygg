@@ -24,10 +24,41 @@ public class Reader {
 		// long has a width of 64
 		long myLongValue = 9_223_372_036_854_775_807L;
 		*/
-		float myFloatValue = 0.5f;
-		double myDoubleLowValue = 1D;
-		double myDoubleValue = 3D; 
-		System.out.println(myFloatValue + myDoubleLowValue / myDoubleValue);
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// 1 pound = 0.45359237 kilogram
+		// Convert a given number of pounds to kilogram
+		
+		
+		
+		
+		double poundValue = 200D;
+		double poundConversionValueKg = 0.45359237;
+		System.out.println(poundValue + " Pounds in kilograms would be: " + poundValue * poundConversionValueKg + " Kg");
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
