@@ -5,6 +5,7 @@
 	<classpathentry kind="src" path="Data Types"/>
 	<classpathentry kind="src" path="LWJGLTest"/>
 	<classpathentry kind="src" path="Animal"/>
+	<classpathentry kind="src" path="Networking"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-javadoc.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-natives-windows.jar"/>
