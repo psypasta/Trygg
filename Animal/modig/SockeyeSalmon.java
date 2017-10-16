@@ -2,7 +2,7 @@ package modig;
 
 public class SockeyeSalmon extends Fish {
 
-	public SockeyeSalmon(String k, String a) {
+	public SockeyeSalmon() {
 		super("sockeyesalmon", "bright red with a green head");
 		
 	}
