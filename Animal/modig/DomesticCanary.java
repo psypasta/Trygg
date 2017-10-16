@@ -6,5 +6,4 @@ public class DomesticCanary extends Bird{
 		super("domesticcanary", "yellow, orange, black, " + 
 				"brown, white, red");
 	}
-
 }
