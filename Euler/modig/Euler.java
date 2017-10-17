@@ -3,8 +3,8 @@ package modig;
 public class Euler {
 
 	public static void main(String[] args) {
-		int size = 10;
-		int[] fSeq = new int[size];
+		int size = 32;
+		long[] fSeq = new long[size];
 		
 		int mulA = 5;
 		int mulB = 3;
@@ -16,11 +16,11 @@ public class Euler {
 		fSeq = fibSeq(size);	
 	}
 	
-	public static int[] fibSeq(int r) {
+	public static long[] fibSeq(int r) {
 		
-		int [] fS = new int[r];
+		long [] fS = new long[r];
 		
-		int a,b,c = 0;	
+		long a,b,c = 0;	
 		
 		a = 1;
 		b = 1;
@@ -29,7 +29,7 @@ public class Euler {
 			
 			
 			fS[i] = b;
-			System.out.println(fS[i]);
+			System.out.println(fS[i] + " " + "loop: " + i);
 			
 			c = b;
 			b = a + b;
