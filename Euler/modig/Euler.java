@@ -10,7 +10,7 @@ public class Euler {
 		int mulB = 3;
 		
 		
-		System.out.println("Sum of mutliples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
+		System.out.println("Sum of multiples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
 	
 		System.out.println("Fibonacci sequence " + size + ": ");
 		fSeq = fibSeq(size);	
