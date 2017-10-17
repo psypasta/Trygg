@@ -6,6 +6,8 @@ import static org.lwjgl.opengl.GL11.*;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 
+//http://nehe.gamedev.net/tutorial/lessons_01__05/22004/
+
 public class Main {
 
 	public static void main(String[] args) {
