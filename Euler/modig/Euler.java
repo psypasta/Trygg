@@ -14,12 +14,16 @@ public class Euler {
 		int mulA = 5;
 		int mulB = 3;	
 		
+		
+		//Print för ID1
 		System.out.println("Sum of multiples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
 	
+		//Print för ID2
 		System.out.println("Fibonacci sequence " + size + ": ");
 		fSeq = fibSeq(size);
 		System.out.println("Sum of even fib seq under 4M: " + fibSum(fSeq));
 		
+		//ID3
 		prime_factors(13195);
 		
 	}
