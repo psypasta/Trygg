@@ -8,7 +8,7 @@ public class Euler {
 		
 	   System.out.println("%d\n" + sumMultiples(5,3,10));
 		
-		fibSeq(10);
+	   fSeq = fibSeq(10);
 		
 		
 	
