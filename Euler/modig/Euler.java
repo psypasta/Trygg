@@ -6,8 +6,13 @@ public class Euler {
 		int size = 10;
 		int[] fSeq = new int[size];
 		
-	   System.out.println("%d\n" + sumMultiples(5,3,10));
+		int mulA = 5;
+		int mulB = 3;
 		
+		
+	   System.out.println("Sum of mutliples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
+	
+	   System.out.println("Fibonacci sequence " + size + ": ");
 	   fSeq = fibSeq(size);
 		
 		
