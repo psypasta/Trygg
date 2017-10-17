@@ -21,30 +21,43 @@ public class Euler {
 		//Print för ID2
 		System.out.println("Fibonacci sequence " + size + ": ");
 		fSeq = fibSeq(size);
-		System.out.println("Sum of even fib seq under 4M: " + fibSum(fSeq));
+		System.out.println("Sum of even fib seq " + size + ": " + fibSum(fSeq));
 		
 		//ID3
-		prime_factors(13195);
+		prime_factors(600851475143L);
 		
 	}
 	
 	// Project euler ID 3 
 	
-	public static ArrayList prime_factors(long n) {
+	public static ArrayList<Long> prime_factors(long n) {
 
-		ArrayList factors = new ArrayList(1);
+		ArrayList<Long> factors = new ArrayList<Long>(1);
 		long d = 2;
 		
 		while(n > 1) {
 			while(n % d == 0) {
-				factors.add(d);
+				if(isPrime(d)) {
+					factors.add(d);
+					System.out.println(d);
+				}
 				n = n / d;
 			}
 			d = d + 1;
-			System.out.println(d);
 		}
 			
 		return factors;
+	}
+	
+	public static boolean isPrime(long n) {
+	    //check if n is a multiple of 2
+	    if (n%2==0) return false;
+	    //if not, then just check the odds
+	    for(int i=3;i*i<=n;i+=2) {
+	        if(n%i==0)
+	            return false;
+	    }
+	    return true;
 	}
 	
 	// Project euler ID 3 end
@@ -76,7 +89,7 @@ public class Euler {
 			
 			
 			fS[i] = b;
-			System.out.println(fS[i] + " " + "loop: " + i);
+		//	System.out.println(fS[i] + " " + "loop: " + i);
 			
 			c = b;
 			b = a + b;
