@@ -1,5 +1,7 @@
 package modig;
 
+import java.util.ArrayList;
+
 public class Euler {
 
 	public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class Euler {
 		long[] fSeq = new long[size];
 		
 		int mulA = 5;
-		int mulB = 3;		
+		int mulB = 3;	
 		
 		System.out.println("Sum of multiples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
 	
@@ -15,9 +17,34 @@ public class Euler {
 		fSeq = fibSeq(size);
 		System.out.println("Sum of even fib seq under 4M: " + fibSum(fSeq));
 		
+		prime_factors(13195);
 		
 	}
 	
+	// Project euler övning 3 
+	
+	public static ArrayList prime_factors(long n) {
+
+		ArrayList factors = new ArrayList(1);
+		long d = 2;
+		
+		while(n > 1) {
+			while(n % d == 0) {
+				factors.add(d);
+				n = n / d;
+			}
+			d = d + 1;
+			System.out.println(d);
+		}
+			
+		return factors;
+	}
+	
+	// Project euler övning 3 end
+	
+	
+	// Project euler övning 2
+
 	public static long fibSum(long[] fS){
 		long sum = 0;
 		
@@ -52,6 +79,10 @@ public class Euler {
 		return fS;
 	}
 	
+	// // Project euler övning 2 end
+	
+	// Project euler övning 1
+	
 	public static int sumMultiples(int a, int b, int r) {
 		int i,sum=0;
 	    
@@ -64,4 +95,6 @@ public class Euler {
 	    }
 		return sum;
 	}
+	
+	// Project euler övning 1 end
 }
