@@ -21,16 +21,16 @@ public class SwitchCoure {
 			System.out.println("Character was be A, I got to A aswell: " + givenChar);
 			break;
 		case "B":
-			System.out.println("Character was be B, I got to A aswell: " + givenChar);
+			System.out.println("Character was be B, I got to B aswell: " + givenChar);
 			break;
 		case "C": 
-			System.out.println("Character was be C, I got to A aswell: " + givenChar);
+			System.out.println("Character was be C, I got to C aswell: " + givenChar);
 			break;
 		case "D":
-			System.out.println("Character was be D, I got to A aswell: " + givenChar);
+			System.out.println("Character was be D, I got to D aswell: " + givenChar);
 			break;
 		case "E":
-			System.out.println("Character was be E, I got to A aswell: " + givenChar);
+			System.out.println("Character was be E, I got to E aswell: " + givenChar);
 			break;
 			
 	
