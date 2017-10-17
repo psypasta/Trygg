@@ -26,7 +26,7 @@ public class Euler {
 		for(int i = 0; i < r; i++) {
 			
 			
-			fS[i] = a + b;
+			fS[i] = b;
 			System.out.println(fS[i]);
 			
 			c = b;
