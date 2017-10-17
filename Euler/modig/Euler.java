@@ -26,7 +26,6 @@ public class Euler {
 				sum = sum + fS[i];
 			}
 		}
-		
 		return sum;
 	}
 	
@@ -48,8 +47,6 @@ public class Euler {
 			c = b;
 			b = a + b;
 			a = c;
-			
-			
 		}
 		
 		return fS;
