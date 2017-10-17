@@ -18,24 +18,24 @@ public class SwitchCoure {
 		
 		switch(givenChar.toUpperCase()) {
 		case "A": 
-			System.out.println("Character was be A, I got to A aswell: " + givenChar);
+			System.out.println("Your Character was " + givenChar + ", I got " + givenChar + " aswell:");
 			break;
 		case "B":
-			System.out.println("Character was be B, I got to B aswell: " + givenChar);
+			System.out.println("Your Character was " + givenChar + ", I got " + givenChar + " aswell:");
 			break;
 		case "C": 
-			System.out.println("Character was be C, I got to C aswell: " + givenChar);
+			System.out.println("Your Character was " + givenChar + ", I got " + givenChar + " aswell:");
 			break;
 		case "D":
-			System.out.println("Character was be D, I got to D aswell: " + givenChar);
+			System.out.println("Your Character was " + givenChar + ", I got " + givenChar + " aswell:");
 			break;
 		case "E":
-			System.out.println("Character was be E, I got to E aswell: " + givenChar);
+			System.out.println("Your Character was " + givenChar + ", I got " + givenChar + " aswell:");
 			break;
 			
 	
 			default:
-				System.out.println("Didnt find value");
+				System.out.println("Didn't get correct character");
 		}
 		
 		
