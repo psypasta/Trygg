@@ -13,7 +13,7 @@ public class Euler {
 	
 		System.out.println("Fibonacci sequence " + size + ": ");
 		fSeq = fibSeq(size);
-		System.out.println(fibSum(fSeq));
+		System.out.println("Sum of even fib seq under 4M: " + fibSum(fSeq));
 		
 		
 	}
