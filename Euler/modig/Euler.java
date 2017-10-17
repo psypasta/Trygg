@@ -5,9 +5,12 @@ import java.util.ArrayList;
 public class Euler {
 
 	public static void main(String[] args) {
+		
+		//Array att lagra fibonacci sekvens i ID2
 		int size = 32;
 		long[] fSeq = new long[size];
 		
+		//Multipliers för ID1
 		int mulA = 5;
 		int mulB = 3;	
 		
