@@ -7,13 +7,27 @@ public class Euler {
 		long[] fSeq = new long[size];
 		
 		int mulA = 5;
-		int mulB = 3;
-		
+		int mulB = 3;		
 		
 		System.out.println("Sum of multiples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
 	
 		System.out.println("Fibonacci sequence " + size + ": ");
-		fSeq = fibSeq(size);	
+		fSeq = fibSeq(size);
+		System.out.println(fibSum(fSeq));
+		
+		
+	}
+	
+	public static long fibSum(long[] fS){
+		long sum = 0;
+		
+		for(int i = 0; i < fS.length; i++) {
+			if (fS[i]%2 ==0) {
+				sum = sum + fS[i];
+			}
+		}
+		
+		return sum;
 	}
 	
 	public static long[] fibSeq(int r) {
@@ -38,7 +52,7 @@ public class Euler {
 			
 		}
 		
-		return null;
+		return fS;
 	}
 	
 	public static int sumMultiples(int a, int b, int r) {
