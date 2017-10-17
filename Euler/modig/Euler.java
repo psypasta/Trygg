@@ -21,7 +21,7 @@ public class Euler {
 		
 	}
 	
-	// Project euler övning 3 
+	// Project euler ID 3 
 	
 	public static ArrayList prime_factors(long n) {
 
@@ -40,10 +40,10 @@ public class Euler {
 		return factors;
 	}
 	
-	// Project euler övning 3 end
+	// Project euler ID 3 end
 	
 	
-	// Project euler övning 2
+	// Project euler ID 2
 
 	public static long fibSum(long[] fS){
 		long sum = 0;
@@ -79,9 +79,9 @@ public class Euler {
 		return fS;
 	}
 	
-	// // Project euler övning 2 end
+	// // Project euler ID 2 end
 	
-	// Project euler övning 1
+	// Project euler ID 1
 	
 	public static int sumMultiples(int a, int b, int r) {
 		int i,sum=0;
@@ -96,5 +96,5 @@ public class Euler {
 		return sum;
 	}
 	
-	// Project euler övning 1 end
+	// Project euler ID 1 end
 }
