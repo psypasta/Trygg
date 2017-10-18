@@ -14,6 +14,10 @@ public class Euler {
 		int mulA = 5;
 		int mulB = 3;	
 		
+		//Arraylist för ID3
+		
+		ArrayList<Long> factors;
+		
 		
 		//Print för ID1
 		System.out.println("Sum of multiples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
@@ -24,10 +28,11 @@ public class Euler {
 		System.out.println("Sum of even fib seq " + size + ": " + fibSum(fSeq));
 		
 		//ID3
-		prime_factors(600851475143L);
-	
+		factors = prime_factors(600851475143L);
+		System.out.println("Largest prime factor of 600851475143: " + factors.get(factors.size()-1));
+		
 		//ID4
-		System.out.println(palindromeProduct());
+		System.out.println("Largest palindrome made from the product of two 3-digit numbers.: " + palindromeProduct());
 		
 	}
 	
@@ -74,7 +79,6 @@ public class Euler {
 			while(n % d == 0) {
 				if(isPrime(d)) {
 					factors.add(d);
-					System.out.println(d);
 				}
 				n = n / d;
 			}
