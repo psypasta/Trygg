@@ -7,4 +7,4 @@ Put your files in a source folder and code away!
 
 -> Remember always pull before you push <-
 
-PM fulsomenko (Max) or sylpasta (Robin) for instructions
+PM fulsomenko (Max) or syltpasta (Robin) for instructions
