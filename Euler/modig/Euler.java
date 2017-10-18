@@ -32,7 +32,32 @@ public class Euler {
 		
 		//ID4
 		System.out.println("Largest palindrome made from the product of two 3-digit numbers: " + palindromeProduct());
+	
+		//ID5
+		int n = 20;
+		while(true) {
+			if(smallDivise(n)) {
+				break;
+			}
+			n = n + 20;
+		}
+		System.out.println("Smallest number evenly divisble by 20: " + n);
+	}
+
+	//ID 5
+	
+	
+	//ID 5 end
+	
+	public static boolean smallDivise(int number) {
+		int smallNumber = 2520;
 		
+		for(int i = 1; i < 21; i++) {
+			if(number % i != 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	//ID 4
