@@ -23,7 +23,6 @@ public class Euler {
 		System.out.println("Sum of multiples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
 	
 		//Print för ID2
-		System.out.println("Fibonacci sequence " + size + ": ");
 		fSeq = fibSeq(size);
 		System.out.println("Sum of even fib seq " + size + ": " + fibSum(fSeq));
 		
