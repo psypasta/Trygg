@@ -7,10 +7,16 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
+	
+	private static String ipcon = null;;
 
 	public static void main(String[] args) {
 
-		try(Socket socket = new Socket("192.168.10.125", 5555)){
+		//System.out.println("Server ip: ");
+		//Scanner scan = new Scanner(System.in);
+		//ipcon = scan.nextLine();
+		
+		try(Socket socket = new Socket("localhost", 5555)){
 			
 			BufferedReader echoes = new BufferedReader(
 					new InputStreamReader(socket.getInputStream()));

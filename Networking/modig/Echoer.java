@@ -9,9 +9,14 @@ import java.net.Socket;
 public class Echoer extends Thread{
 
 	private Socket socket;
+	private String echoString;
 	
 	public Echoer(Socket socket) {
 		this.socket = socket;
+	}
+	
+	public String getEchoString() {
+		return this.echoString;
 	}
 	
 	@Override
@@ -22,11 +27,19 @@ public class Echoer extends Thread{
 			PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
 			
 			while(true) {
-				String echoString = input.readLine();
+				
+				echoString = input.readLine();
+				System.out.println(echoString);
+				
 				if(echoString.equals("exit")) {
 					break;
 				}
 				
+				try {
+					Thread.sleep(15000);
+				} catch(InterruptedException e) {
+					System.out.println("Thread interupted");
+				}
 				output.println(echoString);
 			}
 		} catch(IOException e) {
