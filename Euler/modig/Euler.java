@@ -42,12 +42,10 @@ public class Euler {
 			n = n + 20;
 		}
 		System.out.println("Smallest number evenly divisble by 20: " + n);
+		//ID5 end
 	}
 
 	//ID 5
-	
-	
-	//ID 5 end
 	
 	public static boolean smallDivise(int number) {
 		int smallNumber = 2520;
@@ -59,6 +57,9 @@ public class Euler {
 		}
 		return true;
 	}
+
+	//ID 5 end
+	
 	
 	//ID 4
 	
