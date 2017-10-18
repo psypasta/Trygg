@@ -25,8 +25,46 @@ public class Euler {
 		
 		//ID3
 		prime_factors(600851475143L);
+	
+		//ID4
+		System.out.println(palindromeProduct());
 		
 	}
+	
+	//ID 4
+	
+	public static int palindromeProduct() {
+		
+		int maxPalin = -1;
+		
+		for(int i = 100; i < 1000; i++) {
+			for(int j = 100; j > 1000; j++) {
+				int prod = i * j;
+				if(isPalindrome(prod) && prod > maxPalin) {
+					maxPalin = prod;
+				}
+			}	
+		}
+		return maxPalin;
+	}
+	
+	public static boolean isPalindrome(int a) {
+		String value = null;
+		value = value.valueOf(a);
+		
+		System.out.println("wot");
+	
+		int n = value.length();
+		  for (int i = 0; i < (n/2); ++i) {
+		     if (value.charAt(i) != value.charAt(n - i - 1)) {
+		         return false;
+		     }
+		  }
+		  
+		  return true;
+	}
+	
+	//ID4 end
 	
 	// Project euler ID 3 
 	
