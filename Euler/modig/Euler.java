@@ -6,23 +6,23 @@ public class Euler {
 
 	public static void main(String[] args) {
 		
-		//Array att lagra fibonacci sekvens i ID2
+		//Array att lagra fibonacci sekvens i, ID2
 		int size = 32;
 		long[] fSeq = new long[size];
 		
-		//Multipliers för ID1
+		//Multipliers for ID1
 		int mulA = 5;
 		int mulB = 3;	
 		
-		//Arraylist för ID3
+		//Arraylist for ID3
 		
 		ArrayList<Long> factors;
 		
 		
-		//Print för ID1
+		//Print for ID1
 		System.out.println("Sum of multiples " + mulA + " and " + mulB + ": " + sumMultiples(mulA,mulB,size));
 	
-		//Print för ID2
+		//Print for ID2
 		fSeq = fibSeq(size);
 		System.out.println("Sum of even fib seq " + size + ": " + fibSum(fSeq));
 		
@@ -43,7 +43,32 @@ public class Euler {
 		}
 		System.out.println("Smallest number evenly divisble by 20: " + n);
 		//ID5 end
+		
+		//ID6
+	//	System.out.println(squareSum(10));
+	//	System.out.println(sumSquare(10));
+		System.out.println("Sum square difference of 100 is: " + (sumSquare(100) - squareSum(100)));
 	}
+	
+	//ID 6
+	
+	public static int squareSum(int n) {
+		int sum = 0;
+		for(int i = 1; i <= n; i++) {
+			sum += (i*i);
+		}
+		return sum;
+	}
+	
+	public static int sumSquare(int n) {
+		int sum = 0;
+		for(int i = 1; i <= n; i++) {
+			sum += i;
+		}
+		return (sum*sum);
+	}
+	
+	//ID 6 end
 
 	//ID 5
 	
