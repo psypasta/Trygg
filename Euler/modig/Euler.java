@@ -62,7 +62,6 @@ public class Euler {
 	
 	// Project euler ID 3 end
 	
-	
 	// Project euler ID 2
 
 	public static long fibSum(long[] fS){
