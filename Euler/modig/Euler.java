@@ -37,13 +37,12 @@ public class Euler {
 		
 		int maxPalin = -1;
 		
-		for(int i = 100; i < 1000; i++) {
-			for(int j = 100; j > 1000; j++) {
+		for (int i = 100; i < 1000; i++) {
+			for (int j = 100; j < 1000; j++) {
 				int prod = i * j;
-				if(isPalindrome(prod) && prod > maxPalin) {
+				if (isPalindrome(prod) && prod > maxPalin)
 					maxPalin = prod;
-				}
-			}	
+			}
 		}
 		return maxPalin;
 	}
@@ -51,8 +50,6 @@ public class Euler {
 	public static boolean isPalindrome(int a) {
 		String value = null;
 		value = value.valueOf(a);
-		
-		System.out.println("wot");
 	
 		int n = value.length();
 		  for (int i = 0; i < (n/2); ++i) {
