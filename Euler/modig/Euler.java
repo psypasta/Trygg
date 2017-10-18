@@ -31,7 +31,7 @@ public class Euler {
 		System.out.println("Largest prime factor of 600851475143: " + factors.get(factors.size()-1));
 		
 		//ID4
-		System.out.println("Largest palindrome made from the product of two 3-digit numbers.: " + palindromeProduct());
+		System.out.println("Largest palindrome made from the product of two 3-digit numbers: " + palindromeProduct());
 		
 	}
 	
