@@ -15,7 +15,7 @@ public class Main2 {
 				echoer.start();
 				
 				
-				socket.
+			//	socket.
 				
 				System.out.println(socket.getInetAddress());
 				echoer.getEchoString();
