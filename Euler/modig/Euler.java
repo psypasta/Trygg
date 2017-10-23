@@ -69,6 +69,7 @@ public class Euler {
 		
 		//ID8
 		
+		int range = 13;
 		String thousandN = "73167176531330624919225119674426574742355349194934" + 
 							"96983520312774506326239578318016984801869478851843" + 
 							"85861560789112949495459501737958331952853208805511" + 
@@ -89,10 +90,17 @@ public class Euler {
 							"84580156166097919133875499200524063689912560717606" + 
 							"05886116467109405077541002256983155200055935729725" + 
 							"71636269561882670428252483600823257530420752963450";
-		System.out.println(thousandN);
 		
-		int range = 4;
-	//	ArrayList<Integer> products = new ArrayList<Integer>();
+		
+		
+		
+		ArrayList<String> digits = new ArrayList<String>();
+		digits = sub(thousandN, range);
+		System.out.println("Digits AL size: " + digits.size());
+		
+	/*	for(int i = 0; i < digits.size(); i++) {
+			System.out.println(digits.get(i));
+		}
 		int[] products = new int[1000];
 		
 		for(int i = 0; i < products.length; i++) {
@@ -112,7 +120,7 @@ public class Euler {
 		for(int i = 0; i < digits.length-3; i++) {
 			for(int j = 0; j < digits[i].length(); j++) {
 				products[i] *= Character.getNumericValue(digits[i].charAt(j));
-				System.out.println(i + "<- i " + "j ->" + j);
+			//	System.out.println(i + "<- i " + "j ->" + j);
 			}
 				//largest @615 5832
 				System.out.println(products[i]);
@@ -120,14 +128,33 @@ public class Euler {
 				break;
 			}
 		} 
-		System.out.println("The highest maximum is: " + maxN(products));
+		System.out.println("The highest maximum product is: " + maxN(products)); */
 			
+	}
+	
+	//ID8
+	
+	public static ArrayList<String> products(ArrayList<String> d, int range) {
+		ArrayList<String> products = new ArrayList<String>();
+		
+		return products;
+	}
+	
+	public static ArrayList<String> sub(String s, int range){
+		ArrayList<String> digits = new ArrayList<String>();
+		String n = null;
+		 System.out.println("s length: " + s.length());
+		for(int i = 0; i < (s.length() - (range-1)); i++) {			
+			n = s.substring(range-range+i, range+i);
+			digits.add(n);
+		}
+		
+		return digits;
 	}
 	
 	public static int maxN(int[] n) {
 		
 		 int max = n[0];
-
 	        for (int i = 1; i < n.length; i++){
 	        	if (n[i] > max){
 	        		max = n[i];
@@ -135,6 +162,9 @@ public class Euler {
 	        }        
 		return max;
 	}
+	
+	//ID8 END
+	
 	//ID 6
 	
 	public static int squareSum(int n) {
