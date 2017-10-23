@@ -97,65 +97,30 @@ public class Euler {
 		
 		for(int i = 0; i < products.length; i++) {
 			products[i] = 1;
-		//	System.out.println(products[i]);
 		} 
 		
 		int c = 1;
 		String b = null;
 		
 		String[] digits = new String[1000];
-	//	char[] fours = new char[4];
-	//	String[] subString = new String[4];
-	//	System.out.println(thousandN.substring(range-range, range));
 		
-		for(int i = 0; i < thousandN.length()-3; i++) {
-			//a = thousandN.substring(range-range, range);
-			
+		for(int i = 0; i < thousandN.length()-3; i++) {			
 			b = thousandN.substring(range-range+i, range+i);
 			digits[i] = b;
-		//	System.out.println(digits[i]);
 		}
-		
-		/*c =  Character.getNumericValue(digits[1].charAt(0)) * 
-			 Character.getNumericValue(digits[1].charAt(1)) * 
-			 Character.getNumericValue(digits[1].charAt(2)) *
-			 Character.getNumericValue(digits[1].charAt(3)); 
-		System.out.println(c);
-		System.out.println(digits[1]);
-		System.out.println(digits[1].charAt(0));
-		System.out.println(digits[1].length());
-		System.out.println(	Character.getNumericValue(digits[1].charAt(0))*
-							Character.getNumericValue(digits[1].charAt(1))*
-							Character.getNumericValue(digits[1].charAt(2))*
-							Character.getNumericValue(digits[1].charAt(3))); */
 		
 		for(int i = 0; i < digits.length-3; i++) {
 			for(int j = 0; j < digits[i].length(); j++) {
 				products[i] *= Character.getNumericValue(digits[i].charAt(j));
 				System.out.println(i + "<- i " + "j ->" + j);
-				
-			/*	if(products[i] == 0) {
-					System.out.println(products[i] + "Location: " + i);
-				}
-				else {
-					System.out.println(products[i]
-				} */
-			//	products[i] = (digits[i] * digits[j]);
-			//	System.out.println(products[i]);
-			//	System.out.println(products[i]);
 			}
-			if(products[i] == 0) {
-				System.out.println(products[i] + " " + "Location: " + i);
 				//largest @615 5832
-			}
-			else {
 				System.out.println(products[i]);
-			}
 			if(i == 987) {
 				break;
 			}
 		} 
-		maxN(products);
+		System.out.println("The highest maximum is: " + maxN(products));
 			
 	}
 	
@@ -168,8 +133,7 @@ public class Euler {
 	        		max = n[i];
 	        	}
 	        }        
-	        System.out.println("The highest maximum is: " + max);
-		return 0;
+		return max;
 	}
 	//ID 6
 	
