@@ -48,6 +48,24 @@ public class Euler {
 	//	System.out.println(squareSum(10));
 	//	System.out.println(sumSquare(10));
 		System.out.println("Sum square difference of 100 is: " + (sumSquare(100) - squareSum(100)));
+		
+/*	ArrayList<Long> primes = new ArrayList<Long>();
+		for(int i = 0; i <= n+1; i++) {
+			if(isPrime(i)) {
+				primes.add((long) i);
+			}
+		}
+		System.out.println(primes.size());
+		System.out.println(primes.get(5000));
+		*/
+		
+		//ID7
+		
+		ArrayList<Long> primeList = new ArrayList<Long>();
+		primeList = primeList(10001);
+		System.out.println(primeList.size() + " prime, is: " + primeList.get(primeList.size()-1));
+		
+		//ID7 end
 	}
 	
 	//ID 6
@@ -138,6 +156,23 @@ public class Euler {
 		return factors;
 	}
 	
+	//ID7 Begin
+	
+	public static ArrayList<Long> primeList(int n){
+		ArrayList<Long> list = new ArrayList<Long>();
+		int i = 0;
+		
+		while(list.size() < 10001) {			
+			if(isPrime(i)) {
+				list.add((long) i);
+			}
+			i = i+1;
+		}
+		return list;
+	}
+	
+	//ID7 end
+	
 	public static boolean isPrime(long n) {
 	    //check if n is a multiple of 2
 	    if (n%2==0) return false;
@@ -147,7 +182,7 @@ public class Euler {
 	            return false;
 	    }
 	    return true;
-	}
+}
 	
 	// Project euler ID 3 end
 	
