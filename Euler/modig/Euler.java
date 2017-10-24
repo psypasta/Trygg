@@ -99,7 +99,12 @@ public class Euler {
 		digits = sub(thousandN, range);
 		System.out.println("Digits AL size: " + digits.size());
 		
-		sortString(digits.get(0));
+		String temp = null;
+		for(int i = 0; i < digits.size(); i++) {
+			temp = sortString(digits.get(i));
+			digits.set(i, temp);
+			System.out.println("Digits: " + digits.get(i));
+		}
 		
 	//	System.out.println("DP: " + digitProduct("9989"));
 	/*	for(int i = 0; i < digits.size(); i++) {
@@ -147,16 +152,19 @@ public class Euler {
 		//make it string sorted because 9*9*7 greater then 7*7*7'
 		//stop making this harder ^^
 		
-		int[] numbers = new int[s.length()];		
+		int[] numbers = new int[s.length()];
+		String ascending = "";
 		
 		for(int i = 0; i < numbers.length; i++) {
 			numbers[i] =  Character.getNumericValue(s.charAt(i));
-	
-			System.out.println(numbers[i]);
-			Arrays.sort(numbers);
+		//	System.out.println(numbers[i]);
 		}
-		
-		return null;
+		Arrays.sort(numbers);
+		for(int i = 0; i < numbers.length; i++) {
+			ascending += numbers[i];
+		}
+	//	System.out.println("Ascending: " + ascending);
+		return ascending;
 	}
 	
 	public static ArrayList<String> sub(String s, int range){
