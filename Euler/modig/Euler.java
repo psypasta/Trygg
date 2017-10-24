@@ -1,6 +1,7 @@
 package modig;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Euler {
 
@@ -98,6 +99,9 @@ public class Euler {
 		digits = sub(thousandN, range);
 		System.out.println("Digits AL size: " + digits.size());
 		
+		sortString(digits.get(0));
+		
+	//	System.out.println("DP: " + digitProduct("9989"));
 	/*	for(int i = 0; i < digits.size(); i++) {
 			System.out.println(digits.get(i));
 		}
@@ -134,10 +138,25 @@ public class Euler {
 	
 	//ID8
 	
-	public static ArrayList<String> products(ArrayList<String> d, int range) {
+	/*public static ArrayList<String> products(ArrayList<String> d, int range) {
 		ArrayList<String> products = new ArrayList<String>();
 		
 		return products;
+	} */
+	public static String sortString(String s) {
+		//make it string sorted because 9*9*7 greater then 7*7*7'
+		//stop making this harder ^^
+		
+		int[] numbers = new int[s.length()];		
+		
+		for(int i = 0; i < numbers.length; i++) {
+			numbers[i] =  Character.getNumericValue(s.charAt(i));
+	
+			System.out.println(numbers[i]);
+			Arrays.sort(numbers);
+		}
+		
+		return null;
 	}
 	
 	public static ArrayList<String> sub(String s, int range){
