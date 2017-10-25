@@ -3,6 +3,18 @@ package modig;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+ *  Välkommen till den jobbiga filen.
+ *  Här välkomnar vi misstag!
+ *  
+ *  Innehåller lösningar till project Euler problem 
+ *  Lösningar sorterade med //ID* kommentarer
+ *  
+ *  Två delar till detta, hjälp metoder och main metoden.
+ *  Koden börjar bli väldigt lång.
+ */
+
+
 public class Euler {
 
 	public static void main(String[] args) {
@@ -97,57 +109,43 @@ public class Euler {
 		
 		ArrayList<String> digits = new ArrayList<String>();
 		digits = sub(thousandN, range);
-		System.out.println("Digits AL size: " + digits.size());
+	//	System.out.println("Digits AL size: " + digits.size());
 		
 		String temp = null;
+		long largest = 0;
 		for(int i = 0; i < digits.size(); i++) {
 			temp = sortString(digits.get(i));
 			digits.set(i, temp);
-			System.out.println("Digits: " + digits.get(i));
-		}
-		
-	//	System.out.println("DP: " + digitProduct("9989"));
-	/*	for(int i = 0; i < digits.size(); i++) {
-			System.out.println(digits.get(i));
-		}
-		int[] products = new int[1000];
-		
-		for(int i = 0; i < products.length; i++) {
-			products[i] = 1;
-		} 
-		
-		int c = 1;
-		String b = null;
-		
-		String[] digits = new String[1000];
-		
-		for(int i = 0; i < thousandN.length()-3; i++) {			
-			b = thousandN.substring(range-range+i, range+i);
-			digits[i] = b;
-		}
-		
-		for(int i = 0; i < digits.length-3; i++) {
-			for(int j = 0; j < digits[i].length(); j++) {
-				products[i] *= Character.getNumericValue(digits[i].charAt(j));
-			//	System.out.println(i + "<- i " + "j ->" + j);
-			}
-				//largest @615 5832
-				System.out.println(products[i]);
-			if(i == 987) {
-				break;
-			}
-		} 
-		System.out.println("The highest maximum product is: " + maxN(products)); */
+		//	System.out.println("Digits: " + digits.get(i));
 			
+			if(checkLong(digits.get(i)) > largest) {
+		//		System.out.println(digits.get(i));
+				largest = checkLong(digits.get(i));
+			}
+			
+		}
+		
+		System.out.println("Greatest product of " + range + " adjacent digits in sample: " + largest);
+	
 	}
 	
 	//ID8
 	
-	/*public static ArrayList<String> products(ArrayList<String> d, int range) {
-		ArrayList<String> products = new ArrayList<String>();
-		
-		return products;
-	} */
+	//borde inte behöva denna funktionen men jag sneade, easy way out.
+	public static long checkLong(String s)
+	{
+		long product = 1;
+
+		for (int i = 0; i < s.length(); i++)
+		{
+			Character c = new Character(s.charAt(i));
+			String tmp = c.toString();
+			int temp = Integer.parseInt(tmp);
+			product *= temp;
+		}
+		return product;
+	}
+	
 	public static String sortString(String s) {
 		//make it string sorted because 9*9*7 greater then 7*7*7'
 		//stop making this harder ^^
@@ -166,11 +164,11 @@ public class Euler {
 	//	System.out.println("Ascending: " + ascending);
 		return ascending;
 	}
-	
+	// return long arraylist?
 	public static ArrayList<String> sub(String s, int range){
 		ArrayList<String> digits = new ArrayList<String>();
 		String n = null;
-		 System.out.println("s length: " + s.length());
+	//	 System.out.println("s length: " + s.length());
 		for(int i = 0; i < (s.length() - (range-1)); i++) {			
 			n = s.substring(range-range+i, range+i);
 			digits.add(n);
