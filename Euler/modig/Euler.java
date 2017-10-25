@@ -12,6 +12,8 @@ import java.util.Arrays;
  *  
  *  Två delar till detta, hjälp metoder och main metoden.
  *  Koden börjar bli väldigt lång.
+ *  
+ *  Author: fulsomenko
  */
 
 
