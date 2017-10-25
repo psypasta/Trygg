@@ -30,7 +30,6 @@ public class Euler {
 		int mulB = 3;	
 		
 		//Arraylist for ID3
-		
 		ArrayList<Long> factors;
 		
 		
@@ -41,11 +40,11 @@ public class Euler {
 		fSeq = fibSeq(size);
 		System.out.println("Sum of even fib seq " + size + ": " + fibSum(fSeq));
 		
-		//ID3
+		//Print for ID3
 		factors = prime_factors(600851475143L);
 		System.out.println("Largest prime factor of 600851475143: " + factors.get(factors.size()-1));
 		
-		//ID4
+		//Print for ID4
 		System.out.println("Largest palindrome made from the product of two 3-digit numbers: " + palindromeProduct());
 	
 		//ID5
@@ -60,19 +59,7 @@ public class Euler {
 		//ID5 end
 		
 		//ID6
-	//	System.out.println(squareSum(10));
-	//	System.out.println(sumSquare(10));
 		System.out.println("Sum square difference of 100 is: " + (sumSquare(100) - squareSum(100)));
-		
-/*	ArrayList<Long> primes = new ArrayList<Long>();
-		for(int i = 0; i <= n+1; i++) {
-			if(isPrime(i)) {
-				primes.add((long) i);
-			}
-		}
-		System.out.println(primes.size());
-		System.out.println(primes.get(5000));
-		*/
 		
 		//ID7
 		
@@ -106,34 +93,29 @@ public class Euler {
 							"05886116467109405077541002256983155200055935729725" + 
 							"71636269561882670428252483600823257530420752963450";
 		
-		
-		
-		
 		ArrayList<String> digits = new ArrayList<String>();
 		digits = sub(thousandN, range);
-	//	System.out.println("Digits AL size: " + digits.size());
 		
 		String temp = null;
 		long largest = 0;
 		for(int i = 0; i < digits.size(); i++) {
 			temp = sortString(digits.get(i));
 			digits.set(i, temp);
-		//	System.out.println("Digits: " + digits.get(i));
 			
 			if(checkLong(digits.get(i)) > largest) {
-		//		System.out.println(digits.get(i));
 				largest = checkLong(digits.get(i));
 			}
 			
 		}
-		
+		//Pring for ID8
 		System.out.println("Greatest product of " + range + " adjacent digits in sample: " + largest);
+		//ID8 end
 	
 	}
 	
 	//ID8
 	
-	//borde inte behöva denna funktionen men jag sneade, easy way out.
+	//borde inte behöva denna metoden men jag sneade, easy way out.
 	public static long checkLong(String s)
 	{
 		long product = 1;
@@ -148,39 +130,34 @@ public class Euler {
 		return product;
 	}
 	
+	//sort string of numbers in ascending order
 	public static String sortString(String s) {
 		//make it string sorted because 9*9*7 greater then 7*7*7'
 		//stop making this harder ^^
-		
 		int[] numbers = new int[s.length()];
 		String ascending = "";
 		
 		for(int i = 0; i < numbers.length; i++) {
 			numbers[i] =  Character.getNumericValue(s.charAt(i));
-		//	System.out.println(numbers[i]);
 		}
 		Arrays.sort(numbers);
 		for(int i = 0; i < numbers.length; i++) {
 			ascending += numbers[i];
 		}
-	//	System.out.println("Ascending: " + ascending);
 		return ascending;
 	}
 	// return long arraylist?
 	public static ArrayList<String> sub(String s, int range){
 		ArrayList<String> digits = new ArrayList<String>();
 		String n = null;
-	//	 System.out.println("s length: " + s.length());
 		for(int i = 0; i < (s.length() - (range-1)); i++) {			
 			n = s.substring(range-range+i, range+i);
 			digits.add(n);
 		}
-		
 		return digits;
 	}
 	
 	public static int maxN(int[] n) {
-		
 		 int max = n[0];
 	        for (int i = 1; i < n.length; i++){
 	        	if (n[i] > max){
@@ -334,10 +311,7 @@ public class Euler {
 		b = 1;
 		
 		for(int i = 0; i < r; i++) {
-			
-			
 			fS[i] = b;
-		//	System.out.println(fS[i] + " " + "loop: " + i);
 			
 			c = b;
 			b = a + b;
@@ -346,11 +320,9 @@ public class Euler {
 		
 		return fS;
 	}
+	//ID 2 end
 	
-	// // Project euler ID 2 end
-	
-	// Project euler ID 1
-	
+	//ID 1
 	public static int sumMultiples(int a, int b, int r) {
 		int i,sum=0;
 	    
@@ -363,6 +335,5 @@ public class Euler {
 	    }
 		return sum;
 	}
-	
-	// Project euler ID 1 end
+	//ID 1 end
 }
