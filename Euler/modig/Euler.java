@@ -169,6 +169,23 @@ public class Euler {
 	
 	//ID8 END
 	
+	//ID7 Begin
+	
+	public static ArrayList<Long> primeList(int n){
+		ArrayList<Long> list = new ArrayList<Long>();
+		int i = 0;
+		
+		while(list.size() < 10001) {			
+			if(isPrime(i)) {
+				list.add((long) i);
+			}
+			i = i+1;
+		}
+		return list;
+	}
+	
+	//ID7 end
+	
 	//ID 6
 	
 	public static int squareSum(int n) {
@@ -221,11 +238,6 @@ public class Euler {
 		return maxPalin;
 	}
 
-	
-	//ID4 end
-	
-	// Project euler ID 3 
-	
 	public static boolean isPalindrome(int a) {
 		String value = null;
 		value = value.valueOf(a);
@@ -239,6 +251,10 @@ public class Euler {
 		  
 		  return true;
 	}
+	
+	//ID4 end
+	
+	// Project euler ID 3 
 
 	public static ArrayList<Long> prime_factors(long n) {
 
@@ -247,34 +263,19 @@ public class Euler {
 		
 		while(n > 1) {
 			while(n % d == 0) {
-				if(isPrime(d)) {
+		//		if(isPrime(d)) {
 					factors.add(d);
-				}
+		//		}
 				n = n / d;
+				
 			}
 			d = d + 1;
+		//	System.out.println(n + "<- n  d ->" +d);
 		}
 			
 		return factors;
 	}
-	
-	//ID7 Begin
-	
-	public static ArrayList<Long> primeList(int n){
-		ArrayList<Long> list = new ArrayList<Long>();
-		int i = 0;
-		
-		while(list.size() < 10001) {			
-			if(isPrime(i)) {
-				list.add((long) i);
-			}
-			i = i+1;
-		}
-		return list;
-	}
-	
-	//ID7 end
-	
+	//useless METHOD ?	
 	public static boolean isPrime(long n) {
 	    //check if n is a multiple of 2
 	    if (n%2==0) return false;
