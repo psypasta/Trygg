@@ -110,6 +110,22 @@ public class Euler {
 		//Pring for ID8
 		System.out.println("Greatest product of " + range + " adjacent digits in sample: " + largest);
 		//ID8 end
+		
+		//ID10
+		ArrayList prime2 = primeList(148934); // <-
+		
+		long sum2 = 0;
+		for(int i = 0; i < prime2.size(); i++) {
+				
+			if((long) prime2.get(i) > 2000000L) {
+				System.out.println(sum2);
+				break;
+			}
+			sum2= sum2 + (long) prime2.get(i);
+		}
+		
+		//ID10 end mycket slarvigt :)
+		
 	
 	}
 	
@@ -170,12 +186,12 @@ public class Euler {
 	//ID8 END
 	
 	//ID7 Begin
-	
+	//its all wrong?
 	public static ArrayList<Long> primeList(int n){
 		ArrayList<Long> list = new ArrayList<Long>();
 		int i = 0;
 		
-		while(list.size() < 10001) {			
+		while(list.size() < n) {			
 			if(isPrime(i)) {
 				list.add((long) i);
 			}
@@ -255,7 +271,7 @@ public class Euler {
 	//ID4 end
 	
 	// Project euler ID 3 
-
+	//its all wrong?
 	public static ArrayList<Long> prime_factors(long n) {
 
 		ArrayList<Long> factors = new ArrayList<Long>(1);
@@ -275,10 +291,14 @@ public class Euler {
 			
 		return factors;
 	}
+	//its all wrong?
 	//useless METHOD ?	
 	public static boolean isPrime(long n) {
 	    //check if n is a multiple of 2
-	    if (n%2==0) return false;
+		if (n == 2) return true;
+		else if (n%2==0) return false;
+	    if (n == 1) return false;
+	    
 	    //if not, then just check the odds
 	    for(int i=3;i*i<=n;i+=2) {
 	        if(n%i==0)
