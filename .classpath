@@ -34,5 +34,6 @@
 	<classpathentry kind="lib" path="library/lwjgl-natives-windows.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl_util.jar"/>
 	<classpathentry kind="lib" path="library/slick-util.jar"/>
+	<classpathentry kind="lib" path="library/natives-windows.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
