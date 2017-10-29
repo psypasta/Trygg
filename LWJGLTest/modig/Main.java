@@ -1,10 +1,33 @@
 package modig;
 
-import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MAJOR;
+import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MINOR;
+import static org.lwjgl.glfw.GLFW.GLFW_FALSE;
+import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_CORE_PROFILE;
+import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_FORWARD_COMPAT;
+import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_PROFILE;
+import static org.lwjgl.glfw.GLFW.GLFW_TRUE;
+import static org.lwjgl.glfw.GLFW.GLFW_VISIBLE;
+import static org.lwjgl.glfw.GLFW.glfwCreateWindow;
+import static org.lwjgl.glfw.GLFW.glfwGetPrimaryMonitor;
+import static org.lwjgl.glfw.GLFW.glfwGetVideoMode;
+import static org.lwjgl.glfw.GLFW.glfwInit;
+import static org.lwjgl.glfw.GLFW.glfwMakeContextCurrent;
+import static org.lwjgl.glfw.GLFW.glfwPollEvents;
+import static org.lwjgl.glfw.GLFW.glfwSetWindowPos;
+import static org.lwjgl.glfw.GLFW.glfwShowWindow;
+import static org.lwjgl.glfw.GLFW.glfwSwapBuffers;
+import static org.lwjgl.glfw.GLFW.glfwTerminate;
+import static org.lwjgl.glfw.GLFW.glfwWindowHint;
+import static org.lwjgl.glfw.GLFW.glfwWindowShouldClose;
 
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
+
+import renderEngine.Loader;
+import renderEngine.RawModel;
+import renderEngine.Renderer;
+import shaders.StaticShader;
 
 //http://nehe.gamedev.net/tutorial/lessons_01__05/22004/
 
@@ -41,21 +64,52 @@ public class Main {
 						1,-1,0
 		});
 		
+		Loader loader = new Loader();
+		Renderer renderer = new Renderer();
+		StaticShader shader = new StaticShader();
+		
+		
+		/*
+		float[] vertices = {
+				-0.5f, 0.5f, 0,		//V0
+				-0.5f, -0,5f, 0,	//V1
+				0.5f, -0.5f, 0,		//V2
+				0.5f, 0.5f, 0f		//V3
+		};
+		
+		int[] indices = {					//WTF is going on here
+				0,1,3,	//top left triangle
+				3,1,2	//bottom right triangle
+		};
+		*/
+		float[] vertices = { 
+				-0.5f, 0.5f, 0,		//V0
+				-0.5f, -0.5f, 0,	//V1
+				0.5f, -0.5f, 0,		//V2
+				0.5f, 0.5f, 0		//V3
+		}; 
+		int[] indices = { 
+				0,1,3,
+				3,1,2 
+		};
+		
+		RawModel model = loader.loadToVAO(vertices, indices);
 		
 		while(!glfwWindowShouldClose(window)) {
 			glfwPollEvents();
+	//		glClear(GL_COLOR_BUFFER_BIT);
+	//		testMesh.draw();
 			
-			glClear(GL_COLOR_BUFFER_BIT);
-			
-			
-			testMesh.draw();
-			
-			
+			renderer.prepare();
+			shader.start();
+			renderer.render(model);
+			shader.stop();
 			glfwSwapBuffers(window);
 		}
 		
 		testMesh.destroy();
-		
+		shader.cleanUp();
+		loader.cleanUp();
 		glfwTerminate();
 		
 	}
