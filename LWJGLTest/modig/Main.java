@@ -69,10 +69,10 @@ public class Main {
 		StaticShader shader = new StaticShader();
 		
 		
-		/*
+	
 		float[] vertices = {
 				-0.5f, 0.5f, 0,		//V0
-				-0.5f, -0,5f, 0,	//V1
+				-0.5f, -0.5f, 0,	//V1
 				0.5f, -0.5f, 0,		//V2
 				0.5f, 0.5f, 0f		//V3
 		};
@@ -81,17 +81,7 @@ public class Main {
 				0,1,3,	//top left triangle
 				3,1,2	//bottom right triangle
 		};
-		*/
-		float[] vertices = { 
-				-0.5f, 0.5f, 0,		//V0
-				-0.5f, -0.5f, 0,	//V1
-				0.5f, -0.5f, 0,		//V2
-				0.5f, 0.5f, 0		//V3
-		}; 
-		int[] indices = { 
-				0,1,3,
-				3,1,2 
-		};
+
 		
 		RawModel model = loader.loadToVAO(vertices, indices);
 		
