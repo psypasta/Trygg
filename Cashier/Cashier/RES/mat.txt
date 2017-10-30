@@ -1,0 +1,5 @@
+00 Apple 5
+01 Orange 9
+02 Kiwi 12
+03 Mango 20
+04 
