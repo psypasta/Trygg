@@ -5,7 +5,6 @@ public class Product {
 	private String productName;
 	private int price;
 	
-
 	private enum Category {
 		FRUIT, VEGETABLES, DAIRY, MEAT
 	}
