@@ -6,7 +6,7 @@ public class Product {
 	private int price;
 	
 
-	private enum Day {
+	private enum Category {
 		FRUIT, VEGETABLES, DAIRY, MEAT
 	}
 	
