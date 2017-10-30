@@ -1,0 +1,50 @@
+
+OBJEKT : KASSAsystem
+
+User | 
+	VAR : 
+		code : Int
+		name : String
+		
+
+Product | SubClass Fruit / Veggies / Dairy / Meat ? enums ? 
+	var :
+		number/ID (two digit number) : Int
+		productName : String
+		price : Int 
+	metoder :
+		getMetoder FOR ^ ?
+		
+Register |
+	var : 
+		totalAmount : int
+		
+	metoder : 
+		weigh()  ?
+		
+Payment interface |
+	var:
+		
+	methods:
+		
+	classes that implements ^
+		
+		Card |
+		
+		Cash |
+		
+		Giftcard |
+
+OBJECT : ReceiptSystem
+
+Receipt |
+	var: 
+		FINAL MOMS : INT
+		ID : int 
+		CompanyName: String
+		Org# : int
+		date : String
+		product : Product
+	methods:
+	
+		
