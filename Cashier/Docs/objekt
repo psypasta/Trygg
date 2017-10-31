@@ -50,7 +50,10 @@ Sale
 		Date : String
 		FINAL MOMS : Double
 	methods:
-
+		getTax()
+		getSubTotal()
+		getTotal()
+		setPayment()
 Payment interface |
 	var:
 		
