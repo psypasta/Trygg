@@ -1,39 +1,35 @@
 
 Delmängd : KASSAsystem
 
+Store
+	var:
+		
+	methods:
+
 User | 
 	VAR : 
 		code : Int
 		name : String
-		
+	methods:
 
 Product | SubClass Fruit / Veggies / Dairy / Meat ? enums ? 
 	var :
 		number/ID (two digit number) : Int
 		productName : String
 		price : Int 
-	metoder :
+	methods: :
 		getMetoder FOR ^ ?
 		
 Register |
 	var : 
-		totalAmount : int
-		
-	metoder : 
+		numberOfProducts : int
+		balance : double
+	methods : 
 		weigh()  ?
+		addProduct()
+		commitSale()
 		
-Payment interface |
-	var:
-		
-	methods:
-		
-	classes that implements ^
-		
-		Card |
-		
-		Cash |
-		
-		Giftcard |
+
 
 Delmängd : ReceiptSystem
 
@@ -47,5 +43,26 @@ Receipt |
 		product : Product
 	methods:
 
+Sale
+
+	var:
+		ID : int 
+		Date : String
+		FINAL MOMS : INT
+	methods:
+
+Payment interface |
+	var:
+		
+	methods:
+		
+	classes that implements ^
+		
+		Card |
+		
+		Cash |
+		
+		Giftcard | ??
+		
 
 		
