@@ -29,20 +29,6 @@ Register |
 		addProduct()
 		commitSale()
 		
-
-
-Delmängd : ReceiptSystem
-
-Receipt |
-	var: 
-		FINAL MOMS : Double
-		ID : int 
-		CompanyName: String
-		Org# : int
-		date : String
-		product : Product
-	methods:
-
 Sale
 
 	var:
@@ -66,6 +52,19 @@ Payment interface |
 		Cash |
 		
 		Giftcard | ??
-		
 
-		
+Delmängd : ReceiptSystem
+
+Receipt |
+	var: 
+		FINAL MOMS : Double
+		ID : int 
+		CompanyName: String
+		Org# : int
+		date : String
+		product : Product
+	methods:
+
+Delmängd : adminSystem
+
+Delmängd : saleReportSystem
