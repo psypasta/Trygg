@@ -1,5 +1,5 @@
 
-OBJEKT : KASSAsystem
+Delmängd : KASSAsystem
 
 User | 
 	VAR : 
@@ -35,7 +35,7 @@ Payment interface |
 		
 		Giftcard |
 
-OBJECT : ReceiptSystem
+Delmängd : ReceiptSystem
 
 Receipt |
 	var: 
@@ -46,5 +46,6 @@ Receipt |
 		date : String
 		product : Product
 	methods:
-	
+
+
 		
