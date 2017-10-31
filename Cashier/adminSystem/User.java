@@ -1,4 +1,4 @@
-package registerSystem;
+package adminSystem;
 
 public class User {
 	

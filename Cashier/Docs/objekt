@@ -1,78 +1,83 @@
 
 Delmängd : KASSAsystem
 
-Store
-	var:
-		
-	methods:
-
-User | 
-	VAR : 
-		code : Int
-		name : String
-	methods:
-
-Product | SubClass Fruit / Veggies / Dairy / Meat ? enums ? 
-	var :
-		number/ID (two digit number) : Int
-		productName : String
-		price : Int 
-	methods: :
-		getMetoder FOR ^ ?
-		
-Register |
-	var : 
-		numberOfProducts : int
-		balance : double
-	methods : 
-		weigh()  ?
-		addProduct()
-		commitSale()
-		
-Sale
-
-	var:
-		ID : int 
-		Date : String
-		FINAL MOMS : Double
-	methods:
-		getTax()
-		getSubTotal()
-		getTotal()
-		setPayment()
-Payment interface |
-	var:
-		
-	methods:
-		
-	classes that implements ^
-		
-		Card |
-		
-		Cash |
-		
-		Giftcard | ??
+	Store
+		var:
+			
+		methods:
+	
+	User | 
+		VAR : 
+			code : Int
+			name : String
+		methods:
+	
+	Product | SubClass Fruit / Veggies / Dairy / Meat ? enums ? 
+		var :
+			number/ID (two digit number) : Int
+			productName : String
+			price : Int 
+		methods: :
+			getMetoder FOR ^ ?
+			
+	Register |
+		var : 
+			numberOfProducts : int
+			balance : double
+		methods : 
+			weigh()  ?
+			addProduct()
+			commitSale()
+			
+	Sale
+	
+		var:
+			ID : int 
+			Date : String
+			FINAL MOMS : Double
+		methods:
+			getTax()
+			getSubTotal()
+			getTotal()
+			setPayment()
+	Payment interface |
+		var:
+			
+		methods:
+			
+		classes that implements ^
+			
+			Card |
+			
+			Cash |
+			
+			Giftcard | ??
 
 Delmängd : ReceiptSystem
 
-Receipt |
-	var: 
-		FINAL MOMS : Double
-		ID : int 
-		CompanyName: String
-		Org# : int
-		date : String
-		product : Product
-	methods:
+	Receipt |
+		var: 
+			FINAL MOMS : Double
+			ID : int 
+			CompanyName: String
+			Org# : int
+			date : String
+			product : Product
+		methods:
 
 Delmängd : adminSystem
 
-	User ? delad klass ??
+	User | delad klass ??
 
-	Login något?
+	Login | något?
 	
-	Filehandler? kassan behöver med?
+	
 	
 Delmängd : saleReportSystem
 
+	Sales? |
+	
+Delmängd : Util?
+
+	Filehandler | kassan behöver med?
 	
