@@ -10,7 +10,7 @@
 0107 		Zucchini		15
 0108 		Spinach			5
 0109 		Parsnip			100
-1210 		Milk			20
+1210		Milk			20
 1211 		Yoghurt			15
 1212 		Cheese			200
 1213 		Butter			23
