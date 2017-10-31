@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="registerSystem.Receipt" project="modig" 
-    file="/modig/Cashier/registerSystem/Receipt.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="receiptSystem.Receipt" project="modig" 
+    file="/modig/Cashier/receiptSystem/Receipt.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="486" y="595"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

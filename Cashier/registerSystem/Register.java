@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import receiptSystem.Receipt;
+
 public class Register {
 	
 	//product count

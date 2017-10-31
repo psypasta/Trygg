@@ -1,7 +1,9 @@
-package registerSystem;
+package receiptSystem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import registerSystem.Product;
 
 public class Receipt {
 	

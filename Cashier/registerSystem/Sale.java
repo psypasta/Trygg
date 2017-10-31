@@ -2,6 +2,8 @@ package registerSystem;
 
 import java.util.List;
 
+import receiptSystem.Receipt;
+
 public class Sale {
 	private int ID;
 	private String Date;
