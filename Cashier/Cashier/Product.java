@@ -3,7 +3,7 @@ package Cashier;
 public class Product {
 	private int ID;
 	private String productName;
-	private int price;
+	private float price;
 	
 	private enum Category {
 		FRUIT, VEGETABLES, DAIRY, MEAT
