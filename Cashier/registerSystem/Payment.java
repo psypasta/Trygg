@@ -1,4 +1,4 @@
-package Cashier;
+package registerSystem;
 
 public interface Payment {
 

@@ -1,6 +1,6 @@
-package Cashier;
+package registerSystem;
 
-public class Cash implements Payment{
+public class Credit implements Payment{
 
 	@Override
 	public void pay() {

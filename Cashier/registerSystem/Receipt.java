@@ -1,4 +1,4 @@
-package Cashier;
+package registerSystem;
 
 import java.util.ArrayList;
 import java.util.List;

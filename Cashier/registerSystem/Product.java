@@ -1,4 +1,4 @@
-package Cashier;
+package registerSystem;
 
 public class Product {
 	private int ID;
