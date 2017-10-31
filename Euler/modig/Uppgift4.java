@@ -8,11 +8,11 @@ public class Uppgift4 {
 		String palindrome = null;
 		int tal1 = 9009;
 		
-		for()
-		{
+//		for()
+//		{
 			
 			
-		}
+//		}
 		
 		
 	}

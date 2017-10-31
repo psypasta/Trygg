@@ -1,4 +1,4 @@
-#ID 		Name				Price
+#ID 		Name			Price
 
 0000		Apple			5
 0001 		Orange			9
@@ -20,6 +20,6 @@
 0317 		LambCHOPS		124
 0318 		Pigs Tongue		245
 0319 		Minced meat		234
-	
+
 #FÖRSTA SIFFRAN BESTÄMMER \/
 #0 ÄR KILO PRIS - 1 ÄR STYCKPRIS

@@ -8,6 +8,8 @@ public class Main {
 		System.out.println(produces.getPrice());
 		System.out.println(produces.getProductName());
 		
+		Register kassan = new Register();
+		kassan.addProduct();
 		
 	}
 

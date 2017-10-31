@@ -25,7 +25,7 @@ public class Sale {
 	public double getSubTotal(List<Product> productList) {
 		
 		for(int i = 0; i < productList.size(); i++) {
-			System.out.println(productList.get(i).getPrice()); //hjälp
+			System.out.println(productList.get(i).getPrice()); //hjälp	
 		}
 		
 		return 0;
