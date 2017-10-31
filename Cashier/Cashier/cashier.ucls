@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="Cashier.Product" project="modig" file="/modig/Cashier/Cashier/Product.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="924" y="607"/>    
+    <position height="-1" width="-1" x="723" y="332"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="Cashier.User" project="modig" file="/modig/Cashier/Cashier/User.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="107" x="363" y="300"/>    
+    <position height="-1" width="-1" x="215" y="101"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="Cashier.Cash" project="modig" file="/modig/Cashier/Cashier/Cash.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="87" x="308" y="511"/>    
+    <position height="-1" width="-1" x="150" y="285"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="Cashier.Credit" project="modig" file="/modig/Cashier/Cashier/Credit.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="87" x="435" y="511"/>    
+    <position height="-1" width="-1" x="277" y="285"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="Cashier.Receipt" project="modig" file="/modig/Cashier/Cashier/Receipt.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="189" width="132" x="621" y="776"/>    
+    <position height="-1" width="-1" x="486" y="595"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="Cashier.Sale" project="modig" file="/modig/Cashier/Cashier/Sale.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="191" x="562" y="511"/>    
+    <position height="-1" width="-1" x="456" y="348"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="Cashier.Main" project="modig" file="/modig/Cashier/Cashier/Main.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="113" x="565" y="300"/>    
+    <position height="-1" width="-1" x="420" y="74"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <interface id="8" language="java" name="Cashier.Payment" project="modig" file="/modig/Cashier/Cashier/Payment.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="103" x="435" y="776"/>    
+    <position height="-1" width="-1" x="285" y="541"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </interface>  
   <enumeration id="9" language="java" name="Cashier.Product.Category" project="modig" 
     file="/modig/Cashier/Cashier/Product.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="923" y="818"/>    
+    <position height="-1" width="-1" x="722" y="543"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </enumeration>  
   <class id="10" language="java" name="Cashier.Register" project="modig" file="/modig/Cashier/Cashier/Register.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="171" width="127" x="774" y="300"/>    
+    <position height="-1" width="-1" x="636" y="110"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
