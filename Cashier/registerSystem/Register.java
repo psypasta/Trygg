@@ -15,7 +15,7 @@ public class Register {
 	private List <Product> productList = new ArrayList<Product>();
 	//private Receipt kvitto = new Receipt(productList);
 	private Sale s = new Sale(productList);
-	private File matFile = new File("Cashier/Cashier/RES/mat.txt");
+	private File matFile = new File("Cashier/resource/mat.txt");
 	
 	public Register(/*User u*/) {
 		
