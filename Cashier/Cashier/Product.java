@@ -23,7 +23,7 @@ public class Product {
 		return productName;
 	}
 
-	public int getPrice() {
+	public float getPrice() {
 		return price;
 	}
 
