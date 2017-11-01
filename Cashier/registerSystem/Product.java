@@ -1,7 +1,7 @@
 package registerSystem;
 
 public class Product {
-	
+	/*
 	private static enum Category {
 		FRUIT, VEGETABLES, DAIRY, MEAT, NULL
 	}
@@ -14,6 +14,7 @@ public class Product {
 	private static final int MEAT = 3;
 	
 	private Category category;
+	*/
 	
 	private int ID;
 	private String productName;
