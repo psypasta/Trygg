@@ -18,12 +18,14 @@ public class Test implements ActionListener{
 
 	private JButton[] buttons = new JButton[12];
     private String[] buttonNames = new String[] {"9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#", "Enter"};
+    
+    private static String data;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					Test window = new Test();
@@ -32,8 +34,8 @@ public class Test implements ActionListener{
 					e.printStackTrace();
 				}
 			}
-		});
-	}
+	//	});
+//	}
 
 	/**
 	 * Create the application.
@@ -157,10 +159,16 @@ public class Test implements ActionListener{
         }
 	}
 
+	public String getData() {
+		return data;
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		if(arg0.getActionCommand() == "Enter") {
-			System.out.println(textField.getText());
+		//	System.out.println(textField.getText());
+			data = textField.getText();
+		//	System.out.println(data);
 			textField.setText("");
 		}
 		else{
