@@ -53,7 +53,7 @@ Delmängd : KASSAsystem
 			
 			Giftcard | ??
 
-Delmängd : ReceiptSystem
+Delmängd : ReceiptSystem inte ett subsystem? gör plats för ett utilsubsystem
 
 	Receipt |
 		var: 
@@ -67,14 +67,42 @@ Delmängd : ReceiptSystem
 
 Delmängd : adminSystem
 
-	User | delad klass ??
+	User | 
 
-	Login | något? 
+		subclasses:
+			Administrator |
+			
+			Employee | 
+			
+			Manager |
 	
+	Credentials |
+		var:
+			username:String
+			password:hashit
+	
+	UserManager |
+		var:
+		
+		Methods:
+			public void addUser()
+			public void removeUser()
+			public void manageUser()
+
+	Login | något? - maybe not
 	
 Delmängd : saleReportSystem
 
 	Sales? |
+	
+	Invetory |
+	
+	Manager |
+	
+	Order | 
+	
+	Report |
+	
 	
 Delmängd : Util?
 
