@@ -7,6 +7,11 @@ public class Administrator extends User {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public void setPrice() {
+		
+	}
 	
-
+	public void getUser() {
+		
+	}
 }
