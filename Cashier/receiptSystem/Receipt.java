@@ -16,39 +16,29 @@ public class Receipt {
 	
 	private static int ID;
 	
-	private Date date;
-	private String sDate;
-	
 	private List <Product> productList = new ArrayList<Product>();
 	private String data;
 	
-	public Receipt(List productList) {
-		this.productList = productList;
-
-		data = "Products: " + productList + "\n"
-				+ "Company: " + COMPANY + "\n" 
-				+ "Org#: " + ORGNUMBER;
-		
-		System.out.println(data);
-		
+	public Receipt() {
+		data =	"KVITTENS\n\nCompany: " + COMPANY + "\n" 
+				+ "Org#: " + ORGNUMBER + "\n";
 	}
 	
-	public void print() {
-		System.out.println(date.getTime());
-		//System.out.println(date.get());
-	//	System.out.println(date.getTime());
+	public void addLine(Product p) {
+		data += p.getID() + " " + p.getProductName() + " " + p.getPrice() + "kr\n";
+	}
+	
+	public String print() {
 		//System.out.println(date.getTime());
+		
+		data += "\nDate: " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
+		
+		return data;
 
 	}
 	
-	public class GetCurrentDateTime
-	{
-		
-		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		Date date = new Date();
-		
-	//	DateFormat.Field
-		
-		
+	public String getData() {
+		return data;
 	}
+
 }

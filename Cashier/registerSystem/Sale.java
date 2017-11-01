@@ -9,15 +9,9 @@ public class Sale {
 	private String Date;
 	private final double MOMS = 0.25;
 	private Payment payment;
-	private Receipt kvitto;
 	
 	public Sale(List productList) {
-		kvitto = new Receipt(productList);
 		getSubTotal(productList);
-	}
-	
-	public Receipt getReceipt() {
-		return kvitto;
 	}
 	
 	public double getTax() {
