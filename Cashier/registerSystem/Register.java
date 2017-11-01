@@ -65,6 +65,7 @@ public class Register {
 		return s.getReceipt();
 	}
 	
+	
 	public double weigh() {
 		return 0;
 	}
