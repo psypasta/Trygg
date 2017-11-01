@@ -19,7 +19,7 @@ public class Test implements ActionListener{
 	private JButton[] buttons = new JButton[12];
     private String[] buttonNames = new String[] {"9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#", "Enter"};
     
-    private static String data;
+    private static volatile String data = "99";
 
 	/**
 	 * Launch the application.
@@ -162,10 +162,21 @@ public class Test implements ActionListener{
 	public String getData() {
 		return data;
 	}
+	public void setData() {
+		data = "99";
+	}
+	
+	public void destroy() {
+
+	    frame.setVisible(false);
+	    frame.dispose();
+
+	    System.exit(0); 
+	}
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		if(arg0.getActionCommand() == "Enter") {
+		if(arg0.getActionCommand().equals("Enter")) {
 		//	System.out.println(textField.getText());
 			data = textField.getText();
 		//	System.out.println(data);

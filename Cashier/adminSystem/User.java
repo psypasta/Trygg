@@ -2,19 +2,14 @@ package adminSystem;
 
 public class User {
 	
-	private String name;	
-	private int code;
+	private String firstName;
+	private String lastName;
+	private Credentials credentials;
+	private static int ID;
 	
-	public User(String name, int code) {
-		this.name = name;
-		this.code = code;
-	}
-	
-	public int getCode() {
-		return code;
-	}
-
-	public String getName() {
-		return name;
+	public User(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		credentials = new Credentials(firstName + ID, "password");
 	}
 }

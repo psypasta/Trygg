@@ -1,16 +1,19 @@
 package registerSystem;
 
+import gui.LoginTest;
 import gui.Test;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
+		LoginTest test2 = new LoginTest();
+		test2.run();
 		
 		Test test = new Test();
 		test.run();
 
-		Register /*HASSAN TILL*/kassan = new Register();
+		Register kassan = new Register();
 		Product produces = new Product(1210, "Marabou stek choklad", 100);
 		
 		while(true) {
@@ -26,11 +29,14 @@ public class Main {
 				System.out.println("choklad");
 				kassan.addProduct(produces);
 			}
-			System.out.println(test.getData());
+		//	System.out.println(test.getData());
 		}
 		
 		kassan.commitSale();
-		test.destroy();
+		test.destroy(); 
+		test2.setVisible(false);
+		test2.dispose();
+		
 	}
 
 }
