@@ -77,7 +77,7 @@ public class Main {
 				0.5f, 0.5f, 0f		//V3
 		};
 		
-		int[] indices = {					//WTF is going on here
+		int[] indices = {
 				0,1,3,	//top left triangle
 				3,1,2	//bottom right triangle
 		};
