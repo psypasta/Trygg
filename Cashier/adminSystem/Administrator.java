@@ -1,10 +1,12 @@
 package adminSystem;
 
-public class Administrator extends User {
+public class Administrator extends User{
 
+	private Handler handler;
+	
 	public Administrator(String firstName, String lastName) {
 		super(firstName, lastName);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public void setPrice() {
@@ -13,5 +15,16 @@ public class Administrator extends User {
 	
 	public void getUser() {
 		
+	}
+	
+	public void modUser() {
+		
+	}
+	public void modProduct() {
+		
+	}
+	
+	public String productLabel() {
+		return null;
 	}
 }

@@ -17,6 +17,7 @@ public class Product {
 	*/
 	
 	private int ID;
+	private int inventory;
 	private String productName;
 	private float price;
 	

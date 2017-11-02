@@ -3,6 +3,8 @@ package registerSystem;
 import java.util.ArrayList;
 import java.util.List;
 
+import adminSystem.Employee;
+import adminSystem.User;
 import gui.LoginTest;
 import gui.Test;
 
@@ -16,7 +18,9 @@ public class Main {
 		Test test = new Test();
 		test.run();
 
-		Register kassan = new Register();
+		User user = new Employee("Max", "Blomstervall");
+		
+		Register kassan = new Register(user);
 		Product produces = new Product(1210, "Marabou stek choklad", 100);
 		List<Receipt> receiptList = new ArrayList<Receipt>();
 		
@@ -26,7 +30,7 @@ public class Main {
 			if(test.getData().equals("00")) {
 	//			kassan
 				test.setData();
-				receiptList.add(kassan.getReceipt());
+				receiptList.add(kassan.commitSale());
 			}
 			else if(test.getData().equals("10")) {
 				test.setData();
@@ -39,7 +43,11 @@ public class Main {
 		//	System.out.println(test.getData());
 		}
 		
-		kassan.commitSale();
+		for(int i = 0; i < receiptList.size(); i++) {
+	//		System.out.println(receiptList.size());
+	//		System.out.println(receiptList.get(i).getData());
+		}
+		
 		test.destroy(); 
 		test2.setVisible(false);
 		test2.dispose();

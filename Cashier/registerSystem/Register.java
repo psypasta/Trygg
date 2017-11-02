@@ -6,16 +6,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import adminSystem.Employee;
+import adminSystem.User;
+
 public class Register {
 	
 	//product count
 	private int productCount;
+	private int saleCount = 0;
+	
 	private List <Product> productList = new ArrayList<Product>();
+	//private List<Receipt> kvittoList = new ArrayList<Receipt>();
 	private Receipt kvitto;
 	private Sale s = new Sale(productList);
 	private File matFile = new File("Cashier/resource/mat.txt");
 	
-	public Register(/*User u*/) {
+	
+	private User user;
+	
+	public Register(User u) {
+		this.user = u;
 		kvitto = new Receipt();
 	}
 	
@@ -25,13 +35,11 @@ public class Register {
 	}
 	
 		
-	public void commitSale() {
+	public Receipt commitSale() {
 		//TRANSAKTION
-		//add sale to sale report system
-		System.out.println(kvitto.print());
-	}
-	
-	public Receipt getReceipt() {
+		//add sale to sale report system, remove product from lager, and add to ~ salereport. ~ 
+		
+		
 		return kvitto;
 	}
 	
