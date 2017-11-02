@@ -1,4 +1,4 @@
-package receiptSystem;
+package registerSystem;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-
-import registerSystem.Product;
 public class Receipt {
 	
 	private static final double MOMS = 0.25;

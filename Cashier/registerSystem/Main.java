@@ -1,5 +1,8 @@
 package registerSystem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import gui.LoginTest;
 import gui.Test;
 
@@ -15,14 +18,15 @@ public class Main {
 
 		Register kassan = new Register();
 		Product produces = new Product(1210, "Marabou stek choklad", 100);
+		List<Receipt> receiptList = new ArrayList<Receipt>();
 		
 		while(true) {
 			
 		//	System.out.println(test.getData());
 			if(test.getData().equals("00")) {
-				System.out.println();
-				System.out.println("SEPE");
-				break;	
+	//			kassan
+				test.setData();
+				receiptList.add(kassan.getReceipt());
 			}
 			else if(test.getData().equals("10")) {
 				test.setData();
