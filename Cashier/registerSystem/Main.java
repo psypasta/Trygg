@@ -33,6 +33,9 @@ public class Main {
 				System.out.println("choklad");
 				kassan.addProduct(produces);
 			}
+			if(test.getData().equals("420")) {
+				break;
+			}
 		//	System.out.println(test.getData());
 		}
 		
