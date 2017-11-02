@@ -34,9 +34,11 @@ public class Receipt {
 		return data;
 
 	}
-	
+
 	public String getData() {
+		// TODO Auto-generated method stub
 		return data;
 	}
+
 
 }

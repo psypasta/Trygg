@@ -16,8 +16,8 @@ public class Register {
 	private int saleCount = 0;
 	
 	private List <Product> productList = new ArrayList<Product>();
-	//private List<Receipt> kvittoList = new ArrayList<Receipt>();
-	private Receipt kvitto;
+	private List<Receipt> kvittoList = new ArrayList<Receipt>();
+//	private Receipt kvitto;
 	private Sale s = new Sale(productList);
 	private File matFile = new File("Cashier/resource/mat.txt");
 	
@@ -26,21 +26,23 @@ public class Register {
 	
 	public Register(User u) {
 		this.user = u;
-		kvitto = new Receipt();
+		kvittoList.add(new Receipt());
 	}
 	
 	public void addProduct(Product p) {
 		productList.add(p);
-		kvitto.addLine(p);
+		kvittoList.get(saleCount).addLine(p);
 	}
 	
 		
-	public Receipt commitSale() {
+	public List commitSale() {
 		//TRANSAKTION
 		//add sale to sale report system, remove product from lager, and add to ~ salereport. ~ 
+		kvittoList.add(new Receipt());
 		
-		
-		return kvitto;
+		saleCount++;
+	//	return kvitto;
+		return kvittoList;
 	}
 	
 	public void openMattxt() {

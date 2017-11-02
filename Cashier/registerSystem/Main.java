@@ -29,8 +29,9 @@ public class Main {
 		//	System.out.println(test.getData());
 			if(test.getData().equals("00")) {
 	//			kassan
+		//		kassan.commitSale();
 				test.setData();
-				receiptList.add(kassan.commitSale());
+				receiptList = kassan.commitSale();
 			}
 			else if(test.getData().equals("10")) {
 				test.setData();
@@ -45,7 +46,7 @@ public class Main {
 		
 		for(int i = 0; i < receiptList.size(); i++) {
 	//		System.out.println(receiptList.size());
-	//		System.out.println(receiptList.get(i).getData());
+			System.out.println(receiptList.get(i).getData());
 		}
 		
 		test.destroy(); 
