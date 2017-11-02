@@ -75,7 +75,7 @@
   </class>  
   <package id="9" language="java" name="adminSystem" project="modig" file="/modig/Cashier/adminSystem" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="290" y="43"/>    
+    <position height="-1" width="-1" x="453" y="35"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
   <realization id="10">    

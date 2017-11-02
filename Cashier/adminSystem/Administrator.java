@@ -9,21 +9,6 @@ public class Administrator extends User{
 		
 	}
 	
-	public void setPrice() {
-		
-	}
-	
-	public void getUser() {
-		
-	}
-	
-	public void modUser() {
-		
-	}
-	public void modProduct() {
-		
-	}
-	
 	public String productLabel() {
 		return null;
 	}
