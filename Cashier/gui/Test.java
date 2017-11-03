@@ -2,12 +2,17 @@ package gui;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
+
+import registerSystem.Product;
+
 import java.awt.Font;
 import java.awt.TextArea;
 
@@ -15,9 +20,13 @@ public class Test implements ActionListener{
 
 	private JFrame frame;
 	private JTextField textField;
-
+	private static JTextArea textArea;
+	
 	private JButton[] buttons = new JButton[12];
     private String[] buttonNames = new String[] {"9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#", "Enter"};
+    
+    private List<Product> productList;
+    private int productCount = 0;
     
     private static volatile String data = "99";
 
@@ -48,6 +57,9 @@ public class Test implements ActionListener{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		productList = new ArrayList<Product>();
+		
 		frame = new JFrame();
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 580, 420);
@@ -64,7 +76,7 @@ public class Test implements ActionListener{
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JTextArea textArea = new JTextArea();
+		textArea = new JTextArea();
 		springLayout.putConstraint(SpringLayout.NORTH, textArea, 0, SpringLayout.NORTH, textField);
 		springLayout.putConstraint(SpringLayout.WEST, textArea, 6, SpringLayout.EAST, textField);
 		springLayout.putConstraint(SpringLayout.SOUTH, textArea, -50, SpringLayout.SOUTH, frame.getContentPane());
@@ -165,6 +177,17 @@ public class Test implements ActionListener{
 	}
 	public void setData() {
 		data = "99";
+	}
+	
+	public void addProduct(Product p) {
+		
+		textArea.append(p.getID() + " " + p.getProductName() + " " + p.getPrice() + "\n");
+		System.out.println("append");
+		//productList.add(p);
+	}
+	
+	public void clearArea() {
+		textArea.setText(null);
 	}
 	
 	public void destroy() {

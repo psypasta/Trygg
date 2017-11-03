@@ -32,11 +32,13 @@ public class Main {
 		//		kassan.commitSale();
 				test.setData();
 				receiptList = kassan.commitSale();
+				test.clearArea();
 			}
 			else if(test.getData().equals("10")) {
 				test.setData();
 				System.out.println("choklad");
 				kassan.addProduct(produces);
+				test.addProduct(produces);
 			}
 			if(test.getData().equals("420")) {
 				break;
