@@ -4,20 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adminSystem.Employee;
-import adminSystem.ProductReader;
 import adminSystem.User;
-import adminSystem.UserReader;
-import gui.LoginTest;
 import gui.Test;
 
 //ingen av dessa implementationer är final >
 
-public class Main {
+public class RegisterMain {
 
 	public static void main(String[] args) {
 		
-		LoginTest test2 = new LoginTest();
-		test2.run();
+		
 		
 		Test test = new Test();
 		test.run();
@@ -27,18 +23,6 @@ public class Main {
 		Register kassan = new Register(user);
 		Product produces = new Product(1210, "Marabou stek choklad", 100);
 		List<Receipt> receiptList = new ArrayList<Receipt>();
-		
-		ProductReader pr = new ProductReader();
-		pr.addLine("1210 Marabou Choklad 100");
-		String productFile = pr.read();
-		
-		UserReader ur = new UserReader();
-		ur.addLine("05 Sattar Password Admin");
-		String userFile = ur.read();
-		
-		System.out.println(productFile);
-		System.out.println(userFile);
-		
 		
 		while(true) {
 			
@@ -67,9 +51,9 @@ public class Main {
 			System.out.println(receiptList.get(i).getData());
 		}
 		
+		
+		//dispose of window
 		test.destroy(); 
-		test2.setVisible(false);
-		test2.dispose();
 		
 	}
 

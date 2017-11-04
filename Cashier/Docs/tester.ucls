@@ -65,8 +65,8 @@
     <position height="-1" width="-1" x="450" y="58"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="9" language="java" name="registerSystem.Main" project="modig" 
-    file="/modig/Cashier/registerSystem/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="registerSystem.RegisterMain" project="modig" 
+    file="/modig/Cashier/registerSystem/RegisterMain.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="370" y="165"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
