@@ -46,6 +46,18 @@ public class ProductReader  implements FileReader {
 
 	}
 
+	@Override
+	public void addLine() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeLine() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 }
