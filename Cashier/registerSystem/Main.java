@@ -10,6 +10,8 @@ import adminSystem.UserReader;
 import gui.LoginTest;
 import gui.Test;
 
+//ingen av dessa implementationer är final >
+
 public class Main {
 
 	public static void main(String[] args) {
