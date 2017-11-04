@@ -1,7 +1,3 @@
-#FÖRSTA SIFFRAN BESTÄMMER \/
-#0 ÄR KILO PRIS - 1 ÄR STYCKPRIS¨
-# <- rader skall ignoreras
-
 #ID 		Name			Price
 
 0000 Apple 5
@@ -24,4 +20,7 @@
 0317 LambCHOPS 124
 0318 Pigs Tongue 245
 0319 Minced meat 234
-1210 Marabou Choklad 100
+
+#FÖRSTA SIFFRAN BESTÄMMER \/
+#0 ÄR KILO PRIS - 1 ÄR STYCKPRIS¨
+# <- rader skall ignoreras

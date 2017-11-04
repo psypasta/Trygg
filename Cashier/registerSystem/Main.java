@@ -28,10 +28,11 @@ public class Main {
 		List<Receipt> receiptList = new ArrayList<Receipt>();
 		
 		ProductReader pr = new ProductReader();
-		pr.addLine("\n1210 Marabou Choklad 100");
+		pr.addLine("1210 Marabou Choklad 100");
 		String productFile = pr.read();
 		
 		UserReader ur = new UserReader();
+		ur.addLine("05 Sattar Password Admin");
 		String userFile = ur.read();
 		
 		System.out.println(productFile);

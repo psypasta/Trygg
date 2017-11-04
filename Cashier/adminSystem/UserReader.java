@@ -1,6 +1,9 @@
 package adminSystem;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -31,8 +34,17 @@ public class UserReader implements FileReader{
 
 	@Override
 	public void addLine(String line) {
-		// TODO Auto-generated method stub
+		boolean append = true;
+		Writer output;
 		
+		try {
+			output = new BufferedWriter(new FileWriter(path, append));
+		
+			output.append("\n" + line);
+			output.close();
+		} catch (IOException e) {
+				e.printStackTrace();
+		}  
 	}
 
 	@Override

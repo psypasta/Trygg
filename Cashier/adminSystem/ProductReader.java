@@ -57,7 +57,7 @@ public class ProductReader  implements FileReader {
 		try {
 			output = new BufferedWriter(new FileWriter(path, append));
 		
-			output.append(line);
+			output.append("\n" + line);
 			output.close();
 		} catch (IOException e) {
 				e.printStackTrace();
