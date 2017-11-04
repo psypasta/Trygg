@@ -8,11 +8,11 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class UserReader implements FileReader{
+public class UserHandler implements FileHandler{
 
 	private String path = "Cashier/resource/users.txt";
 	
-	public UserReader() {
+	public UserHandler() {
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -27,7 +27,25 @@ public class UserReader implements FileReader{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		    return new String(encoded, StandardCharsets.UTF_8);
+			
+			String data = new String(encoded, StandardCharsets.UTF_8);
+			String[] lines = data.split(System.getProperty("line.separator"));
+			
+			for(int i=0;i<lines.length;i++){
+			    if(lines[i].startsWith("#")){
+			        lines[i]="";
+			    }
+			}
+			
+			StringBuilder finalStringBuilder = new StringBuilder();
+			for(String s:lines){
+			   if(!s.equals("")){
+			       finalStringBuilder.append(s).append(System.getProperty("line.separator"));
+			    }
+			}
+			data = finalStringBuilder.toString();
+				
+		    return data;
 		  }
 
 	}

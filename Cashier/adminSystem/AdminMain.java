@@ -9,17 +9,16 @@ public class AdminMain {
 		LoginTest test2 = new LoginTest();
 		test2.run();
 		
-		ProductReader pr = new ProductReader();
+		ProductHandler pr = new ProductHandler();
 		pr.addLine("1210 Marabou Choklad 100");
 		String productFile = pr.read();
 		
-		UserReader ur = new UserReader();
+		UserHandler ur = new UserHandler();
 		ur.addLine("05 Sattar Password Admin");
 		String userFile = ur.read();
 		
 		System.out.println(productFile);
 		System.out.println(userFile);
-		
 		
 		//dispose of window
 		test2.setVisible(false);

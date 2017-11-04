@@ -3,6 +3,7 @@ package registerSystem;
 import java.util.ArrayList;
 import java.util.List;
 
+import adminSystem.AdminMain;
 import adminSystem.Employee;
 import adminSystem.User;
 import gui.Test;

@@ -63,7 +63,7 @@ public class TestCardLayout implements ActionListener{
            }
         //   System.out.println(login.getLogin());
            System.out.println(boolLogin);
-           if(command.equals("Login")) {
+           if(command.equals("Login")) {	
 	           	
 	           	boolLogin = true;
 	           	System.out.println(boolLogin);

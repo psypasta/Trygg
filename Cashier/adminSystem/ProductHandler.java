@@ -8,11 +8,11 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class ProductReader  implements FileReader {
+public class ProductHandler  implements FileHandler {
 	
 	private String path = "Cashier/resource/products.txt";
 
-	public ProductReader() {
+	public ProductHandler() {
 		// TODO Auto-generated constructor stub
 	}
 	
