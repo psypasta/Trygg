@@ -101,8 +101,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="13" language="java" name="adminSystem.Handler" project="modig" 
-    file="/modig/Cashier/adminSystem/Handler.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="13" language="java" name="adminSystem.FileReader" project="modig" 
+    file="/modig/Cashier/adminSystem/FileReader.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1134" y="1174"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -119,8 +119,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="adminSystem.productHandler" project="modig" 
-    file="/modig/Cashier/adminSystem/productHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="adminSystem.ProductReader" project="modig" 
+    file="/modig/Cashier/adminSystem/ProductReader.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="987" y="936"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -178,8 +178,8 @@
     <position height="-1" width="-1" x="567" y="64"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="22" language="java" name="adminSystem.UserHandler" project="modig" 
-    file="/modig/Cashier/adminSystem/UserHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="22" language="java" name="adminSystem.UserReader" project="modig" 
+    file="/modig/Cashier/adminSystem/UserReader.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1130" y="936"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -219,20 +219,21 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="27">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="18"/>  
-  </realization>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
   <association id="28">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="29" name="user">        
+    <bendpoint x="1862" y="606"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="29" name="productList">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="30" minimum="0" maximum="1">        
+      <multiplicity id="30" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
+    <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <realization id="31">    
@@ -251,87 +252,86 @@
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="35">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="19"/>  
-  </generalization>  
-  <association id="36">    
+  <association id="35">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="36" name="user">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="37" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
     <end type="SOURCE" refId="25" navigable="false">      
-      <attribute id="37" name="productList">        
+      <attribute id="39" name="productList">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="38" minimum="0" maximum="2147483647">        
+      <multiplicity id="40" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="39">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="40" name="i">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="41" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="42">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <association id="43">    
-    <bendpoint x="1862" y="606"/>    
+  <association id="41">    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="44" name="productList">        
+      <attribute id="42" name="s">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="45" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="46">    
-    <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="47" name="s">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="48" minimum="0" maximum="1">        
+      <multiplicity id="43" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="20" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="49">    
+  <realization id="44">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="45">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="18"/>  
   </realization>  
-  <generalization id="50">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="19"/>  
-  </generalization>  
-  <generalization id="51">    
+  <realization id="46">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <generalization id="47">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="19"/>  
   </generalization>  
-  <association id="52">    
+  <association id="48">    
     <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="53" name="payment">        
+      <attribute id="49" name="payment">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="54" minimum="0" maximum="1">        
+      <multiplicity id="50" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="52" name="i">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="53" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="54">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

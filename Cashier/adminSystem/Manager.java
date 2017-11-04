@@ -3,6 +3,8 @@ package adminSystem;
 import registerSystem.Product;
 import saleReportSystem.Inventory;
 
+
+//Manager hanterar salesreport systemet - dÃ¥ligt namn?
 public class Manager extends User {
 
 	Inventory i = new Inventory();
@@ -24,7 +26,7 @@ public class Manager extends User {
 	}
 	public void orderProduct(int numberOfProduct, Product p)
 	{
-		// Lista ut vilka varor vi har i lågt saldo, ska kunna markera vilken vara vi ska beställa, sen en knapp för "beställ"
+		// Lista ut vilka varor vi har i lï¿½gt saldo, ska kunna markera vilken vara vi ska bestï¿½lla, sen en knapp fï¿½r "bestï¿½ll"
 	}
 	
 }

@@ -45,6 +45,7 @@ public class Register {
 		return kvittoList;
 	}
 	
+	//drop this
 	public void openMattxt() {
 //		String code = null;
 		//	code = scanKeyboard.nextLine();

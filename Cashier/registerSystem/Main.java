@@ -1,10 +1,13 @@
 package registerSystem;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 import adminSystem.Employee;
+import adminSystem.ProductReader;
 import adminSystem.User;
+import adminSystem.UserReader;
 import gui.LoginTest;
 import gui.Test;
 
@@ -23,6 +26,15 @@ public class Main {
 		Register kassan = new Register(user);
 		Product produces = new Product(1210, "Marabou stek choklad", 100);
 		List<Receipt> receiptList = new ArrayList<Receipt>();
+		
+		ProductReader pr = new ProductReader();
+		String productFile = pr.read();
+		
+		UserReader ur = new UserReader();
+		String userFile = ur.read();
+		
+		System.out.println(productFile);
+		System.out.println(userFile);
 		
 		while(true) {
 			
