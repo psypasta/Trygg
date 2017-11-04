@@ -12,7 +12,7 @@ import javax.swing.SwingUtilities;
 
 public class TestCardLayout {
 
-    PanelOne p1 = new PanelOne();
+    LoginPanel login = new LoginPanel();
     PanelTwo p2 = new PanelTwo();
     PanelThree p3 = new PanelThree();
 
@@ -30,8 +30,8 @@ public class TestCardLayout {
         showOne.addActionListener(new ButtonListener());
         showTwo.addActionListener(new ButtonListener());
         showThree.addActionListener(new ButtonListener());
-
-        cardPanel.add(p1, "panel 1");
+        
+        cardPanel.add(login, "panel 1");
         cardPanel.add(p2, "panel 2");
         cardPanel.add(p3, "panel 3");
 
@@ -44,7 +44,7 @@ public class TestCardLayout {
     }
 
     private class ButtonListener implements ActionListener {
-
+//big time derps going down
         public void actionPerformed(ActionEvent e) {
             String command = e.getActionCommand();
             if ("Show One".equals(command)) {
@@ -53,6 +53,10 @@ public class TestCardLayout {
                 layout.show(cardPanel, "panel 2");
             } else {
                 layout.show(cardPanel, "panel 3");
+            }
+            System.out.println(login.getLogin());
+            if(login.getLogin()) {
+            	layout.show(cardPanel, "panel 2");
             }
         }
     }
