@@ -1,18 +1,19 @@
 package gui;
 
-import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-class PanelThree extends JPanel {
+public class SalesPanel extends JPanel {
 
-    public PanelThree() {
-        setBackground(Color.YELLOW);
-        add(new JLabel("Panel three"));
-    }
-
+	/**
+	 * Create the panel.
+	 */
+	public SalesPanel() {
+        add(new JLabel("Sales"));
+	}
+  
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(300, 300);

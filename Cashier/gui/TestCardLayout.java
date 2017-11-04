@@ -14,7 +14,7 @@ public class TestCardLayout {
 
     LoginPanel login = new LoginPanel();
     RegisterPanel register = new RegisterPanel();
-    PanelThree p3 = new PanelThree();
+    SalesPanel sales = new SalesPanel();
 
     CardLayout layout = new CardLayout();
     JPanel cardPanel = new JPanel(layout);
@@ -33,7 +33,7 @@ public class TestCardLayout {
         
         cardPanel.add(login, "login");
         cardPanel.add(register, "register");
-        cardPanel.add(p3, "panel 3");
+        cardPanel.add(sales, "sales");
 
         JFrame frame = new JFrame("Test Card");
         frame.setResizable(false);
@@ -56,7 +56,7 @@ public class TestCardLayout {
             } else if ("Show Two".equals(command)) {
                 layout.show(cardPanel, "register");
             } else {
-                layout.show(cardPanel, "panel 3");
+                layout.show(cardPanel, "sales");
             }
             System.out.println(login.getLogin());
         /*    if(login.getLogin()) {

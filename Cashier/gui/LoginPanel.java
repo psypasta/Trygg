@@ -21,25 +21,25 @@ public class LoginPanel extends JPanel {
 		setLayout(null);
 		
 		txtUsername = new JTextField();
-		txtUsername.setBounds(100, 100, 86, 20);
+		txtUsername.setBounds(180, 100, 86, 20);
 		add(txtUsername);
 		txtUsername.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("Username");
-		lblUsername.setBounds(100, 75, 55, 14);
+		lblUsername.setBounds(180, 75, 70, 14);
 		add(lblUsername);
 		
 		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setBounds(100, 131, 46, 14);
+		lblPassword.setBounds(180, 131, 70, 14);
 		add(lblPassword);
 		
 		textField = new JTextField();
-		textField.setBounds(100, 156, 86, 20);
+		textField.setBounds(180, 156, 86, 20);
 		add(textField);
 		textField.setColumns(10);
 		
 		JButton btnLogin = new JButton("Login");
-		btnLogin.setBounds(100, 187, 89, 23);
+		btnLogin.setBounds(180, 187, 89, 23);
 		add(btnLogin);
 		
 		 btnLogin.addActionListener(new ButtonListener());
