@@ -11,9 +11,7 @@ import gui.Test;
 
 public class RegisterMain {
 
-	public static void main(String[] args) {
-		
-		
+	public static void main(String[] args) {		
 		
 		Test test = new Test();
 		test.run();
