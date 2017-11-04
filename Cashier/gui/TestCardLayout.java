@@ -17,6 +17,7 @@ public class TestCardLayout implements ActionListener{
     private LoginPanel login = new LoginPanel(this);
     private RegisterPanel register = new RegisterPanel();
     private SalesPanel sales = new SalesPanel();
+    private AdminPanel admin = new AdminPanel();
 
     private CardLayout layout = new CardLayout();
     private JPanel cardPanel = new JPanel(layout);
@@ -27,17 +28,21 @@ public class TestCardLayout implements ActionListener{
         JButton showOne = new JButton("Show One");
         JButton showTwo = new JButton("Show Two");
         JButton showThree = new JButton("Show Three");
+        JButton showFour = new JButton("Show Four");
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.add(showOne);
         buttonsPanel.add(showTwo);
         buttonsPanel.add(showThree);
+        buttonsPanel.add(showFour);
         showOne.addActionListener(this);
         showTwo.addActionListener(this);
         showThree.addActionListener(this);
+        showFour.addActionListener(this);
         
         cardPanel.add(login, "login");
         cardPanel.add(register, "register");
         cardPanel.add(sales, "sales");
+        cardPanel.add(admin, "admin");
 
         JFrame frame = new JFrame("Test Card");
         frame.setResizable(false);
@@ -58,8 +63,10 @@ public class TestCardLayout implements ActionListener{
                layout.show(cardPanel, "login");
            } else if ("Show Two".equals(command)) {
                layout.show(cardPanel, "register");
-           } else {
+           } else if("Show Three".equals(command)){
                layout.show(cardPanel, "sales");
+           } else if("Show Four".equals(command)) {
+        	   layout.show(cardPanel, "admin");
            }
         //   System.out.println(login.getLogin());
            System.out.println(boolLogin);

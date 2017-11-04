@@ -32,6 +32,7 @@ public class RegisterPanel extends JPanel implements ActionListener {
 		initialize();
 	}
 	
+	//skapar och lägger till komponenter i JPanel
 	private void initialize() {
 		
 	//	productList = new ArrayList<Product>();
