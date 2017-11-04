@@ -10,26 +10,30 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-public class TestCardLayout {
+public class TestCardLayout implements ActionListener{
 
-    LoginPanel login = new LoginPanel();
-    RegisterPanel register = new RegisterPanel();
-    SalesPanel sales = new SalesPanel();
+//	private static ActionListener listener = new Listener();
+	
+    private LoginPanel login = new LoginPanel(this);
+    private RegisterPanel register = new RegisterPanel();
+    private SalesPanel sales = new SalesPanel();
 
-    CardLayout layout = new CardLayout();
-    JPanel cardPanel = new JPanel(layout);
+    private CardLayout layout = new CardLayout();
+    private JPanel cardPanel = new JPanel(layout);
+    
+    private boolean boolLogin = false;
 
     public TestCardLayout() {
         JButton showOne = new JButton("Show One");
         JButton showTwo = new JButton("Show Two");
-        JButton showThree = new JButton("Show Trree");
+        JButton showThree = new JButton("Show Three");
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.add(showOne);
         buttonsPanel.add(showTwo);
         buttonsPanel.add(showThree);
-        showOne.addActionListener(new ButtonListener());
-        showTwo.addActionListener(new ButtonListener());
-        showThree.addActionListener(new ButtonListener());
+        showOne.addActionListener(this);
+        showTwo.addActionListener(this);
+        showThree.addActionListener(this);
         
         cardPanel.add(login, "login");
         cardPanel.add(register, "register");
@@ -47,24 +51,29 @@ public class TestCardLayout {
         frame.setVisible(true);
     }
 
-    private class ButtonListener implements ActionListener {
-//big time derps going down
-        public void actionPerformed(ActionEvent e) {
-            String command = e.getActionCommand();
-            if ("Show One".equals(command)) {
-                layout.show(cardPanel, "login");
-            } else if ("Show Two".equals(command)) {
-                layout.show(cardPanel, "register");
-            } else {
-                layout.show(cardPanel, "sales");
-            }
-            System.out.println(login.getLogin());
-        /*    if(login.getLogin()) {
-            	layout.show(cardPanel, "panel 2");
-            } */
-        }
-    }
-
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		   String command = e.getActionCommand();
+           if ("Show One".equals(command)) {
+               layout.show(cardPanel, "login");
+           } else if ("Show Two".equals(command)) {
+               layout.show(cardPanel, "register");
+           } else {
+               layout.show(cardPanel, "sales");
+           }
+        //   System.out.println(login.getLogin());
+           System.out.println(boolLogin);
+           if(command.equals("Login")) {
+	           	
+	           	boolLogin = true;
+	           	System.out.println(boolLogin);
+	           	layout.show(cardPanel, "register");
+           } /*else(command.equals("Logout")){
+        	   boolLogin = false;
+        	   layout.show(cardPanel, "login");
+           }*/
+	}
+    
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -73,4 +82,5 @@ public class TestCardLayout {
             }
         });
     }
+
 }
