@@ -13,7 +13,7 @@ import javax.swing.SwingUtilities;
 public class TestCardLayout {
 
     LoginPanel login = new LoginPanel();
-    PanelTwo p2 = new PanelTwo();
+    RegisterPanel register = new RegisterPanel();
     PanelThree p3 = new PanelThree();
 
     CardLayout layout = new CardLayout();
@@ -31,15 +31,19 @@ public class TestCardLayout {
         showTwo.addActionListener(new ButtonListener());
         showThree.addActionListener(new ButtonListener());
         
-        cardPanel.add(login, "panel 1");
-        cardPanel.add(p2, "panel 2");
+        cardPanel.add(login, "login");
+        cardPanel.add(register, "register");
         cardPanel.add(p3, "panel 3");
 
         JFrame frame = new JFrame("Test Card");
+        frame.setResizable(false);
+		frame.setBounds(100, 100, 580, 450);
+		
         frame.add(cardPanel);
         frame.add(buttonsPanel, BorderLayout.SOUTH);
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+   //   frame.pack(); automatically sets the size of windows according to components use setSize/setBounds OR pack
         frame.setVisible(true);
     }
 
@@ -48,16 +52,16 @@ public class TestCardLayout {
         public void actionPerformed(ActionEvent e) {
             String command = e.getActionCommand();
             if ("Show One".equals(command)) {
-                layout.show(cardPanel, "panel 1");
+                layout.show(cardPanel, "login");
             } else if ("Show Two".equals(command)) {
-                layout.show(cardPanel, "panel 2");
+                layout.show(cardPanel, "register");
             } else {
                 layout.show(cardPanel, "panel 3");
             }
             System.out.println(login.getLogin());
-            if(login.getLogin()) {
+        /*    if(login.getLogin()) {
             	layout.show(cardPanel, "panel 2");
-            }
+            } */
         }
     }
 
