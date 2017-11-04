@@ -30,7 +30,7 @@ public class UserReader implements FileReader{
 	}
 
 	@Override
-	public void addLine() {
+	public void addLine(String line) {
 		// TODO Auto-generated method stub
 		
 	}

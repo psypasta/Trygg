@@ -28,6 +28,7 @@ public class Main {
 		List<Receipt> receiptList = new ArrayList<Receipt>();
 		
 		ProductReader pr = new ProductReader();
+		pr.addLine("\n1210 Marabou Choklad 100");
 		String productFile = pr.read();
 		
 		UserReader ur = new UserReader();
@@ -35,6 +36,7 @@ public class Main {
 		
 		System.out.println(productFile);
 		System.out.println(userFile);
+		
 		
 		while(true) {
 			
