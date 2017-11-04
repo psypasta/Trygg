@@ -1,3 +1,7 @@
+# <- rader skall ignoreras
+
+#ID	Name	Password	Position
+
 00 Max Password Employee
 01 Robin password Manager
 02 Jonathan password Admin
