@@ -182,7 +182,7 @@ public class Test implements ActionListener{
 	public void addProduct(Product p) {
 		
 		textArea.append(p.getID() + " " + p.getProductName() + " " + p.getPrice() + "\n");
-		System.out.println("append");
+		//System.out.println("append");
 		//productList.add(p);
 	}
 	

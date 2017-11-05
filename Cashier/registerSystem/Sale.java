@@ -3,6 +3,8 @@ package registerSystem;
 import java.util.List;
 
 public class Sale {
+	
+	private String path = "Cashier/resource/Sales.txt";
 	private int ID;
 	private String Date;
 	private final double MOMS = 0.25;
