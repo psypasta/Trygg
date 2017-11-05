@@ -3,7 +3,6 @@ package registerSystem;
 import java.util.ArrayList;
 import java.util.List;
 
-import adminSystem.AdminMain;
 import adminSystem.Employee;
 import adminSystem.User;
 import gui.Test;
@@ -32,6 +31,8 @@ public class RegisterMain {
 				test.setData();
 				receiptList = kassan.commitSale();
 				test.clearArea();
+				
+				System.out.println("Betala: " + kassan.getPrice());
 			}
 			else if(test.getData().equals("10")) {
 				test.setData();

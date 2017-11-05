@@ -9,7 +9,7 @@ public class Sale {
 	private Payment payment;
 	
 	public Sale(List productList) {
-		getSubTotal(productList);
+	//	System.out.println(getSubTotal(productList));
 	}
 	
 	public double getTax() {
@@ -17,12 +17,13 @@ public class Sale {
 	}
 	
 	public double getSubTotal(List<Product> productList) {
-		
+		double sum = 0;
 		for(int i = 0; i < productList.size(); i++) {
-			System.out.println(productList.get(i).getPrice()); //hjälp	
+		//	System.out.println(productList.get(i).getPrice()); //hjälp	
+			sum += productList.get(i).getPrice();
 		}
 		
-		return 0;
+		return sum;
 	}
 	
 	public double getTotal() {

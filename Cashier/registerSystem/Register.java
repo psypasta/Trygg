@@ -14,9 +14,13 @@ public class Register {
 	//product count
 	private int productCount;
 	private int saleCount = 0;
+	private double saldo = 2550;
+	private double price = 0;
 	
 	private List <Product> productList = new ArrayList<Product>();
 	private List<Receipt> kvittoList = new ArrayList<Receipt>();
+//	List<Sale> salesList = new ArrayList<Sale>();
+	private Sale snail;
 //	private Receipt kvitto;
 	private Sale s = new Sale(productList);
 	private File matFile = new File("Cashier/resource/mat.txt");
@@ -38,6 +42,9 @@ public class Register {
 	public List commitSale() {
 		//TRANSAKTION
 		//add sale to sale report system, remove product from lager, and add to ~ salereport. ~ 
+		snail = new Sale(productList);
+		price = snail.getSubTotal(productList);
+		productList = new ArrayList<Product>();
 		kvittoList.add(new Receipt());
 		
 		saleCount++;
@@ -85,5 +92,9 @@ public class Register {
 	
 	public double weigh() {
 		return 0;
+	}
+
+	public double getPrice() {
+		return price;
 	}
 }
