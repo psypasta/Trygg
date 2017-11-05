@@ -35,7 +35,7 @@ public class AdminPanel extends JPanel implements ActionListener {
         list.setBounds(409, 36, 161, 333);
         add(list);
         
-        JButton btnNewButton = new JButton("Anst√§llda");
+        JButton btnNewButton = new JButton("Anst‰llda");
         btnNewButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent arg0) {
         	}
@@ -91,7 +91,7 @@ public class AdminPanel extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		   String command = e.getActionCommand();
-           if ("Anst√§llda".equals(command)) {
+           if ("Anst‰llda".equals(command)) {
                layout.show(panel, "employee");
            } else if ("Vara".equals(command)) {
                layout.show(panel, "product");

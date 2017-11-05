@@ -1,0 +1,9 @@
+#QUESTIONS FOR THE PRODUCT OWNER
+
+	1.Generera en lista över varugruppsspecificerad struktur 
+	2.Rapporten Skall kunna sorteras med datum och tidsintervall   
+	3.Generera prislistorna inklusive och exklusive moms 
+	4.Generera en lista över varugruppsspecificerad struktur 
+	
+	
+	
