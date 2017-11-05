@@ -1,4 +1,4 @@
-package gui;
+package gui.admin;
 
 import java.awt.CardLayout;
 import java.awt.Dimension;

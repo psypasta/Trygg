@@ -1,4 +1,4 @@
-package gui;
+package gui.register;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;

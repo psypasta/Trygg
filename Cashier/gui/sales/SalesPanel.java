@@ -1,4 +1,4 @@
-package gui;
+package gui.sales;
 
 import java.awt.CardLayout;
 import java.awt.Dimension;

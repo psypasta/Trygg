@@ -10,6 +10,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import gui.admin.AdminPanel;
+import gui.register.RegisterPanel;
+import gui.sales.SalesPanel;
+
 public class TestCardLayout implements ActionListener{
 
 //	private static ActionListener listener = new Listener();
