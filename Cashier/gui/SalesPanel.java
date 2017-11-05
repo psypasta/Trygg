@@ -16,9 +16,6 @@ public class SalesPanel extends JPanel implements ActionListener {
 	private InventoryPanel inventory = new InventoryPanel();
 	private ReportPanel report = new ReportPanel();
 	
-	
-	
-	
 	private CardLayout layout = new CardLayout();
 	private JPanel panel = new JPanel(layout);
 
@@ -35,9 +32,9 @@ public class SalesPanel extends JPanel implements ActionListener {
         list.setBounds(406, 23, 161, 333);
         add(list);
         
-        JPanel panel = new JPanel();
-        panel.setBounds(10, 23, 389, 299);
-        add(panel);
+    //    JPanel panel = new JPanel();
+   //     panel.setBounds(10, 23, 389, 299);
+  //      add(panel);
         
         JButton btnNewButton = new JButton("Rapport");
         btnNewButton.setBounds(307, 333, 89, 23);
@@ -49,17 +46,17 @@ public class SalesPanel extends JPanel implements ActionListener {
         
         btnNewButton.addActionListener(this);
         btnLager.addActionListener(this);
-        panel.setLayout(null);
+     //   panel.setLayout(null);
         
-        inventory.setBounds(191, 5, 1, 1);
-        
+     //   inventory.setBounds(191, 5, 1, 1);
+        //   report.setBounds(197, 5, 1, 1);
         panel.setBounds(10, 39, 389, 280);
         add(panel);
         
         
-        panel.add(inventory);
-        report.setBounds(197, 5, 1, 1);
-        panel.add(report);
+        panel.add(inventory, "inventory");
+   
+        panel.add(report, "report");
 	}
   
     @Override
@@ -71,9 +68,11 @@ public class SalesPanel extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String command = e.getActionCommand();
         if ("Lager".equals(command)) {
-            layout.show(panel, "Lager");
-        } else if ("Report".equals(command)) {
-            layout.show(panel, "Rapport");
+        	System.out.println("lager");
+            layout.show(panel, "inventory");
+        } else if ("Rapport".equals(command)) {
+        	System.out.println("rapport");
+            layout.show(panel, "report");
         } 
 		
 	}
