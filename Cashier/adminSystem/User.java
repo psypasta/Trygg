@@ -5,12 +5,10 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private Credentials credentials;
-	private static int ID;
-	
-	
-	//Skall lagra tid från när man loggar in till när man loggar ut. När man har loggat ut skall workHours sparas till fil
-	//reset 30 dagar
+	private int ID;
 	private double workHours = 0;
+	//Skall lagra tid frï¿½n nï¿½r man loggar in till nï¿½r man loggar ut. Nï¿½r man har loggat ut skall workHours sparas till fil
+	//reset 30 dagar
 	
 	public User(String firstName, String lastName) {
 		this.firstName = firstName;
@@ -26,7 +24,7 @@ public class User {
 		return lastName;
 	}
 
-	public static int getID() {
+	public int getID() {
 		return ID;
 	}
 

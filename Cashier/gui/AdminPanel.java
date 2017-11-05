@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JEditorPane;
 import java.awt.CardLayout;
+import javax.swing.JSeparator;
 
 public class AdminPanel extends JPanel {
 	private JTextField textField;
@@ -21,11 +22,11 @@ public class AdminPanel extends JPanel {
 	public AdminPanel() {
         setLayout(null);
         JLabel label = new JLabel("Admin");
-        label.setBounds(210, 5, 29, 14);
+        label.setBounds(210, 5, 41, 14);
         add(label);
         
         JList list = new JList();
-        list.setBounds(300, 39, 140, 210);
+        list.setBounds(409, 36, 161, 333);
         add(list);
         
         JButton btnNewButton = new JButton("Anställda");
@@ -33,7 +34,7 @@ public class AdminPanel extends JPanel {
         	public void actionPerformed(ActionEvent arg0) {
         	}
         });
-        btnNewButton.setBounds(10, 266, 89, 23);
+        btnNewButton.setBounds(10, 346, 89, 23);
         add(btnNewButton);
         
         JButton btnNewButton_1 = new JButton("Vara");
@@ -41,28 +42,28 @@ public class AdminPanel extends JPanel {
         	public void actionPerformed(ActionEvent e) {
         	}
         });
-        btnNewButton_1.setBounds(109, 266, 89, 23);
+        btnNewButton_1.setBounds(109, 346, 89, 23);
         add(btnNewButton_1);
         
         JButton btnNewButton_2 = new JButton("Varugrupp");
-        btnNewButton_2.setBounds(210, 266, 89, 23);
+        btnNewButton_2.setBounds(210, 346, 89, 23);
         add(btnNewButton_2);
         
         JLabel lblSk = new JLabel("Sök:");
-        lblSk.setBounds(315, 14, 29, 14);
+        lblSk.setBounds(453, 11, 29, 14);
         add(lblSk);
         
         textField = new JTextField();
-        textField.setBounds(354, 11, 86, 20);
+        textField.setBounds(484, 5, 86, 20);
         add(textField);
         textField.setColumns(10);
         
-        JButton btnVlj = new JButton("Välj");
-        btnVlj.setBounds(310, 266, 89, 23);
+        JButton btnVlj = new JButton("Redigera");
+        btnVlj.setBounds(310, 346, 89, 23);
         add(btnVlj);
         
         JPanel panel = new JPanel();
-        panel.setBounds(10, 39, 280, 210);
+        panel.setBounds(10, 39, 389, 280);
         add(panel);
         panel.setLayout(new CardLayout(0, 0));
 	}
