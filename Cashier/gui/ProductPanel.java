@@ -54,16 +54,20 @@ public class ProductPanel extends JPanel {
 		add(textField_3);
 		
 		JButton btnSpara = new JButton("Spara");
-		btnSpara.setBounds(120, 179, 70, 23);
+		btnSpara.setBounds(229, 246, 70, 23);
 		add(btnSpara);
 		
 		JButton btnTaBort = new JButton("Ta bort");
-		btnTaBort.setBounds(200, 179, 70, 23);
+		btnTaBort.setBounds(309, 246, 70, 23);
 		add(btnTaBort);
 		
 		JButton btnPrintEtikett = new JButton("Print Etikett");
-		btnPrintEtikett.setBounds(10, 179, 89, 23);
+		btnPrintEtikett.setBounds(10, 246, 89, 23);
 		add(btnPrintEtikett);
+		
+		JLabel lblVara_1 = new JLabel("Vara");
+		lblVara_1.setBounds(10, 11, 46, 14);
+		add(lblVara_1);
 
 	}
 

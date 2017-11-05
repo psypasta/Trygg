@@ -1,21 +1,27 @@
 package gui;
 
-import java.awt.Dimension;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JList;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JTextField;
-import javax.swing.JEditorPane;
 import java.awt.CardLayout;
-import javax.swing.JSeparator;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AdminPanel extends JPanel {
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class AdminPanel extends JPanel implements ActionListener {
 	private JTextField textField;
-
+	
+	private EmployeePanel employee = new EmployeePanel();
+	private ProductPanel product = new ProductPanel();
+	private ProductGroupPanel productGroup = new ProductGroupPanel();
+	
+	private CardLayout layout = new CardLayout();
+	private JPanel panel = new JPanel(layout);
+	
+	
 	/**
 	 * Create the panel.
 	 */
@@ -62,14 +68,37 @@ public class AdminPanel extends JPanel {
         btnVlj.setBounds(310, 346, 89, 23);
         add(btnVlj);
         
-        JPanel panel = new JPanel();
+        btnNewButton.addActionListener(this);
+        btnNewButton_1.addActionListener(this);
+        btnNewButton_2.addActionListener(this);
+        btnVlj.addActionListener(this);
+        
+ //     JPanel panel = new JPanel();
         panel.setBounds(10, 39, 389, 280);
-        add(panel);
-        panel.setLayout(new CardLayout(0, 0));
+       add(panel);
+ //     panel.setLayout(new CardLayout(0, 0));
+        
+        panel.add(employee, "employee");
+        panel.add(product, "product");
+        panel.add(productGroup, "productGroup");
 	}
   
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(300, 300);
     }
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		   String command = e.getActionCommand();
+           if ("Anställda".equals(command)) {
+               layout.show(panel, "employee");
+           } else if ("Vara".equals(command)) {
+               layout.show(panel, "product");
+           } else if("Varugrupp".equals(command)){
+               layout.show(panel, "productGroup");
+           } else if("Redigera".equals(command)) {
+        
+           }
+	}
 }
