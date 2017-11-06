@@ -1,0 +1,7 @@
+1.Generera en lista �ver varugruppsspecificerad struktur   
+ jag vill ha, gruppera varor som en gren, tshirt till hör kläder osv
+ 
+ göra struktur över alla katergorier för varor.
+ 
+ 
+ Minns på ica att om man köpte flera av en vara så klickade man enter igen bara

@@ -1,0 +1,24 @@
+Sprint ett
+
+	Mål för sprint 1: 
+		Göra adminsystem, göra kassasystem
+		En protoyp för dessa och målet är uppfyllt?
+		
+		Förstå branching
+		
+		Minimum feature set kassa system:
+			Läsa in produkter från products.txt
+			Kassan skall kunna kalla på alla produkter i products.txt
+			Även logga in med en användare
+		Minimum Feature set admin system:
+			Logga in med en användare och hamna i rätt subsystem 
+			read ID ^
+			Users.txt
+				
+	Spring Backlog:
+		https://app.zenhub.com/workspace/o/fulsomenko/modig/boards?repos=106711822
+	Mål för sprint 2:
+		
+	Mål för sprint 3:
+	
+	Mål för sprint 4:

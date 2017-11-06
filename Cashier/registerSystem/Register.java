@@ -10,7 +10,7 @@ import adminSystem.Employee;
 import adminSystem.User;
 
 public class Register {
-	
+	//Lägga till gånger antal istället för att skriva in samma vara flera gånger.
 	//product count
 	private int productCount;
 	private int saleCount = 0;
