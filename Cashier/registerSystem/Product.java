@@ -1,5 +1,6 @@
 package registerSystem;
 
+
 public class Product {
 	/*
 	private static enum Category {
@@ -17,15 +18,26 @@ public class Product {
 	*/
 	
 	private int ID;
+	private static int IDcount;
 	private int inventory;
 	private String productName;
-	private float price;
+	private double price;
 	
-	public Product(int ID, String productName, int price){
+	private Product p2 = new Product();
+	private Product p = new Product(ID, productName, price);
+	
+	public Product() {
+		
+	}
+	
+	public Product(int ID, String productName, double price){
 		this.ID = ID;
 		this.productName = productName;
 		this.price = price;
+		IDcount++;
 	}
+	
+	
 	
 	public int getID() {
 		return ID;
@@ -35,7 +47,7 @@ public class Product {
 		return productName;
 	}
 
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 

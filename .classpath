@@ -9,6 +9,7 @@
 	<classpathentry kind="src" path="Euler"/>
 	<classpathentry kind="src" path="pong"/>
 	<classpathentry kind="src" path="Cashier"/>
+	<classpathentry kind="src" path="Design Patterns"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-javadoc.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-natives-windows.jar"/>

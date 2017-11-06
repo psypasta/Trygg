@@ -6,6 +6,7 @@ public class Sale {
 	
 	private String path = "Cashier/resource/Sales.txt";
 	private int ID;
+	
 	private String Date;
 	private final double MOMS = 0.25;
 	private Payment payment;
@@ -19,13 +20,14 @@ public class Sale {
 	}
 	
 	public double getSubTotal(List<Product> productList) {
-		double sum = 0;
+		double subTotal = 0;
 		for(int i = 0; i < productList.size(); i++) {
 		//	System.out.println(productList.get(i).getPrice()); //hjälp	
-			sum += productList.get(i).getPrice();
+			subTotal += productList.get(i).getPrice();
+			
 		}
-		
-		return sum;
+		System.out.println(subTotal + "sub total");
+		return subTotal;
 	}
 	
 	public double getTotal() {

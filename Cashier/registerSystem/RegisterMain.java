@@ -12,48 +12,26 @@ import gui.Test;
 public class RegisterMain {
 
 	public static void main(String[] args) {		
+	
+	
+		
 		
 		Test test = new Test();
-		test.run();
+//		test.run();
 
 		User user = new Employee("Max", "Blomstervall");
+		List<Product> productList = new ArrayList<Product>();
 		
-		Register kassan = new Register(user);
-		Product produces = new Product(1210, "Marabou stek choklad", 100);
-		List<Receipt> receiptList = new ArrayList<Receipt>();
+		Register kassan = new Register(user, productList, test);
+//		Product produces = new Product(1210, "Marabou stek choklad", 100);
 		
-		while(true) {
-			
-		//	System.out.println(test.getData());
-			if(test.getData().equals("00")) {
-	//			kassan
-		//		kassan.commitSale();
-				test.setData();
-				receiptList = kassan.commitSale();
-				test.clearArea();
-				
-				System.out.println("Betala: " + kassan.getPrice());
-			}
-			else if(test.getData().equals("10")) {
-				test.setData();
-				System.out.println("choklad");
-				kassan.addProduct(produces);
-				test.addProduct(produces);
-			}
-			if(test.getData().equals("420")) {
-				break;
-			}
-		//	System.out.println(test.getData());
-		}
-		
-		for(int i = 0; i < receiptList.size(); i++) {
-	//		System.out.println(receiptList.size());
-			System.out.println(receiptList.get(i).getData());
-		}
+//		List<Receipt> receiptList = new ArrayList<Receipt>();
 		
 		
+
+		kassan.run();
 		//dispose of window
-		test.destroy(); 
+//		test.destroy(); 
 		
 	}
 
