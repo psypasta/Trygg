@@ -3,6 +3,7 @@ package registerSystem;
 import java.util.ArrayList;
 import java.util.List;
 
+import adminSystem.Credentials;
 import adminSystem.Employee;
 import adminSystem.User;
 import gui.Test;
@@ -18,8 +19,10 @@ public class RegisterMain {
 		
 		Test test = new Test();
 //		test.run();
+		
+		Credentials cred = new Credentials(420);
 
-		User user = new Employee("Max", "Blomstervall");
+		User user = new Employee("Max", "Blomstervall", cred);
 		List<Product> productList = new ArrayList<Product>();
 		
 		Register kassan = new Register(user, productList, test);

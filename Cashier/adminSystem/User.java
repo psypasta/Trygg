@@ -1,6 +1,13 @@
 package adminSystem;
 
-public class User {
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import adminSystem.UserFactory.UserInterface;
+import registerSystem.Product;
+
+public class User implements UserInterface {
 	
 	private String firstName;
 	private String lastName;
@@ -10,10 +17,19 @@ public class User {
 	//Skall lagra tid fr�n n�r man loggar in till n�r man loggar ut. N�r man har loggat ut skall workHours sparas till fil
 	//reset 30 dagar
 	
-	public User(String firstName, String lastName) {
+	public enum Role {
+	    EMPLOYEE, MANAGER, ADMIN
+	}
+	
+	public User(String firstName, String lastName, Credentials cred) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		credentials = new Credentials(firstName + ID, "password");
+		credentials = cred;
+		ID = cred.getUserName();
+	}
+
+	public Credentials getCredentials(){
+		return credentials;
 	}
 
 	public String getFirstName() {
@@ -31,4 +47,11 @@ public class User {
 	public double getWorkHours() {
 		return workHours;
 	}
+
+	@Override
+	public Role getRole() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }

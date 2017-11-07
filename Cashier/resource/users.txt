@@ -1,13 +1,12 @@
 # <- rader skall ignoreras
-
+#
 #ID	Name	Password	Position
-
-00 Max Password Employee
-01 Robin password Manager
-02 Jonathan password Admin
-03 Peter password Employee
-05 Sattar Password Admin
-05 Sattar Password Admin
-05 Sattar Password Admin
-05 Sattar Password Admin
-05 Sattar Password Admin
+#
+#
+205 Max Password Employee
+501 Robin password Manager
+302 Jonathan password Admin
+203 Peter password Employee
+305 Sattar Password Admin
+305 Sattar Password Admin
+305 Sattar Password Admin

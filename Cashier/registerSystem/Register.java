@@ -28,7 +28,7 @@ public class Register {
 	private Sale snail;
 	// private Receipt kvitto;
 	private Sale s = new Sale(productList);
-	private File matFile = new File("Cashier/resource/mat.txt");
+//	private File matFile = new File("Cashier/resource/mat.txt");
 
 	private User user;
 

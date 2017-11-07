@@ -2,20 +2,23 @@ package adminSystem;
 
 public class Credentials {
 	
-	private String userName;
-	private String password;
+	private int userName;
+//	private String password;
 	
-	public Credentials(String userName, String password) {
+	public Credentials(int userName/*, String password*/) {
 		this.userName = userName;
-		this.password = password;
+//		this.password = password;
 	}
 
-	public boolean login(String userName, String password) {
-		if(this.userName.equals(userName) && this.userName.equals(password)) {
-			return true;
+	public int getUserName() {
+		return userName;
+	}
+//public boolean login(int userName/*, String password*/) {
+	//	if(this.userName == userName)/* && this.userName.equals(password))*/ {
+	/*		return true;
 		}
 		else {
 			return false;
 		}
-	}
+	}*/
 }

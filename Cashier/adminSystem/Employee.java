@@ -1,12 +1,20 @@
 package adminSystem;
 
-public class Employee extends User {
+import adminSystem.User.Role;
+import adminSystem.UserFactory.UserInterface;
 
-	public Employee(String firstName, String lastName) {
-		super(firstName, lastName);
-		
+public class Employee extends User implements UserInterface{
+	
+	public Role role;
+	
+	public Employee(String firstName, String lastName, Credentials cred) {
+		super(firstName, lastName, cred);
+		role = Role.EMPLOYEE;
 	}
+	
+	public Role getRole() {
+		return role;
+	}
+	
 
-	
-	
 }
