@@ -61,8 +61,15 @@ public class Register {
 
 		while (true) {
 
-			int compareNum = Integer.parseInt(view.getData()); //Converted to int so the program can read the ID from the products
-
+			int compareNum = 0;
+			try {
+			compareNum = Integer.parseInt(view.getData()); //Converted to int so the program can read the ID from the products
+			}
+			catch(Exception e)
+			{
+				
+			}
+		
 			// System.out.println(test.getData());
 			if (view.getData().equals("#2#")) {
 				// kassan
