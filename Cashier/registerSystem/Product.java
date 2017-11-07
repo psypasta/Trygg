@@ -23,8 +23,8 @@ public class Product {
 	private String productName;
 	private double price;
 	
-	private Product p2 = new Product();
-	private Product p = new Product(ID, productName, price);
+	//private Product p2 = new Product();                   //What purpose does these have? Right now all they seem to do is crash the program. - J.V
+	//private Product p = new Product(ID, productName, price);
 	
 	public Product() {
 		
