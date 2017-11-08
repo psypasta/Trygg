@@ -3,6 +3,9 @@ package adminSystem;
 import java.util.ArrayList;
 import java.util.List;
 
+import adminSystem.UserFactory.FileFactory;
+import adminSystem.UserFactory.ProductFactory;
+import adminSystem.UserFactory.UserFactory;
 import gui.LoginTest;
 
 public class AdminMain {
@@ -12,18 +15,20 @@ public class AdminMain {
 
 		LoginTest test2 = new LoginTest();
 		test2.run();	
+		
+		FileFactory uf = new UserFactory();
+	//	FileFactory pf = new ProductFactory();
 	
-		FileFacade ff = new FileFacade();
-		List<User> userList = new ArrayList<User>();
-		
-		userList = ff.userList();
-		
-		for(int i = 0; i < userList.size(); i++) {
-			System.out.println(userList.get(i).getFirstName());
-		}
+		User a = uf.createUser(1);
+	//	pf.createProduct(1);
+		System.out.println("First name: " + a.getFirstName());
+		System.out.println("Last name: " + a.getLastName());
+		System.out.println("Work hours: " + a.getWorkHours());
+		System.out.println("Username: " + a.getCredentials().getUserName());
+		System.out.println("Role: " + a.getRole());
+
 		//dispose of window
 			test2.setVisible(false);
 			test2.dispose(); 
 	}
-
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import adminSystem.UserFactory.UserFactory;
 import registerSystem.Product;
 
-public class FileFacade {
+public class deletesoon {
 	
 	public List<User> userList() {
 		UserFactory uf = new UserFactory();
@@ -18,7 +18,7 @@ public class FileFacade {
 		
 		List<User> userList = new ArrayList<User>();
 		
-		UserHandler ur = new UserHandler();
+		FileHandler ur = new FileHandler();
 		String userFile = ur.read();
 		
 		String[] lines = userFile.split(System.getProperty("line.separator"));
@@ -68,7 +68,7 @@ public class FileFacade {
 	//	String productFile = pr.read();
 	}
 	public void addUser(User u) {
-		UserHandler ur = new UserHandler();
+		FileHandler ur = new FileHandler();
 		ur.addLine(u.getCredentials().getUserName() + " " +
 					u.getFirstName() + " " +
 					u.getLastName() + " " +

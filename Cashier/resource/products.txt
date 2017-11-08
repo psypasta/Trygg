@@ -4,7 +4,6 @@
 
 #ID 		Name			Price
 
-<<<<<<< HEAD
 FRUIT UNIT 00 Apple 5
 FRUIT UNIT 01 Orange 9
 FRUIT UNIT 02 Kiwi 12
@@ -25,7 +24,6 @@ MEAT WEIGHT 16 ChickenBREAST 245
 MEAT WEIGHT 17 LambCHOPS 124
 MEAT WEIGHT 18 Pigs Tongue 245
 MEAT WEIGHT 19 Minced meat 234
-=======
 0000 Apple 5
 0001 Orange 9
 0002 Kiwi 12
@@ -47,4 +45,3 @@ MEAT WEIGHT 19 Minced meat 234
 0318 Pigs Tongue 245
 0319 Minced meat 234
 1210 Marabou Choklad 100
->>>>>>> branch 'master' of https://github.com/fulsomenko/modig.git
