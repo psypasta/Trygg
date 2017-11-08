@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 import adminSystem.User;
 import gui.Test;
+import registerSystem.Product.Category;
 
 public class Register {
 	//Lägga till gånger antal istället för att skriva in samma vara flera gånger.
@@ -19,7 +20,7 @@ public class Register {
 	
 	private Test view = new Test();
 	
-	private Product produces = new Product(1210, "Marabou stek choklad", 100);
+	private Product produces = new Product(1210, "Marabou stek choklad", 100.0);
 	
 	private List <Product> productList = new ArrayList<Product>();
 	private List<Receipt> kvittoList = new ArrayList<Receipt>();
