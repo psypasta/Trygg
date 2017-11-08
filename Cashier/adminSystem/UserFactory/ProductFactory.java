@@ -14,22 +14,22 @@ public class ProductFactory implements FileFactory {
 	
 	@Override
 	public Product createProduct(int index/*String userType, String firstName, String lastName, Credential cred*/) {
-
+	
 		arrayChop(fileArray(), index);
-		
+
 		if(category == null) {
 			return null;
 		}
-		else if(category == "MEAT") {
+		else if(category.equalsIgnoreCase("MEAT")) {
 			return new Product(ID, productName, price, Category.MEAT);
 		}
-		else if(category == "DAIRY") {
+		else if(category.equalsIgnoreCase("DAIRY")) {
 			return new Product(ID, productName, price, Category.DAIRY);
 		}
-		else if(category == "FRUIT") {
+		else if(category.equalsIgnoreCase("FRUIT")) {
 			return new Product(ID, productName, price, Category.FRUIT);
 		}	
-		else if(category == "VEGETABLE") {
+		else if(category.equalsIgnoreCase("VEGETABLE")) {
 			return new Product(ID, productName, price, Category.VEGETABLE);
 		}
 		
@@ -53,23 +53,27 @@ public class ProductFactory implements FileFactory {
 		
 		test = lines[index].split("\\s+");
 		
-		ID = 0;
+	/*	ID = 0;
 		productName = null;
 		price = 0.0;
-		category = null;
+		category = null; */
 		
 		for(int j = 0; j < test.length; j++) {
-
 			if(j == 0) {
-				ID = Integer.parseInt(test[j]);
-			}else if(j == 1) {
-				productName = test[j];
-			}else if(j == 2) {
-				price = Double.parseDouble(test[j]);
-			}else if(j == 3) {
 				category = test[j];
+				
+			}else if(j == 1) {
+				//wtf varför är denna unit? Hur kan arrayen bli 5 stor? när jag deklarerat den 4 på rad 52?
+				System.out.println(j + " index " + test[j]);
+			}else if(j == 2) {
+				ID = Integer.parseInt(test[j]);
+			}else if(j == 3) {
+				productName = test[j];
 			}
-		}
+			else if(j == 4) {
+				price = Double.parseDouble(test[j]);
+			}
+		} 
 		return test;
 	}
 
