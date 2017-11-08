@@ -33,7 +33,7 @@ public class Receipt {
 		data += "\n";
 		
 		return data;
-//uhm2
+//uhm2 push rejected check earlier commit messages
 	}
 	
 /*	public String getData() {
