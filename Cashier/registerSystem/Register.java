@@ -53,6 +53,7 @@ public class Register {
 				String categoryString = txtIn.next();
 				Product.Category sort = Product.Category.valueOf(categoryString); //Converts the textstring into a enum of equal value. Warning, case sensitive - J.V
 				testlist.add(new Product(id, name, price, sort));
+				txtIn.close();
 
 			}
 		} catch (FileNotFoundException e) {
