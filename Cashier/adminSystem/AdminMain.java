@@ -23,7 +23,7 @@ public class AdminMain {
 		System.out.println("ID: " + b.getID());
 		System.out.println("Pris: " + b.getPrice());
 		System.out.println("Product name: " + b.getProductName());
-		System.out.println("Catergory: " + b.getSort());
+		System.out.println("Category: " + b.getSort() + "\n");
 		
 		
 	  	User a = uf.createUser(1);

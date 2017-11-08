@@ -43,7 +43,7 @@ public class FileHandler{
 			    }
 			}
 			data = finalStringBuilder.toString();
-				
+			System.out.println("data: " + data);
 		    return data;
 		  }
 

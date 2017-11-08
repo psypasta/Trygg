@@ -1,4 +1,4 @@
-package adminSystem;
+/*package adminSystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,4 +74,4 @@ public class deletesoon {
 					u.getLastName() + " " +
 					u.getRole());
 	}
-}
+}*/
