@@ -20,7 +20,7 @@ public class Register {
 
 	private Test view = new Test();
 
-	private Product produces = new Product(1210, "Marabou stek choklad", 100);
+	private Product produces = new Product(1210, "Marabou stek choklad", 100, Product.Category.MEAT); //yum yum marabou kött
 
 	private List<Product> productList = new ArrayList<Product>();
 	private List<Receipt> kvittoList = new ArrayList<Receipt>();
@@ -51,7 +51,9 @@ public class Register {
 				int id = txtIn.nextInt(); // Will ignores all zeroes in the front unless the number is exactly 0 - J.V
 				String name = txtIn.next(); //Will right now only read one word meaning words like "ice cream" does not work - J.V
 				Double price = txtIn.nextDouble();
-				testlist.add(new Product(id, name, price));
+				String categoryString = txtIn.next();
+				Product.Category sort = Product.Category.valueOf(categoryString); 
+				testlist.add(new Product(id, name, price, sort));
 
 			}
 		} catch (FileNotFoundException e) {
@@ -90,7 +92,8 @@ public class Register {
 
 					if (compareNum == currentProduct.getID()) {
 						view.setData();
-						System.out.println(currentProduct.getProductName());
+						System.out.print(currentProduct.getProductName() + (" "));
+						System.out.println(currentProduct.getSort());
 						addProduct(currentProduct);
 						view.addProduct(currentProduct);
 					}

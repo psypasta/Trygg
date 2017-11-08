@@ -22,6 +22,9 @@ public class Product {
 	private int inventory;
 	private String productName;
 	private double price;
+	private Category Sort;
+	
+	public enum Category {MEAT, DAIRY, VEGETABLE, FRUIT};
 	
 	//private Product p2 = new Product();                   //What purpose does these have? Right now all they seem to do is crash the program. - J.V
 	//private Product p = new Product(ID, productName, price);
@@ -30,10 +33,11 @@ public class Product {
 		
 	}
 	
-	public Product(int ID, String productName, double price){
+	public Product(int ID, String productName, double price, Category Sort){
 		this.ID = ID;
 		this.productName = productName;
 		this.price = price;
+		this.Sort = Sort;
 		IDcount++;
 	}
 	
@@ -49,6 +53,10 @@ public class Product {
 
 	public double getPrice() {
 		return price;
+	}
+	
+	public Category getSort() {
+		return Sort;
 	}
 
 
