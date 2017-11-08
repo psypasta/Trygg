@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 import adminSystem.User;
 import gui.Test;
-import registerSystem.Product.Category;
 
 public class Register {
 	// Lägga till gånger antal istället för att skriva in samma vara flera
@@ -21,14 +20,14 @@ public class Register {
 
 	private Test view = new Test();
 
-	private Product produces = new Product(1210, "Marabou stek choklad", 100, Product.Category.MEAT); //yum yum marabou k�tt
+//	private Product produces = new Product(1210, "Marabou stek choklad", 100, Product.Category.MEAT); //yum yum marabou k�tt
 
 	private List<Product> productList = new ArrayList<Product>();
 	private List<Receipt> kvittoList = new ArrayList<Receipt>();
 	// List<Sale> salesList = new ArrayList<Sale>();
 	private Sale snail;
-	// private Receipt kvitto;
-	private Sale s = new Sale(productList);
+// private Receipt kvitto;
+//	private Sale s = new Sale(productList);
 //	private File matFile = new File("Cashier/resource/mat.txt");
 
 	private User user;

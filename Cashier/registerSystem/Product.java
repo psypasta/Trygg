@@ -3,9 +3,10 @@ package registerSystem;
 
 public class Product {
 	
-	private int ID;
+	
 	private int nType;
 	private int inventory;
+	private int ID;
 	private String productName;
 	private double price;
 	private Category sort;
