@@ -1,11 +1,11 @@
 package adminSystem.UserFactory;
 
-import adminSystem.Credentials;
+import adminSystem.Credential;
 import adminSystem.User.Role;
 
 public interface UserInterface {
 	
-	public Credentials getCredentials();
+	public Credential getCredentials();
 	public String getFirstName();
 	public String getLastName();
 	public double getWorkHours();

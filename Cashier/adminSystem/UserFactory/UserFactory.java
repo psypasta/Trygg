@@ -1,14 +1,14 @@
 package adminSystem.UserFactory;
 
 import adminSystem.Administrator;
-import adminSystem.Credentials;
+import adminSystem.Credential;
 import adminSystem.Employee;
 import adminSystem.Manager;
 import adminSystem.User;
 import adminSystem.User.Role;
 
 public class UserFactory {
-	public User getUser(String userType, String firstName, String lastName, Credentials cred) {
+	public User getUser(String userType, String firstName, String lastName, Credential cred) {
 		if(userType == null) {
 			return null;
 		}

@@ -11,7 +11,7 @@ public class Manager extends User implements UserInterface{
 
 	Inventory i = new Inventory();
 	
-	public Manager(String firstName, String lastName, Credentials cred, Role role) {
+	public Manager(String firstName, String lastName, Credential cred, Role role) {
 		super(firstName, lastName, cred, role);
 		//role = Role.MANAGER;
 	}

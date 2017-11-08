@@ -11,7 +11,7 @@ public class User implements UserInterface {
 	
 	private String firstName;
 	private String lastName;
-	private Credentials credentials;
+	private Credential credentials;
 	private double workHours = 0;
 	//Skall lagra tid fr�n n�r man loggar in till n�r man loggar ut. N�r man har loggat ut skall workHours sparas till fil
 	//reset 30 dagar
@@ -22,14 +22,14 @@ public class User implements UserInterface {
 	    EMPLOYEE, MANAGER, ADMIN
 	}
 	
-	public User(String firstName, String lastName, Credentials cred, Role role) {
+	public User(String firstName, String lastName, Credential cred, Role role) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.credentials = cred;
 		this.role = role;
 	}
 
-	public Credentials getCredentials(){
+	public Credential getCredentials(){
 		return credentials;
 	}
 

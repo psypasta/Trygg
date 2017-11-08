@@ -1,11 +1,11 @@
 package adminSystem;
 
-public class Credentials {
+public class Credential {
 	
 	private int userName;
 //	private String password;
 	
-	public Credentials(int userName/*, String password*/) {
+	public Credential(int userName/*, String password*/) {
 		this.userName = userName;
 //		this.password = password;
 	}
