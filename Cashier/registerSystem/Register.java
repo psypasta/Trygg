@@ -20,17 +20,10 @@ public class Register {
 	private double price = 0;
 
 	private Test view = new Test();
-<<<<<<< HEAD
-	
-	private Product produces = new Product(1210, "Marabou stek choklad", 100.0);
-	
-	private List <Product> productList = new ArrayList<Product>();
-=======
 
-	private Product produces = new Product(1210, "Marabou stek choklad", 100, Product.Category.MEAT); //yum yum marabou kött
+	private Product produces = new Product(1210, "Marabou stek choklad", 100, Product.Category.MEAT); //yum yum marabou kï¿½tt
 
 	private List<Product> productList = new ArrayList<Product>();
->>>>>>> branch 'master' of https://github.com/fulsomenko/modig.git
 	private List<Receipt> kvittoList = new ArrayList<Receipt>();
 	// List<Sale> salesList = new ArrayList<Sale>();
 	private Sale snail;
