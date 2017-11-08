@@ -118,7 +118,7 @@ public class Register {
 
 	public double printSum() {
 		snail = new Sale(productList);
-		System.out.println(snail.getSubTotal(productList) + "SNAIL");
+	//	System.out.println(snail.getSubTotal(productList) + "SNAIL");
 		return snail.getSubTotal(productList);
 	}
 

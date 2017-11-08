@@ -26,7 +26,7 @@ public class Sale {
 			subTotal += productList.get(i).getPrice();
 			
 		}
-		System.out.println(subTotal + "sub total");
+	//	System.out.println(subTotal + "sub total");
 		return subTotal;
 	}
 	
