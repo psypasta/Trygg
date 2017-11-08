@@ -1,7 +1,7 @@
 package adminSystem;
 
+import adminSystem.FileFactory.UserInterface;
 import adminSystem.User.Role;
-import adminSystem.UserFactory.UserInterface;
 import registerSystem.Product;
 import saleReportSystem.Inventory;
 

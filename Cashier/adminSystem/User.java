@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import adminSystem.UserFactory.UserInterface;
+import adminSystem.FileFactory.UserInterface;
 import registerSystem.Product;
 
 public class User implements UserInterface {

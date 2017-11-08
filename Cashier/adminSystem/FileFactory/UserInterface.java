@@ -1,4 +1,4 @@
-package adminSystem.UserFactory;
+package adminSystem.FileFactory;
 
 import adminSystem.Credential;
 import adminSystem.User.Role;

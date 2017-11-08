@@ -1,4 +1,4 @@
-package adminSystem.UserFactory;
+package adminSystem.FileFactory;
 
 import adminSystem.User;
 import registerSystem.Product;

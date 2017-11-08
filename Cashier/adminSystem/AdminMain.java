@@ -1,8 +1,8 @@
 package adminSystem;
 
-import adminSystem.UserFactory.FileFactory;
-import adminSystem.UserFactory.ProductFactory;
-import adminSystem.UserFactory.UserFactory;
+import adminSystem.FileFactory.FileFactory;
+import adminSystem.FileFactory.ProductFactory;
+import adminSystem.FileFactory.UserFactory;
 import gui.LoginTest;
 import registerSystem.Product;
 

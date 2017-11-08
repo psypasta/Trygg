@@ -1,6 +1,6 @@
 package adminSystem;
 
-import adminSystem.UserFactory.UserInterface;
+import adminSystem.FileFactory.UserInterface;
 
 public class Administrator extends User implements UserInterface{
 

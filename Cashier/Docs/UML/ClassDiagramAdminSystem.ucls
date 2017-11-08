@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="6" language="java" name="adminSystem.UserFactory.UserFactory" project="modig" 
-    file="/modig/Cashier/adminSystem/UserFactory/UserFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="adminSystem.FileFactory.UserFactory" project="modig" 
+    file="/modig/Cashier/adminSystem/FileFactory/UserFactory.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="101" width="270" x="291" y="24"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -73,13 +73,13 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="9" language="java" name="adminSystem.UserFactory" project="modig" 
-    file="/modig/Cashier/adminSystem/UserFactory" binary="false" corner="BOTTOM_RIGHT">    
+  <package id="9" language="java" name="adminSystem.FileFactory" project="modig" 
+    file="/modig/Cashier/adminSystem/FileFactory" binary="false" corner="BOTTOM_RIGHT">    
     <position height="52" width="201" x="601" y="24"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <interface id="10" language="java" name="adminSystem.UserFactory.UserInterface" project="modig" 
-    file="/modig/Cashier/adminSystem/UserFactory/UserInterface.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="10" language="java" name="adminSystem.FileFactory.UserInterface" project="modig" 
+    file="/modig/Cashier/adminSystem/FileFactory/UserInterface.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="155" width="176" x="842" y="486"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
