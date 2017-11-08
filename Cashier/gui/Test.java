@@ -24,10 +24,7 @@ public class Test implements ActionListener{
 	
 	private JButton[] buttons = new JButton[12];
     private String[] buttonNames = new String[] {"9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#", "Enter"};
-    
-    private List<Product> productList;
-    private int productCount = 0;
-    
+
     private static volatile String data = "99";
 
 	/**
@@ -57,8 +54,6 @@ public class Test implements ActionListener{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		
-		productList = new ArrayList<Product>();
 		
 		frame = new JFrame();
 		frame.setResizable(false);

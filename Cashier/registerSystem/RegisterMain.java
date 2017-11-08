@@ -14,29 +14,18 @@ import gui.Test;
 public class RegisterMain {
 
 	public static void main(String[] args) {		
-	
-	
-		
 		
 		Test test = new Test();
-//		test.run();
 		
 		Credential cred = new Credential(420);
 
-		User user = new Employee("Max", "Blomstervall", cred, Role.ADMIN);
+		User user = new Employee("Max", "Blomstervall", cred, Role.EMPLOYEE);
 		List<Product> productList = new ArrayList<Product>();
 		
-		Register kassan = new Register(user, productList, test);
-//		Product produces = new Product(1210, "Marabou stek choklad", 100);
-		
-//		List<Receipt> receiptList = new ArrayList<Receipt>();
-		
-		
+		Register kassan = new Register(user, test);
 
 		kassan.run();
-		//dispose of window
-//		test.destroy(); 
-		
+
 	}
 
 }

@@ -33,9 +33,8 @@ public class Register {
 
 	private User user;
 
-	public Register(User u, List productList, Test view) {
+	public Register(User u, Test view) {
 		this.user = u;
-		this.productList = productList;
 		this.view = view;
 
 		view.run();
@@ -73,7 +72,6 @@ public class Register {
 				
 			}
 		
-			// System.out.println(test.getData());
 			if (view.getData().equals("#2#")) {
 				// kassan
 				// kassan.commitSale();
@@ -103,17 +101,12 @@ public class Register {
 			if (view.getData().equals("420")) {
 				break;
 			}
-			// System.out.println(test.getData());
-
 		}
 
 		for (int i = 0; i < kvittoList.size(); i++) {
-			// System.out.println(receiptList.size());
 			System.out.println(kvittoList.get(i).getData());
 		}
-
 		view.destroy();
-
 	}
 
 	public void addProduct(Product p) {
@@ -123,7 +116,6 @@ public class Register {
 
 	public double printSum() {
 		snail = new Sale(productList);
-		// price =
 		System.out.println(snail.getSubTotal(productList) + "SNAIL");
 		return snail.getSubTotal(productList);
 	}
