@@ -33,7 +33,7 @@ public class Receipt {
 		data += "\n";
 		
 		return data;
-
+//uhm
 	}
 	
 /*	public String getData() {
