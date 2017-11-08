@@ -42,7 +42,7 @@ public class ProductFactory implements FileFactory {
 		String userFile = uh.read("products.txt");
 		
 		String[] lines = userFile.split(System.getProperty("line.separator"));
-		
+			
 		return lines;
 	}
 	

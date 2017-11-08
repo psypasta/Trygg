@@ -103,7 +103,7 @@ public class Register {
 		}
 
 		for (int i = 0; i < kvittoList.size(); i++) {
-			System.out.println(kvittoList.get(i).getData());
+			System.out.println(kvittoList.get(i).print());
 		}
 		view.destroy();
 	}

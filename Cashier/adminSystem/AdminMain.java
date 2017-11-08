@@ -17,7 +17,6 @@ public class AdminMain {
 		FileFactory uf = new UserFactory();
 		FileFactory pf = new ProductFactory();
 	
-		
 		Product b = pf.createProduct(1);
 		
 		System.out.println("ID: " + b.getID());
@@ -25,8 +24,8 @@ public class AdminMain {
 		System.out.println("Product name: " + b.getProductName());
 		System.out.println("Category: " + b.getSort() + "\n");
 		
-		
 	  	User a = uf.createUser(1);
+	  	
 		System.out.println("First name: " + a.getFirstName());
 		System.out.println("Last name: " + a.getLastName());
 		System.out.println("Work hours: " + a.getWorkHours());

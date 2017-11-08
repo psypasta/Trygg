@@ -13,7 +13,9 @@ public class Product {
 	
 	private static int IDCount;
 
-	public enum Category {MEAT, DAIRY, VEGETABLE, FRUIT}; //Categories for the products. Coding tradition has it that they are supposed to be in all caps, which can cause problems with our textfile since it also has to be in all caps. Suggestions for it not to look weird in GUI? - J.V
+	public enum Category {MEAT, DAIRY, VEGETABLE, FRUIT}; 
+	//Categories for the products. Coding tradition has it that they are supposed to be in all caps,
+	//which can cause problems with our textfile since it also has to be in all caps. Suggestions for it not to look weird in GUI? - J.V
 	
 	public Product() {
 		
