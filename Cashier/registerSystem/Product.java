@@ -24,7 +24,7 @@ public class Product {
 	private double price;
 	private Category Sort;
 	
-	public enum Category {MEAT, DAIRY, VEGETABLE, FRUIT};
+	public enum Category {MEAT, DAIRY, VEGETABLE, FRUIT}; //Categories for the products. Coding tradition has it that they are supposed to be in all caps, which can cause problems with our textfile since it also has to be in all caps. Suggestions for it not to look weird in GUI? - J.V
 	
 	//private Product p2 = new Product();                   //What purpose does these have? Right now all they seem to do is crash the program. - J.V
 	//private Product p = new Product(ID, productName, price);
