@@ -32,11 +32,15 @@ public class UserHandler implements FileHandler{
 			String[] lines = data.split(System.getProperty("line.separator"));
 			
 			for(int i=0;i<lines.length;i++){
-			    if(lines[i].startsWith("#")){
-			        lines[i]="";
-			    }
-			}
 			
+			    if(lines[i].startsWith("#")){
+			        lines[i] = "";
+			       
+			    }
+			    
+
+			}
+
 			StringBuilder finalStringBuilder = new StringBuilder();
 			for(String s:lines){
 			   if(!s.equals("")){
@@ -58,7 +62,7 @@ public class UserHandler implements FileHandler{
 		try {
 			output = new BufferedWriter(new FileWriter(path, append));
 		
-			output.append("\n" + line);
+			output.append(System.getProperty("line.separator") + line);
 			output.close();
 		} catch (IOException e) {
 				e.printStackTrace();

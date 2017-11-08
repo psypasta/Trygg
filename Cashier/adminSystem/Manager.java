@@ -1,17 +1,19 @@
 package adminSystem;
 
+import adminSystem.User.Role;
+import adminSystem.UserFactory.UserInterface;
 import registerSystem.Product;
 import saleReportSystem.Inventory;
 
 
 //Manager hanterar salesreport systemet - dåligt namn?
-public class Manager extends User {
+public class Manager extends User implements UserInterface{
 
 	Inventory i = new Inventory();
 	
-	public Manager(String firstName, String lastName) {
-		super(firstName, lastName);
-		
+	public Manager(String firstName, String lastName, Credential cred, Role role) {
+		super(firstName, lastName, cred, role);
+		//role = Role.MANAGER;
 	}
 
 	public int inventoryProduct(Product p)
