@@ -5,6 +5,7 @@ import java.util.List;
 
 import adminSystem.UserFactory.UserFactory;
 import gui.LoginTest;
+import registerSystem.Product;
 
 public class AdminMain {
 	
@@ -14,32 +15,19 @@ public class AdminMain {
 		
 		
 		UserFactory uf = new UserFactory();
-		User a = uf.getUser("ADMIN", "Coolguy", "McHenk", cred);
-		User e = uf.getUser("EMPLOYEE", "Carl", "Danke", cred);
-		User m = uf.getUser("MANAGER", "Karl", "Dragonpants", cred);
+		User a = uf.getUser("EMPLOYEE", "Coolguy", "McHenk", cred);
+		
+		addUser(a);
 		
 		List<User> userList = new ArrayList<User>();
 		
-		
-		
-		System.out.println(a.getRole());
-		System.out.println(e.getRole());
-		System.out.println(m.getRole());
-		
 		LoginTest test2 = new LoginTest();
-		test2.run();
-		
-		ProductHandler pr = new ProductHandler();
-		pr.addLine("1210 Marabou Choklad 100");
-		String productFile = pr.read();
+		test2.run();	
 		
 		UserHandler ur = new UserHandler();
-		ur.addLine("305 Sattar Password Admin");
 		String userFile = ur.read();
-	//	System.out.println(userFile);
 		
 		String[] lines = userFile.split(System.getProperty("line.separator"));
-		System.out.println("0 index;" + lines[0]);
 		String[] test = new String[4];
 		
 		for(int i = 0; i < lines.length; i++) {
@@ -52,7 +40,7 @@ public class AdminMain {
 			
 			
 			for(int j = 0; j < test.length; j++) {
-				System.out.println(j + " hej " + test[j]);
+		//		System.out.println(j + " hej " + test[j]);
 			
 				if(j == 0) {
 					userName = new Credentials(Integer.parseInt(test[j]));
@@ -72,7 +60,7 @@ public class AdminMain {
 		}
 		
 		System.out.println(userList.get(0).getFirstName() + userList.get(1).getFirstName());
-		System.out.println(userList.get(6).getID() + " <- ID \n" + " Credentials ->" + userList.get(6).getCredentials().getUserName());
+		System.out.println(userList.get(6).getCredentials().getUserName());
 		System.out.println("Length: " + lines.length);
 		
 		
@@ -80,5 +68,17 @@ public class AdminMain {
 		test2.setVisible(false);
 		test2.dispose();
 	}
-
+	
+	public void addProduct(Product p) {
+		ProductHandler pr = new ProductHandler();
+		pr.addLine(p.getID()  + " " + p.getProductName() + " " + p.getPrice());
+	//	String productFile = pr.read();
+	}
+	public static void addUser(User u) {
+		UserHandler ur = new UserHandler();
+		ur.addLine(u.getCredentials().getUserName() + " " +
+					u.getFirstName() + " " +
+					u.getLastName() + " " +
+					u.getRole());
+	}
 }

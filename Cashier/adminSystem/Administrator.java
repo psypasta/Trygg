@@ -6,18 +6,15 @@ public class Administrator extends User implements UserInterface{
 
 	private FileHandler handler;
 	
-	private Role role;
+	//private Role role;
 	
-	public Administrator(String firstName, String lastName, Credentials cred) {
-		super(firstName, lastName, cred);
-		role = Role.ADMIN;
+	public Administrator(String firstName, String lastName, Credentials cred, Role role) {
+		super(firstName, lastName, cred, role);
+	//	role = Role.ADMIN;
 	}
 	
 	public String productLabel() {
 		return null;
 	}
-	
-	public Role getRole() {
-		return role;
-	}
+
 }

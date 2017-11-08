@@ -11,11 +11,9 @@ public class Manager extends User implements UserInterface{
 
 	Inventory i = new Inventory();
 	
-	public Role role;
-	
-	public Manager(String firstName, String lastName, Credentials cred) {
-		super(firstName, lastName, cred);
-		role = Role.MANAGER;
+	public Manager(String firstName, String lastName, Credentials cred, Role role) {
+		super(firstName, lastName, cred, role);
+		//role = Role.MANAGER;
 	}
 
 	public int inventoryProduct(Product p)
@@ -31,10 +29,6 @@ public class Manager extends User implements UserInterface{
 	public void orderProduct(int numberOfProduct, Product p)
 	{
 		// Lista ut vilka varor vi har i l�gt saldo, ska kunna markera vilken vara vi ska best�lla, sen en knapp f�r "best�ll"
-	}
-	
-	public Role getRole() {
-		return role;
 	}
 	
 }
