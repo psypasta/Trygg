@@ -1,0 +1,11 @@
+Sprint ett 
+
+	mål ha klart kassa subsystemet
+
+Sprint två
+
+	mål: göra klart de resterande subsystemen, admin och lager.
+
+Sprint tre 
+
+	mål: ha en fungerande produkt, som inkluderar kravspecen
