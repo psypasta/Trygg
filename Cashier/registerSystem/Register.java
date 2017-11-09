@@ -79,7 +79,8 @@ public class Register {
 				// kassan.commitSale();
 				view.setData();
 				price = printSum();
-
+				//view.addLine(printSum())
+				view.addLine("" + printSum());
 				System.out.println("Betala: " + price);
 
 			}

@@ -11,3 +11,5 @@ Sprint tre
 	mål: ha en fungerande produkt, som inkluderar kravspecen
 	
 Här är en ändring
+
+	Sluta skriv med � � �

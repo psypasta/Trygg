@@ -21,7 +21,7 @@ public class Product {
 		
 	}
 
-	Category cName;
+	//Category cName;
 	
 
 	public Product(int ID, String productName, double price, Category sort){

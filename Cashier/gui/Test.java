@@ -181,6 +181,10 @@ public class Test implements ActionListener{
 		//productList.add(p);
 	}
 	
+	public void addLine(String s) {
+		textArea.append(s);
+	}
+	
 	public void clearArea() {
 		textArea.setText(null);
 	}
