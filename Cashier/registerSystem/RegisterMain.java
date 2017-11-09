@@ -20,7 +20,7 @@ public class RegisterMain {
 		Credential cred = new Credential(420);
 
 		User user = new Employee("Max", "Blomstervall", cred, Role.EMPLOYEE);
-		List<Product> productList = new ArrayList<Product>();
+		//List<Product> productList = new ArrayList<Product>();
 		
 		Register kassan = new Register(user, test);
 
