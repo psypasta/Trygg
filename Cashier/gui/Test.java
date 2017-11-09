@@ -179,6 +179,8 @@ public class Test implements ActionListener{
 		textArea.append(p.getID() + " " + p.getProductName() + " " + p.getPrice() + "\n");
 		//System.out.println("append");
 		//productList.add(p);
+	
+		
 	}
 	
 	public void addLine(String s) {
@@ -201,9 +203,13 @@ public class Test implements ActionListener{
 	public void actionPerformed(ActionEvent arg0) {
 		if(arg0.getActionCommand().equals("Enter")) {
 		//	System.out.println(textField.getText());
+			
+			
 			data = textField.getText();
 		//	System.out.println(data);
 			textField.setText("");
+
+			
 		}
 		else{
 			textField.setText(textField.getText()+arg0.getActionCommand());

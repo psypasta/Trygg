@@ -79,10 +79,10 @@ public class Register {
 				fmt.setMaximumFractionDigits(2);
 				fmt.setRoundingMode(RoundingMode.CEILING);
 				String value = fmt.format(unrounded);
-				System.out.println(value);
+				//System.out.println(value);
 				//view.addLine(printSum())
-				view.addLine("" + printSum());
-				System.out.println("Betala: " + price);
+				view.addLine( value + "");
+				System.out.println("Betala: " + value);
 
 			}
 
