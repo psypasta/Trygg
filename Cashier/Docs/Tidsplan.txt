@@ -9,3 +9,5 @@ Sprint tvÃ¥
 Sprint tre 
 
 	mÃ¥l: ha en fungerande produkt, som inkluderar kravspecen
+	
+	Sluta skriv med å ä ö
