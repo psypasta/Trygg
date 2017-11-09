@@ -2,6 +2,8 @@ package registerSystem;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -68,6 +70,7 @@ public class Register {
 			int compareNum = 0;
 			try {
 			compareNum = Integer.parseInt(view.getData()); //Converted to int so the program can read the ID from the products
+			
 			}
 			catch(Exception e)
 			{
@@ -79,6 +82,13 @@ public class Register {
 				// kassan.commitSale();
 				view.setData();
 				price = printSum();
+				// Added a way to round up "price" it shows in the console.
+				double unrounded = price;
+				NumberFormat fmt = NumberFormat.getNumberInstance();
+				fmt.setMaximumFractionDigits(2);
+				fmt.setRoundingMode(RoundingMode.CEILING);
+				String value = fmt.format(unrounded);
+				System.out.println(value);
 				//view.addLine(printSum())
 				view.addLine("" + printSum());
 				System.out.println("Betala: " + price);
@@ -98,6 +108,7 @@ public class Register {
 						System.out.println(currentProduct.getSort());
 						addProduct(currentProduct);
 						view.addProduct(currentProduct);
+						
 					}
 				}
 			}
