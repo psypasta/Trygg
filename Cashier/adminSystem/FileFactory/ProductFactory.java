@@ -3,7 +3,6 @@ package adminSystem.FileFactory;
 import adminSystem.FileHandler;
 import adminSystem.User;
 import registerSystem.Product;
-import registerSystem.Product.Category;
 
 public class ProductFactory implements FileFactory {
 
@@ -21,16 +20,16 @@ public class ProductFactory implements FileFactory {
 			return null;
 		}
 		else if(category.equalsIgnoreCase("MEAT")) {
-			return new Product(ID, productName, price, Category.MEAT);
+			return new Product(ID, productName, price, "MEAT");
 		}
 		else if(category.equalsIgnoreCase("DAIRY")) {
-			return new Product(ID, productName, price, Category.DAIRY);
+			return new Product(ID, productName, price, "DAIRY");
 		}
 		else if(category.equalsIgnoreCase("FRUIT")) {
-			return new Product(ID, productName, price, Category.FRUIT);
+			return new Product(ID, productName, price, "FRUIT");
 		}	
 		else if(category.equalsIgnoreCase("VEGETABLE")) {
-			return new Product(ID, productName, price, Category.VEGETABLE);
+			return new Product(ID, productName, price, "VEGETABLE");
 		}
 		
 		return null;

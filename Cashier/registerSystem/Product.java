@@ -9,13 +9,9 @@ public class Product {
 	private String ID;
 	private String productName;
 	private double price;
-	private Category sort;
+	private String sort;
 	
 	private static int IDCount;
-
-	public enum Category {MEAT, DAIRY, VEGETABLE, FRUIT}; 
-	//Categories for the products. Coding tradition has it that they are supposed to be in all caps,
-	//which can cause problems with our textfile since it also has to be in all caps. Suggestions for it not to look weird in GUI? - J.V
 	
 	public Product() {
 		
@@ -24,7 +20,7 @@ public class Product {
 	//Category cName;
 	
 
-	public Product(String ID, String productName, double price, Category sort){
+	public Product(String ID, String productName, double price, String sort){
 
 		this.ID = ID;
 		this.productName = productName;
@@ -49,7 +45,7 @@ public class Product {
 		return price;
 	}
 	
-	public Category getSort() {
+	public String getSort() {
 		return sort;
 	}
 

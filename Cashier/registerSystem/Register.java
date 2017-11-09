@@ -52,8 +52,7 @@ public class Register {
 				String id = txtIn.next(); // Will ignores all zeroes in the front unless the number is exactly 0 - J.V
 				String name = txtIn.next(); //Will right now only read one word meaning words like "ice cream" does not work - J.V
 				Double price = txtIn.nextDouble();
-				String categoryString = txtIn.next();
-				Product.Category sort = Product.Category.valueOf(categoryString); //Converts the textstring into a enum of equal value. Warning, case sensitive - J.V
+				String sort = txtIn.next();
 				testlist.add(new Product(id, name, price, sort));
 				
 
