@@ -1,6 +1,6 @@
 #ID 		Name			Price
 
-0000 Apple 5
+0000 Apple
 0001 Orange 9
 0002 Kiwi 12
 0003 Mango 9
