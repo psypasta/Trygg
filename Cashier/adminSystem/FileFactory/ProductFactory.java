@@ -7,7 +7,7 @@ import registerSystem.Product.Category;
 
 public class ProductFactory implements FileFactory {
 
-	private int ID = 0;
+	private String ID = null;
 	private String productName = null;
 	private double price = 0.0;
 	private String category = null;
@@ -63,7 +63,7 @@ public class ProductFactory implements FileFactory {
 		
 		for(int j = 0; j < test.length; j++) {
 			if(j == 0) {
-				ID = Integer.parseInt(test[j]);
+				ID = test[j];
 			}
 			else if(j == 1) {
 				productName = test[j];

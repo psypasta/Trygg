@@ -49,7 +49,7 @@ public class Register {
 		try {
 			Scanner txtIn = new Scanner(new File("Cashier/resource/productsTest.txt")); //Temporary text file that has deleted everything except the products themselves - J.V
 			while (txtIn.hasNext()) {
-				int id = txtIn.nextInt(); // Will ignores all zeroes in the front unless the number is exactly 0 - J.V
+				String id = txtIn.next(); // Will ignores all zeroes in the front unless the number is exactly 0 - J.V
 				String name = txtIn.next(); //Will right now only read one word meaning words like "ice cream" does not work - J.V
 				Double price = txtIn.nextDouble();
 				String categoryString = txtIn.next();
@@ -67,16 +67,7 @@ public class Register {
 		
 		while (true) {
 
-			int compareNum = 0;
-			try {
-			compareNum = Integer.parseInt(view.getData()); //Converted to int so the program can read the ID from the products
 			
-			}
-			catch(Exception e)
-			{
-				
-			}
-		
 			if (view.getData().equals("#2#")) {
 				// kassan
 				// kassan.commitSale();
@@ -102,7 +93,7 @@ public class Register {
 			} else {
 				for (Product currentProduct : testlist) { // Foreach used so it can compare the ID input with all the products in the list - J.V
 
-					if (compareNum == currentProduct.getID()) {
+					if (view.getData().equals(currentProduct.getID())) {
 						view.setData();
 						System.out.print(currentProduct.getProductName() + (" "));
 						System.out.println(currentProduct.getSort());

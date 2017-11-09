@@ -6,7 +6,7 @@ public class Product {
 	
 	private int nType;
 	private int inventory;
-	private int ID;
+	private String ID;
 	private String productName;
 	private double price;
 	private Category sort;
@@ -24,7 +24,7 @@ public class Product {
 	//Category cName;
 	
 
-	public Product(int ID, String productName, double price, Category sort){
+	public Product(String ID, String productName, double price, Category sort){
 
 		this.ID = ID;
 		this.productName = productName;
@@ -37,7 +37,7 @@ public class Product {
 	
 	
 	
-	public int getID() {
+	public String getID() {
 		return ID;
 	}
 	
