@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.1" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="adminSystem.Credential" project="modig" 
-    file="/modig/Cashier/adminSystem/Credential.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="model.adminSystem.Credential" project="modig" 
+    file="/modig/Cashier/model/adminSystem/Credential.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1493" y="936"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="adminSystem.Employee" project="modig" 
-    file="/modig/Cashier/adminSystem/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="model.adminSystem.Employee" project="modig" 
+    file="/modig/Cashier/model/adminSystem/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1680" y="909"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="adminSystem.Manager" project="modig" 
-    file="/modig/Cashier/adminSystem/Manager.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="model.adminSystem.Manager" project="modig" 
+    file="/modig/Cashier/model/adminSystem/Manager.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="821" y="684"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,7 +28,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="gui.LoginTest" project="modig" file="/modig/Cashier/gui/LoginTest.java" 
+  <class id="4" language="java" name="view.LoginTest" project="modig" file="/modig/Cashier/view/LoginTest.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1283" y="419"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="adminSystem.Administrator" project="modig" 
-    file="/modig/Cashier/adminSystem/Administrator.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="model.adminSystem.Administrator" project="modig" 
+    file="/modig/Cashier/model/adminSystem/Administrator.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1296" y="918"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,13 +46,13 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="6" language="java" name="saleReportSystem" project="modig" file="/modig/Cashier/saleReportSystem" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <package id="6" language="java" name="model.saleReportSystem" project="modig" 
+    file="/modig/Cashier/model/saleReportSystem" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="167" y="58"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="7" language="java" name="saleReportSystem.Order" project="modig" 
-    file="/modig/Cashier/saleReportSystem/Order.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="model.saleReportSystem.Order" project="modig" 
+    file="/modig/Cashier/model/saleReportSystem/Order.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="316" y="73"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -60,13 +60,13 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="8" language="java" name="gui" project="modig" file="/modig/Cashier/gui" binary="false" 
+  <package id="8" language="java" name="view" project="modig" file="/modig/Cashier/view" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="450" y="58"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="9" language="java" name="registerSystem.RegisterMain" project="modig" 
-    file="/modig/Cashier/registerSystem/RegisterMain.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="model.registerSystem.RegisterMain" project="modig" 
+    file="/modig/Cashier/model/registerSystem/RegisterMain.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="370" y="165"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -74,8 +74,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="registerSystem.Cash" project="modig" 
-    file="/modig/Cashier/registerSystem/Cash.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="model.registerSystem.Cash" project="modig" 
+    file="/modig/Cashier/model/registerSystem/Cash.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1050" y="53"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -83,8 +83,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="saleReportSystem.Report" project="modig" 
-    file="/modig/Cashier/saleReportSystem/Report.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="11" language="java" name="model.saleReportSystem.Report" project="modig" 
+    file="/modig/Cashier/model/saleReportSystem/Report.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1482" y="410"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -92,8 +92,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="registerSystem.Credit" project="modig" 
-    file="/modig/Cashier/registerSystem/Credit.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="model.registerSystem.Credit" project="modig" 
+    file="/modig/Cashier/model/registerSystem/Credit.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1177" y="53"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -101,7 +101,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="gui.Test" project="modig" file="/modig/Cashier/gui/Test.java" binary="false" 
+  <class id="13" language="java" name="view.Test" project="modig" file="/modig/Cashier/view/Test.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="213" y="255"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -110,8 +110,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="registerSystem.Register" project="modig" 
-    file="/modig/Cashier/registerSystem/Register.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="14" language="java" name="model.registerSystem.Register" project="modig" 
+    file="/modig/Cashier/model/registerSystem/Register.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1692" y="413"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -119,8 +119,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="registerSystem.Product" project="modig" 
-    file="/modig/Cashier/registerSystem/Product.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="model.registerSystem.Product" project="modig" 
+    file="/modig/Cashier/model/registerSystem/Product.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1862" y="972"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -128,8 +128,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="16" language="java" name="registerSystem.Payment" project="modig" 
-    file="/modig/Cashier/registerSystem/Payment.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="16" language="java" name="model.registerSystem.Payment" project="modig" 
+    file="/modig/Cashier/model/registerSystem/Payment.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1121" y="204"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -137,8 +137,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="17" language="java" name="adminSystem.User" project="modig" file="/modig/Cashier/adminSystem/User.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="17" language="java" name="model.adminSystem.User" project="modig" 
+    file="/modig/Cashier/model/adminSystem/User.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1484" y="716"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -146,8 +146,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="saleReportSystem.Sale" project="modig" 
-    file="/modig/Cashier/saleReportSystem/Sale.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="18" language="java" name="model.saleReportSystem.Sale" project="modig" 
+    file="/modig/Cashier/model/saleReportSystem/Sale.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1364" y="175"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -155,13 +155,13 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="19" language="java" name="adminSystem" project="modig" file="/modig/Cashier/adminSystem" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <package id="19" language="java" name="model.adminSystem" project="modig" file="/modig/Cashier/model/adminSystem" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="567" y="64"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="20" language="java" name="adminSystem.FileHandler" project="modig" 
-    file="/modig/Cashier/adminSystem/FileHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="20" language="java" name="model.adminSystem.FileHandler" project="modig" 
+    file="/modig/Cashier/model/adminSystem/FileHandler.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1130" y="936"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -169,8 +169,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="saleReportSystem.Inventory" project="modig" 
-    file="/modig/Cashier/saleReportSystem/Inventory.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="21" language="java" name="model.saleReportSystem.Inventory" project="modig" 
+    file="/modig/Cashier/model/saleReportSystem/Inventory.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="821" y="949"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -178,13 +178,13 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="22" language="java" name="registerSystem" project="modig" file="/modig/Cashier/registerSystem" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <package id="22" language="java" name="model.registerSystem" project="modig" 
+    file="/modig/Cashier/model/registerSystem" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="690" y="59"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="23" language="java" name="registerSystem.Receipt" project="modig" 
-    file="/modig/Cashier/registerSystem/Receipt.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="23" language="java" name="model.registerSystem.Receipt" project="modig" 
+    file="/modig/Cashier/model/registerSystem/Receipt.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1703" y="716"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -192,59 +192,54 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="saleReportSystem.Sales" project="modig" 
-    file="/modig/Cashier/saleReportSystem/Sales.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="830" y="74"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
+  <realization id="24">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
   <association id="25">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="26" name="i">        
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="26" name="productList">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="27" minimum="0" maximum="1">        
+      <multiplicity id="27" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="29">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="30" name="user">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="33" name="i">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="34" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="28">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <generalization id="29">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <realization id="30">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="16"/>  
-  </realization>  
-  <generalization id="31">    
+  <generalization id="35">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="17"/>  
   </generalization>  
-  <realization id="32">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="16"/>  
-  </realization>  
-  <association id="33">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="34" name="payment">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="35" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="36">    
     <bendpoint x="1862" y="606"/>    
     <end type="SOURCE" refId="14" navigable="false">      
@@ -258,30 +253,14 @@
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="39">    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="40" name="productList">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="41" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="42">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="43" name="user">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="44" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <realization id="40">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

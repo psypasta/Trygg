@@ -1,0 +1,49 @@
+package model.adminSystem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.adminSystem.FileFactory.FileFactory;
+import model.adminSystem.FileFactory.ProductFactory;
+import model.adminSystem.FileFactory.UserFactory;
+import model.registerSystem.Product;
+import view.LoginTest;
+
+public class AdminMain {
+
+	public static void main(String[] args) {
+		
+		LoginTest test2 = new LoginTest();
+		test2.run();	
+		
+		FileFactory uf = new UserFactory();
+		FileFactory pf = new ProductFactory();
+	
+		Product b = pf.createProduct(1);
+		
+		System.out.println("ID: " + b.getID());
+		System.out.println("Pris: " + b.getPrice());
+		System.out.println("Product name: " + b.getProductName());
+		System.out.println("Category: " + b.getSort() + "\n");
+		
+	  	User a = uf.createUser(1);
+	  	
+		System.out.println("First name: " + a.getFirstName());
+		System.out.println("Last name: " + a.getLastName());
+		System.out.println("Work hours: " + a.getWorkHours());
+		System.out.println("Username: " + a.getCredentials().getUserName());
+		System.out.println("Role: " + a.getRole());
+
+		List<Product> help = new ArrayList<Product>();
+		
+		for(int i = 0; i < pf.getLinesSize(); i++) {
+			help.add(pf.createProduct(i));
+			System.out.println(help.get(i).getProductName());
+		}
+		
+		
+		//dispose of window
+			test2.setVisible(false);
+			test2.dispose(); 
+	}
+}
