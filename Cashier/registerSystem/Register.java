@@ -1,15 +1,15 @@
 package registerSystem;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import adminSystem.User;
+import adminSystem.FileFactory.FileFactory;
+import adminSystem.FileFactory.ProductFactory;
 import gui.Test;
+import saleReportSystem.Sale;
 
 public class Register {
 	// Lägga till gånger antal istället för att skriva in samma vara flera
@@ -39,37 +39,27 @@ public class Register {
 		this.view = view;
 
 		view.run();
-		kvittoList.add(new Receipt());
+		kvittoList.add(new Receipt(user));
 	}
 
 	public void run() {
-		ArrayList<Product> testlist = new ArrayList<Product>(); //List over products from the text file
-		                                                         
-
-		try {
-			Scanner txtIn = new Scanner(new File("Cashier/resource/productsTest.txt")); //Temporary text file that has deleted everything except the products themselves - J.V
-			while (txtIn.hasNext()) {
-				String id = txtIn.next(); // Will ignores all zeroes in the front unless the number is exactly 0 - J.V
-				String name = txtIn.next(); //Will right now only read one word meaning words like "ice cream" does not work - J.V
-				Double price = txtIn.nextDouble();
-				String sort = txtIn.next();
-				testlist.add(new Product(id, name, price, sort));
-				
-
-			}
-			txtIn.close();
-		} catch (FileNotFoundException e) {
-			// Program won't scan without an exception finder - J.V
-
-		}
-
 		
+		//Uses FileFactory class to create product object
+		FileFactory pf = new ProductFactory();
+		
+		pf.createProduct(0);
+		
+		ArrayList<Product> testlist = new ArrayList<Product>(); //List over products from the text file
+		
+		//Loop to fill testlist with product objects from products.txt
+		for(int i = 0; i < pf.getLinesSize(); i++) {
+			testlist.add(pf.createProduct(i));
+		}
+		
+		//Main register loop
 		while (true) {
-
 			
 			if (view.getData().equals("#2#")) {
-				// kassan
-				// kassan.commitSale();
 				view.setData();
 				price = printSum();
 				// Added a way to round up "price" it shows in the console.
@@ -103,6 +93,7 @@ public class Register {
 				}
 			}
 			if (view.getData().equals("420")) {
+				snail.reportFile();
 				break;
 			}
 		}
@@ -119,7 +110,7 @@ public class Register {
 	}
 
 	public double printSum() {
-		snail = new Sale(productList);
+		snail = new Sale();
 	//	System.out.println(snail.getSubTotal(productList) + "SNAIL");
 		return snail.getSubTotal(productList);
 	}
@@ -128,10 +119,10 @@ public class Register {
 		// TRANSAKTION
 		// add sale to sale report system, remove product from lager, and add to ~
 		// salereport. ~
-		snail = new Sale(productList);
-
+		snail = new Sale();
+		snail.commitSale(productList);
 		productList = new ArrayList<Product>();
-		kvittoList.add(new Receipt());
+		kvittoList.add(new Receipt(user));
 
 		saleCount++;
 		// return kvitto;
