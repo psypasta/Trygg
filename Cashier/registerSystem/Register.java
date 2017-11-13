@@ -32,7 +32,7 @@ public class Register {
 // private Receipt kvitto;
 //	private Sale s = new Sale(productList);
 //	private File matFile = new File("Cashier/resource/mat.txt");
-
+	
 	private User user;
 
 	public Register(User u, Test view) {
@@ -73,6 +73,7 @@ public class Register {
 			if (view.getData().equals("#2#")) {
 				// kassan
 				// kassan.commitSale();
+				// Might be deprecated code between line 78 - 88, after the j.v fix with US language the decimals seems to be working without this.
 				view.setData();
 				price = printSum();
 				// Added a way to round up "price" it shows in the console.
@@ -84,10 +85,10 @@ public class Register {
 				//System.out.println(value);
 				//view.addLine(printSum())
 				view.addLine( value + "");
-				System.out.println("Betala: " + value);
+				System.out.println("Betala: " + price);
 
 			}
-
+			// Commiting the sale, clearing the view inside GUI.
 			else if (view.getData().equals("00")) {
 				view.setData();
 				kvittoList = commitSale();
