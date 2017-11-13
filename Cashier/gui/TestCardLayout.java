@@ -19,7 +19,7 @@ import gui.sales.SalesPanel;
 public class TestCardLayout implements ActionListener{
 
 //	private static ActionListener listener = new Listener();
-	
+	//CONFLICTS INC
     private LoginPanel login = new LoginPanel(this);
     private RegisterPanel register = new RegisterPanel();
     private SalesPanel sales = new SalesPanel();
