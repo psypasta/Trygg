@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 import adminSystem.User;
@@ -41,8 +42,10 @@ public class Register {
 		view.run();
 		kvittoList.add(new Receipt());
 	}
-
+    
+	
 	public void run() {
+		Locale.setDefault(Locale.US); //This changes the locale to US no matter computer you are on. Should solve our decimal crash problem.
 		ArrayList<Product> testlist = new ArrayList<Product>(); //List over products from the text file
 		                                                         
 
