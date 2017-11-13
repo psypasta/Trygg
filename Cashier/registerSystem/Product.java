@@ -3,9 +3,10 @@ package registerSystem;
 
 public class Product {
 	
-	
+	//Product class fields.
 	private int nType;
-	private int inventory;
+	private int inventory; //Maybe use this?
+	//Fields for product
 	private String ID;
 	private String productName;
 	private double price;
@@ -16,13 +17,12 @@ public class Product {
 	
 	enum WeightUnit {UNIT, WEIGHT}
 	
+	//Empty unused constructor I think?
 	public Product() {
 		
 	}
 
-	//Category cName;
-	
-
+	//Actual constructor sets the objects fields to whats incoming
 	public Product(String ID, String productName, double price, String sort){
 
 		this.ID = ID;

@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,18 +19,25 @@ import gui.sales.SalesPanel;
 public class TestCardLayout implements ActionListener{
 
 //	private static ActionListener listener = new Listener();
-	
+	//CONFLICTS INC
     private LoginPanel login = new LoginPanel(this);
     private RegisterPanel register = new RegisterPanel();
     private SalesPanel sales = new SalesPanel();
     private AdminPanel admin = new AdminPanel();
 
+//  private List<JPanel> panels = new ArrayList<JPanel>();
+    
     private CardLayout layout = new CardLayout();
     private JPanel cardPanel = new JPanel(layout);
     
     private boolean boolLogin = false;
-
+/*
+    public List getPanels() {
+    		return panels;
+    }
+    */
     public TestCardLayout() {
+    		
         JButton showOne = new JButton("Show One");
         JButton showTwo = new JButton("Show Two");
         JButton showThree = new JButton("Show Three");
@@ -47,7 +56,12 @@ public class TestCardLayout implements ActionListener{
         cardPanel.add(register, "register");
         cardPanel.add(sales, "sales");
         cardPanel.add(admin, "admin");
-
+/*
+		panels.add(login);
+		panels.add(register);
+		panels.add(sales);
+		panels.add(admin);
+        */
         JFrame frame = new JFrame("Test Card");
         frame.setResizable(false);
 		frame.setBounds(100, 100, 580, 450);

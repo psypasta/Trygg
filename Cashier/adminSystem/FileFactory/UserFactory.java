@@ -80,6 +80,12 @@ public class UserFactory implements FileFactory{
 		return null;
 	}
 
+	@Override
+	public int getLinesSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 	
 }
