@@ -49,7 +49,7 @@ public class Register {
 		try {
 			Scanner txtIn = new Scanner(new File("Cashier/resource/productsTest.txt")); //Temporary text file that has deleted everything except the products themselves - J.V
 			while (txtIn.hasNext()) {
-				String id = txtIn.next(); // Will ignores all zeroes in the front unless the number is exactly 0 - J.V
+				String id = txtIn.next();
 				String name = txtIn.next(); //Will right now only read one word meaning words like "ice cream" does not work - J.V
 				Double price = txtIn.nextDouble();
 				String sort = txtIn.next();
