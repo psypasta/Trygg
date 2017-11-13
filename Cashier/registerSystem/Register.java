@@ -96,6 +96,7 @@ public class Register {
 						view.setData();
 						System.out.print(currentProduct.getProductName() + (" "));
 						System.out.println(currentProduct.getSort());
+						System.out.println(currentProduct.getWeightUnit()); //Just here to check that it works
 						addProduct(currentProduct);
 						view.addProduct(currentProduct);
 						

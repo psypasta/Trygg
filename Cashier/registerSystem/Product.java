@@ -10,8 +10,11 @@ public class Product {
 	private String productName;
 	private double price;
 	private String sort;
+	private WeightUnit weightUnit;
 	
 	private static int IDCount;
+	
+	enum WeightUnit {UNIT, WEIGHT}
 	
 	public Product() {
 		
@@ -29,6 +32,15 @@ public class Product {
 		IDCount++;
 
 		this.sort = sort;
+		if (this.sort.equals("FRUIT") || this.sort.equals("VEGETABLE")) //Mostly testing to see how the program should see if a product
+			                                                            //should be measured in unit or weight. Has of now no real function
+		{
+			this.weightUnit = Product.WeightUnit.WEIGHT;
+		}
+		else
+		{
+			this.weightUnit = Product.WeightUnit.UNIT;
+		}
 	}
 	
 	
@@ -49,7 +61,9 @@ public class Product {
 		return sort;
 	}
 
-
+    public WeightUnit getWeightUnit() {
+    	return weightUnit;
+    	
+    }
 }
-
 
