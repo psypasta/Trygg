@@ -1,5 +1,8 @@
 package adminSystem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import adminSystem.FileFactory.FileFactory;
 import adminSystem.FileFactory.ProductFactory;
 import adminSystem.FileFactory.UserFactory;
@@ -32,6 +35,14 @@ public class AdminMain {
 		System.out.println("Username: " + a.getCredentials().getUserName());
 		System.out.println("Role: " + a.getRole());
 
+		List<Product> help = new ArrayList<Product>();
+		
+		for(int i = 0; i < pf.getLinesSize(); i++) {
+			help.add(pf.createProduct(i));
+			System.out.println(help.get(i).getProductName());
+		}
+		
+		
 		//dispose of window
 			test2.setVisible(false);
 			test2.dispose(); 

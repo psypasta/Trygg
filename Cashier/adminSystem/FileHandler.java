@@ -16,6 +16,10 @@ public class FileHandler{
 		// TODO Auto-generated constructor stub
 	}
 	
+	public FileHandler(String file) {
+		this.path += file;
+	}
+	
 	public String read(String file) {
 		path += file;
 		//  throws IOException 
@@ -43,7 +47,7 @@ public class FileHandler{
 			    }
 			}
 			data = finalStringBuilder.toString();
-			System.out.println("data: " + data);
+		//	System.out.println("data: " + data);
 		    return data;
 		  }
 

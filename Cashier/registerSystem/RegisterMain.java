@@ -9,19 +9,15 @@ import adminSystem.User;
 import adminSystem.User.Role;
 import gui.Test;
 
-//ingen av dessa implementationer är final >
-
 public class RegisterMain {
 
+	//Main start point for register program.
 	public static void main(String[] args) {		
 		
 		Test test = new Test();
 		
 		Credential cred = new Credential(420);
-
-		User user = new Employee("Max", "Blomstervall", cred, Role.EMPLOYEE);
-		//List<Product> productList = new ArrayList<Product>();
-		
+		User user = new Employee("Max", "Blomstervall", cred, Role.EMPLOYEE);	
 		Register kassan = new Register(user, test);
 
 		kassan.run();

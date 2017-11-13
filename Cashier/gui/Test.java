@@ -184,7 +184,7 @@ public class Test implements ActionListener{
 	}
 	
 	public void addLine(String s) {
-		textArea.append(s);
+		textArea.append(s + "\n");
 	}
 	
 	public void clearArea() {

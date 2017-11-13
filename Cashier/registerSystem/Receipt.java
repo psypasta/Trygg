@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import adminSystem.User;
 public class Receipt {
 	
 	private static final double MOMS = 0.25;
@@ -16,9 +18,9 @@ public class Receipt {
 	private String data;
 	private double sum = 0;
 	
-	public Receipt() {
+	public Receipt(User u) {
 		data =	"KVITTENS\n\nCompany: " + COMPANY + "\n" 
-				+ "Org#: " + ORGNUMBER + "\n";
+				+ "Org#: " + ORGNUMBER + "\nKassör: " + u.getCredentials().getUserName() + " " + u.getFirstName()+ "\n\n";
 	}
 	
 	public void addLine(Product p) {
@@ -27,13 +29,10 @@ public class Receipt {
 	}
 	
 	public String print() {
-		//System.out.println(date.getTime());
-		
 		data += "\nSum: " + sum + "\nDate: " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
 		data += "\n";
 		
 		return data;
-//uhm2 push rejected check earlier commit messages
 	}
 	
 /*	public String getData() {

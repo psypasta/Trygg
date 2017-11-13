@@ -3,23 +3,26 @@ package registerSystem;
 
 public class Product {
 	
-	
+	//Product class fields.
 	private int nType;
-	private int inventory;
+	private int inventory; //Maybe use this?
+	//Fields for product
 	private String ID;
 	private String productName;
 	private double price;
 	private String sort;
+	private WeightUnit weightUnit;
 	
 	private static int IDCount;
 	
+	enum WeightUnit {UNIT, WEIGHT}
+	
+	//Empty unused constructor I think?
 	public Product() {
 		
 	}
 
-	//Category cName;
-	
-
+	//Actual constructor sets the objects fields to whats incoming
 	public Product(String ID, String productName, double price, String sort){
 
 		this.ID = ID;
@@ -29,6 +32,15 @@ public class Product {
 		IDCount++;
 
 		this.sort = sort;
+		if (this.sort.equals("FRUIT") || this.sort.equals("VEGETABLE")) //Mostly testing to see how the program should see if a product
+			                                                            //should be measured in unit or weight. Has of now no real function
+		{
+			this.weightUnit = Product.WeightUnit.WEIGHT;
+		}
+		else
+		{
+			this.weightUnit = Product.WeightUnit.UNIT;
+		}
 	}
 	
 	
@@ -49,7 +61,9 @@ public class Product {
 		return sort;
 	}
 
-
+    public WeightUnit getWeightUnit() {
+    	return weightUnit;
+    	
+    }
 }
-
 

@@ -4,10 +4,12 @@ import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import adminSystem.User;
 import adminSystem.FileFactory.FileFactory;
 import adminSystem.FileFactory.ProductFactory;
+import adminSystem.FileFactory.UserFactory;
 import gui.Test;
 import saleReportSystem.Sale;
 
@@ -41,15 +43,19 @@ public class Register {
 		view.run();
 		kvittoList.add(new Receipt(user));
 	}
-
+    
+	
 	public void run() {
 		
+		Locale.setDefault(Locale.US); //This changes the locale to US no matter computer you are on. Should solve our decimal crash problem.	                                                         
+
 		//Uses FileFactory class to create product object
 		FileFactory pf = new ProductFactory();
-		
+				
 		pf.createProduct(0);
-		
 		ArrayList<Product> testlist = new ArrayList<Product>(); //List over products from the text file
+		
+		Product[] parray;
 		
 		//Loop to fill testlist with product objects from products.txt
 		for(int i = 0; i < pf.getLinesSize(); i++) {
@@ -75,6 +81,7 @@ public class Register {
 
 			}
 
+			//Commit sale condition
 			else if (view.getData().equals("00")) {
 				view.setData();
 				kvittoList = commitSale();
@@ -86,35 +93,40 @@ public class Register {
 						view.setData();
 						System.out.print(currentProduct.getProductName() + (" "));
 						System.out.println(currentProduct.getSort());
+						System.out.println(currentProduct.getWeightUnit()); //Just here to check that it works
 						addProduct(currentProduct);
 						view.addProduct(currentProduct);
 						
 					}
 				}
-			}
+			}//Exits the program in its current form
 			if (view.getData().equals("420")) {
 				snail.reportFile();
 				break;
 			}
 		}
 
+		//prints the receipt to console
 		for (int i = 0; i < kvittoList.size(); i++) {
 			System.out.println(kvittoList.get(i).print());
 		}
 		view.destroy();
 	}
 
+	//add products to the kvitto and register list (productList)
 	public void addProduct(Product p) {
 		productList.add(p);
 		kvittoList.get(saleCount).addLine(p);
 	}
 
+	//Method for printing sum of current products
 	public double printSum() {
 		snail = new Sale();
 	//	System.out.println(snail.getSubTotal(productList) + "SNAIL");
 		return snail.getSubTotal(productList);
 	}
 
+	//commits a sale. clears productsList, add kvittoList into receipt object.
 	public List commitSale() {
 		// TRANSAKTION
 		// add sale to sale report system, remove product from lager, and add to ~
@@ -124,6 +136,7 @@ public class Register {
 		productList = new ArrayList<Product>();
 		kvittoList.add(new Receipt(user));
 
+		//add one to salecount, which is used for indexing of kvittolist
 		saleCount++;
 		// return kvitto;
 		return kvittoList;

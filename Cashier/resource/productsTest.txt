@@ -1,4 +1,4 @@
-01 Apple 10 FRUIT
+01 Apple 10.23 FRUIT
 02 Orange 9 FRUIT
 03 Kiwi 12 FRUIT
 04 Mango 9 FRUIT
