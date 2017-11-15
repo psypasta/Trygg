@@ -1,134 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.1" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="model.adminSystem.Credential" project="modig" 
-    file="/modig/Cashier/model/adminSystem/Credential.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="125" x="130" y="291"/>    
+  <class id="1" language="java" name="adminSystem.UserReader" project="modig" 
+    file="/modig/Cashier/adminSystem/UserReader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="102" y="154"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="model.adminSystem.Employee" project="modig" 
-    file="/modig/Cashier/model/adminSystem/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="83" width="246" x="295" y="291"/>    
+  <class id="2" language="java" name="adminSystem.Credentials" project="modig" 
+    file="/modig/Cashier/adminSystem/Credentials.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="585" y="390"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="model.adminSystem.Manager" project="modig" 
-    file="/modig/Cashier/model/adminSystem/Manager.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="155" width="240" x="581" y="291"/>    
+  <class id="3" language="java" name="adminSystem.Employee" project="modig" 
+    file="/modig/Cashier/adminSystem/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="772" y="363"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="model.adminSystem.Administrator" project="modig" 
-    file="/modig/Cashier/model/adminSystem/Administrator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="263" x="882" y="291"/>    
+  <class id="4" language="java" name="adminSystem.Manager" project="modig" 
+    file="/modig/Cashier/adminSystem/Manager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="967" y="399"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="5" language="java" name="model.adminSystem.User.Role" project="modig" 
-    file="/modig/Cashier/model/adminSystem/User.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="137" width="135" x="1185" y="291"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </enumeration>  
-  <class id="6" language="java" name="model.adminSystem.FileFactory.UserFactory" project="modig" 
-    file="/modig/Cashier/model/adminSystem/FileFactory/UserFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="101" width="270" x="291" y="24"/>    
+  <class id="5" language="java" name="adminSystem.Administrator" project="modig" 
+    file="/modig/Cashier/adminSystem/Administrator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="420" y="172"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="model.adminSystem.User" project="modig" 
-    file="/modig/Cashier/model/adminSystem/User.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="227" width="218" x="842" y="24"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="model.adminSystem.FileHandler" project="modig" 
-    file="/modig/Cashier/model/adminSystem/FileHandler.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="155" width="134" x="1360" y="291"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <package id="9" language="java" name="model.adminSystem.FileFactory" project="modig" 
-    file="/modig/Cashier/model/adminSystem/FileFactory" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="52" width="201" x="601" y="24"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <interface id="10" language="java" name="model.adminSystem.FileFactory.UserInterface" project="modig" 
-    file="/modig/Cashier/model/adminSystem/FileFactory/UserInterface.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="155" width="176" x="842" y="486"/>    
+  <interface id="6" language="java" name="adminSystem.FileReader" project="modig" 
+    file="/modig/Cashier/adminSystem/FileReader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="241" y="356"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="11" language="java" name="model.adminSystem.FileHandler" project="modig" 
-    file="/modig/Cashier/model/adminSystem/FileHandler.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="119" width="134" x="1360" y="486"/>    
+  <class id="7" language="java" name="adminSystem.User" project="modig" file="/modig/Cashier/adminSystem/User.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="670" y="170"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
+  <class id="8" language="java" name="adminSystem.ProductReader" project="modig" 
+    file="/modig/Cashier/adminSystem/ProductReader.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="246" y="154"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="9" language="java" name="adminSystem" project="modig" file="/modig/Cashier/adminSystem" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="453" y="35"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <generalization id="10">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <realization id="11">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
   <generalization id="12">    
-    <end type="SOURCE" refId="2"/>    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="7"/>  
   </generalization>  
   <generalization id="13">    
-    <end type="SOURCE" refId="4"/>    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="7"/>  
   </generalization>  
   <realization id="14">    
-    <bendpoint x="851" y="291"/>    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="10"/>  
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
   </realization>  
-  <realization id="15">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <realization id="16">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <generalization id="17">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
-  <realization id="18">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <nesting id="19">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="5"/>  
-  </nesting>  
+  <association id="15">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="16" name="handler">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="17" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="18">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="19" name="credentials">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="20" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
