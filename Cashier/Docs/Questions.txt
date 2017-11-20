@@ -1,6 +1,0 @@
-#QUESTIONS FOR THE PRODUCT OWNER
-
-	1.Generera en lista �ver varugruppsspecificerad struktur   
- jag vill ha, gruppera varor som en gren, tshirt till hör kläder osv
-	
-	

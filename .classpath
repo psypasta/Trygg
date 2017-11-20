@@ -8,7 +8,6 @@
 	<classpathentry kind="src" path="Networking"/>
 	<classpathentry kind="src" path="Euler"/>
 	<classpathentry kind="src" path="pong"/>
-	<classpathentry kind="src" path="Cashier"/>
 	<classpathentry kind="src" path="Design Patterns"/>
 	<classpathentry kind="src" path="Exercises"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
