@@ -144,3 +144,70 @@ Product
 	Price20.0
 	ßCategory: DAIRY
 
+
+Day total:109.0
+
+Date: 2017-11-20 09:21:53.185
+Sum: 
+Product
+	ID: 10
+	Name: Parsnip
+	Price100.0
+	ßCategory: VEGETABLE
+
+Product
+	ID: 02
+	Name: Orange
+	Price9.0
+	ßCategory: FRUIT
+
+
+Day total:19.23
+
+Date: 2017-11-20 12:21:20.513
+Sum: 
+Product
+	ID: 01
+	Name: Apple
+	Price10.23
+	ßCategory: FRUIT
+
+Product
+	ID: 02
+	Name: Orange
+	Price9.0
+	ßCategory: FRUIT
+
+
+Day total:10.23
+
+Date: 2017-11-20 12:22:53.307
+Sum: 
+Product
+	ID: 01
+	Name: Apple
+	Price10.23
+	ßCategory: FRUIT
+
+
+Day total:100.0
+
+Date: 2017-11-20 12:26:03.919
+Sum: 
+Product
+	ID: 10
+	Name: Parsnip
+	Price100.0
+	ßCategory: VEGETABLE
+
+
+Day total:9.0
+
+Date: 2017-11-20 12:27:27.340
+Sum: 
+Product
+	ID: 02
+	Name: Orange
+	Price9.0
+	ßCategory: FRUIT
+

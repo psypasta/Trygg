@@ -16,7 +16,7 @@ public class RegisterMain {
 		
 		Test test = new Test();
 		
-		Credential cred = new Credential(420);
+		Credential cred = new Credential(123);
 		User user = new Employee("Max", "Blomstervall", cred, Role.EMPLOYEE);	
 		Register kassan = new Register(user, test);
 

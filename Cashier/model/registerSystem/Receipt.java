@@ -9,8 +9,8 @@ import model.adminSystem.User;
 public class Receipt {
 	
 	private static final double MOMS = 0.25;
-	private static final String COMPANY = "ICA Nära";;
-	private static final int ORGNUMBER = 4201337;;
+	private static final String COMPANY = "ICA";;
+	private static final int ORGNUMBER = 8888;;
 	
 	private static int ID;
 	
@@ -20,7 +20,7 @@ public class Receipt {
 	
 	public Receipt(User u) {
 		data =	"KVITTENS\n\nCompany: " + COMPANY + "\n" 
-				+ "Org#: " + ORGNUMBER + "\nKassör: " + u.getCredentials().getUserName() + " " + u.getFirstName()+ "\n\n";
+				+ "Org#: " + ORGNUMBER + "\nCashier: " + u.getCredentials().getUserName() + " " + u.getFirstName()+ "\n\n";
 	}
 	
 	public void addLine(Product p) {

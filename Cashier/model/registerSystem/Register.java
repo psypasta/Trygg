@@ -109,7 +109,7 @@ public class Register {
 					}
 				}
 			}//Exits the program in its current form
-			if (view.getData().equals("420")) {
+			if (view.getData().equals("#0#")) {
 				snail.reportFile();
 				break;
 			}
