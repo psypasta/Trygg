@@ -1,8 +1,5 @@
 package designPattern.factoryPattern;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class FactoryPattern {
 	
 	public static void main(String[] args) {
@@ -19,7 +16,7 @@ public class FactoryPattern {
 		Shape shape3 = shapeFactory.getShape("SQUARE");
 		
 		shape3.draw();
-		// Kollar på detta sen!
+		// Kollar pï¿½ detta sen!
 		//List<Shape> shapeList = new ArrayList<Shape>();
 		//Waiting for answers from Patrik
 		//for(int i = 0; i < 100; i++) {

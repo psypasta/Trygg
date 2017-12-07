@@ -1,9 +1,6 @@
 package designPattern.AbstractFactory;
 
-import designPattern.factoryPattern.Circle;
-import designPattern.factoryPattern.Rectangle;
 import designPattern.factoryPattern.Shape;
-import designPattern.factoryPattern.Square;
 
 public class ColorFactory extends AbstractFactory{
 

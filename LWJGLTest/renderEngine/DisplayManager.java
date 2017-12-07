@@ -1,11 +1,29 @@
 package renderEngine;
 
-import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
-import static org.lwjgl.opengl.GL11.glClear;
+import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MAJOR;
+import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MINOR;
+import static org.lwjgl.glfw.GLFW.GLFW_FALSE;
+import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_CORE_PROFILE;
+import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_FORWARD_COMPAT;
+import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_PROFILE;
+import static org.lwjgl.glfw.GLFW.GLFW_TRUE;
+import static org.lwjgl.glfw.GLFW.GLFW_VISIBLE;
+import static org.lwjgl.glfw.GLFW.glfwCreateWindow;
+import static org.lwjgl.glfw.GLFW.glfwGetPrimaryMonitor;
+import static org.lwjgl.glfw.GLFW.glfwGetVideoMode;
+import static org.lwjgl.glfw.GLFW.glfwInit;
+import static org.lwjgl.glfw.GLFW.glfwMakeContextCurrent;
+import static org.lwjgl.glfw.GLFW.glfwPollEvents;
+import static org.lwjgl.glfw.GLFW.glfwSetWindowPos;
+import static org.lwjgl.glfw.GLFW.glfwShowWindow;
+import static org.lwjgl.glfw.GLFW.glfwSwapBuffers;
+import static org.lwjgl.glfw.GLFW.glfwTerminate;
+import static org.lwjgl.glfw.GLFW.glfwWindowHint;
+import static org.lwjgl.glfw.GLFW.glfwWindowShouldClose;
 
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
+import org.lwjgl.opengl.GL11;
 
 public class DisplayManager {
 
@@ -14,9 +32,10 @@ public class DisplayManager {
 	
 	
 	public static void main(String[] args) {
-	
+		Renderer r = new Renderer();
+		r.prepare();
 		createDisplay();
-		updateDisplay();
+		updateDisplay(r);
 		closeDisplay();
 		
 	}
@@ -43,11 +62,11 @@ public class DisplayManager {
 		glfwSetWindowPos(window, (videoMode.width() - 640) / 2, (videoMode.height() - 480) / 2);
 		
 		glfwShowWindow(window);
-	/*	
+		
 		while(!glfwWindowShouldClose(window)) {
 			glfwPollEvents();
 			
-			glClear(GL_COLOR_BUFFER_BIT);
+			GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
 			
 			
 
@@ -56,11 +75,16 @@ public class DisplayManager {
 			glfwSwapBuffers(window);
 		}
 		
-		glfwTerminate(); */
+		glfwTerminate(); 
 	}
 	
-	public static void updateDisplay() {
-
+	public static void updateDisplay(Renderer r) {
+		Loader l = new Loader();
+		float[] pos = {1.0f,  1.0f,
+						0.5f, 0.5f,
+						0.0f, 0.0f};
+		int[] indices = {1};
+		r.render(l.loadToVAO(null, null));
 	}
 	
 	public static void closeDisplay() {

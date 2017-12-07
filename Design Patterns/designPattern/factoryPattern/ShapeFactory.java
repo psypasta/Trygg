@@ -1,8 +1,5 @@
 package designPattern.factoryPattern;
 
-import designPattern.AbstractFactory.AbstractFactory;
-import designPattern.AbstractFactory.Color;
-
 public class ShapeFactory {
 	
 	public Shape getShape(String shapeType) {
