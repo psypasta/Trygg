@@ -11,10 +11,6 @@ public class TestTile {
 	private double tileCoordX = 0;
 	private double tileCoordY = 0;
 	
-	private double tileWidth = 0;
-	private double tileHeight = 0;
-	
-	private Line2D line;
 	private Point2D.Double top;
 	private Point2D.Double right;
 	private Point2D.Double bottom;
@@ -24,9 +20,6 @@ public class TestTile {
 		
 		this.tileCoordX = x;
 		this.tileCoordY = y;
-		this.tileWidth = w;
-		this.tileHeight = h;
-		
 		
 		top = new Point2D.Double(0, 0);
 		right = new Point2D.Double(w / 2, h / 2);
