@@ -3,16 +3,23 @@ package gfx.timer;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.geom.Rectangle2D;
+
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class Board extends JPanel
-        implements ActionListener {
+import jdk.nashorn.internal.runtime.ECMAErrors;
+
+public class Board extends JPanel 
+        implements ActionListener, KeyListener {
 
     private final int B_WIDTH = 350;
     private final int B_HEIGHT = 350;
@@ -20,6 +27,10 @@ public class Board extends JPanel
     private final int INITIAL_Y = -40;
     private final int DELAY = 1;
 
+    private Rectangle2D testRect;
+    private int rectX, rectY;
+    
+    
     private Image star;
     private Timer timer;
     private int x, y;
@@ -41,10 +52,15 @@ public class Board extends JPanel
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
         setDoubleBuffered(true);
 
+        testRect = new Rectangle2D.Double(100, 100, 100, 100);
+        
         loadImage();
         
         x = INITIAL_X;
         y = INITIAL_Y;
+        
+        rectX = INITIAL_X;
+        rectY = INITIAL_Y;
         
         timer = new Timer(DELAY, this);
         timer.start();
@@ -53,7 +69,7 @@ public class Board extends JPanel
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
+        drawRect(g);
         drawStar(g);
     }
 
@@ -63,6 +79,17 @@ public class Board extends JPanel
         Toolkit.getDefaultToolkit().sync();
     }
 
+    private void drawRect(Graphics g) {
+    	Graphics2D g2 = (Graphics2D) g;
+    	g2.translate(rectX, rectY);
+    	g2.rotate(0.785398163);
+    	
+    	g2.draw(testRect);
+    	g2.fill(testRect);
+    	g2.translate(-rectX, -rectY);
+    	g2.rotate(-0.785398163);
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -77,4 +104,31 @@ public class Board extends JPanel
 
         repaint();
     }
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if('w' == e.getKeyChar()){
+			rectY -= 10;
+		}
+		else if('a' == e.getKeyChar()) {
+			rectX -= 10;
+		}		
+		else if('s' == e.getKeyChar()) {
+			rectY += 10;
+		}
+		else if('d' == e.getKeyChar()) {
+			rectX += 10;
+		}
+        repaint();
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+
+	}
 }

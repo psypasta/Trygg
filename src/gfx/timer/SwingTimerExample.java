@@ -11,11 +11,15 @@ public class SwingTimerExample extends JFrame {
     }
     
     private void initUI() {
-
-        add(new Board());
+    	Board b = new Board();
+        add(b);
         
         setResizable(false);
         pack();
+        
+        b.setFocusable(true);
+        b.requestFocus();
+        b.addKeyListener(b);
         
         setTitle("Star");
         setLocationRelativeTo(null);        
