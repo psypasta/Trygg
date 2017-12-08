@@ -1,11 +1,10 @@
+
 package gfx;
 
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +15,7 @@ import javax.swing.JPanel;
 class Surface extends JPanel {
 	
 	List<TestTile> column = new ArrayList<TestTile>();
+	List<Rectangle2D> column2 = new ArrayList<Rectangle2D>();
 	double columnX = 0;
 	double columnY = 0;
 	double offset = 25;
@@ -30,7 +30,7 @@ class Surface extends JPanel {
         g2d.draw(new Line2D.Double(100.0, 0.0, 200.0, 100.0));
         g2d.draw(new Line2D.Double(200.0, 100.0, 100.0, 200.0));
         g2d.draw(new Line2D.Double(100.0, 200.0, 0.0, 100.0));
-        g2d.draw(new Rectangle2D.Double(0,0,200,200));
+        
 */
         for(int i = 0; i < column.size(); i++) {
         	if(i == 6) {
@@ -42,6 +42,7 @@ class Surface extends JPanel {
         	}else if(i == 24) {
         		g2d.setColor(Color.BLACK);
         	}
+        	g2d.draw(column2.get(i));
         	column.get(i).paint(g2d);
         }
     }
@@ -53,6 +54,7 @@ class Surface extends JPanel {
 		    	columnY = columnY + offset;
 		    	columnX = 0;
 		    }
+			column2.add(new Rectangle2D.Double(columnX,columnY,offset,offset));
 			TestTile tile = new TestTile(columnX, columnY, offset, offset);
 		    column.add(tile);
 		    columnX = columnX + offset;
