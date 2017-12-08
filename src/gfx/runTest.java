@@ -43,6 +43,7 @@ class Surface extends JPanel {
         		g2d.setColor(Color.BLACK);
         	}
         	g2d.draw(column2.get(i));
+        	g2d.fill(column2.get(i));
         	column.get(i).paint(g2d);
         }
     }
@@ -54,7 +55,8 @@ class Surface extends JPanel {
 		    	columnY = columnY + offset;
 		    	columnX = 0;
 		    }
-			column2.add(new Rectangle2D.Double(columnX,columnY,offset,offset));
+			Rectangle2D.Double rect = new Rectangle2D.Double(columnX,columnY,offset,offset);
+			column2.add(rect);
 			TestTile tile = new TestTile(columnX, columnY, offset, offset);
 		    column.add(tile);
 		    columnX = columnX + offset;
