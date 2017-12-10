@@ -16,8 +16,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import jdk.nashorn.internal.runtime.ECMAErrors;
-
 public class Board extends JPanel 
         implements ActionListener, KeyListener {
 
