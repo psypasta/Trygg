@@ -1,4 +1,4 @@
-package gfx;
+package opengfx;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFW.*;
