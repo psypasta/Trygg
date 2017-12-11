@@ -16,8 +16,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import jdk.nashorn.internal.runtime.ECMAErrors;
-
 public class Board extends JPanel 
         implements ActionListener, KeyListener {
 
@@ -29,7 +27,7 @@ public class Board extends JPanel
 
     private Rectangle2D testRect;
     private int rectX, rectY;
-    
+    private double rectRotate = Math.toRadians(45);
     
     private Image star;
     private Timer timer;
@@ -74,20 +72,23 @@ public class Board extends JPanel
     }
 
     private void drawStar(Graphics g) {
-
         g.drawImage(star, x, y, this);
         Toolkit.getDefaultToolkit().sync();
     }
 
     private void drawRect(Graphics g) {
     	Graphics2D g2 = (Graphics2D) g;
+    	
     	g2.translate(rectX, rectY);
-    	g2.rotate(0.785398163);
+    	g2.rotate(rectRotate);
     	
     	g2.draw(testRect);
     	g2.fill(testRect);
+    	
     	g2.translate(-rectX, -rectY);
-    	g2.rotate(-0.785398163);
+    	g2.rotate(-rectRotate);
+    	
+    	Toolkit.getDefaultToolkit().sync();
     }
     
     @Override

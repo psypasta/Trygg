@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 class Surface extends JPanel {
-	
+	Rectangle2D.Double testRect;
 	List<TestTile> column = new ArrayList<TestTile>();
 	List<Rectangle2D> column2 = new ArrayList<Rectangle2D>();
 	double columnX = 0;
@@ -42,9 +44,12 @@ class Surface extends JPanel {
         	}else if(i == 24) {
         		g2d.setColor(Color.BLACK);
         	}
+        	g2d.rotate(Math.toRadians(45));
         	g2d.draw(column2.get(i));
+        	
         	g2d.fill(column2.get(i));
         	column.get(i).paint(g2d);
+        	g2d.rotate(Math.toRadians(-45));
         }
     }
 
@@ -55,6 +60,7 @@ class Surface extends JPanel {
 		    	columnY = columnY + offset;
 		    	columnX = 0;
 		    }
+			
 			Rectangle2D.Double rect = new Rectangle2D.Double(columnX,columnY,offset,offset);
 			column2.add(rect);
 			TestTile tile = new TestTile(columnX, columnY, offset, offset);
@@ -63,11 +69,16 @@ class Surface extends JPanel {
 		}
     }
     
+    public void testSquare() {
+    	testRect = new Rectangle2D.Double(columnX,columnY,offset,offset);
+    }
+    
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         doDrawing(g);
     }
+
 }
 
 public class runTest extends JFrame {
@@ -83,7 +94,7 @@ public class runTest extends JFrame {
 
     	Surface s = new Surface();
         add(s);
-
+        System.out.println(s.isFocusable());
         s.initTest(windowWidth, windowHeight);
         
         setTitle("Java 2D");
