@@ -11,7 +11,12 @@
 	<classpathentry kind="src" path="Design Patterns"/>
 	<classpathentry kind="src" path="Exercises"/>
 	<classpathentry kind="src" path="Adventure"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="JOGL"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-javadoc.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-natives-windows.jar"/>
 	<classpathentry kind="lib" path="library/lwjgl-assimp-sources.jar"/>
@@ -39,15 +44,14 @@
 	<classpathentry kind="lib" path="library/slick-util.jar"/>
 	<classpathentry kind="lib" path="library/natives-windows.jar"/>
 	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
-	<classpathentry kind="src" path="JOGL"/>
-	<classpathentry kind="lib" path="E:/Users/Max/eclipse-workspace/JavaOpenGL/jogamp-all-platforms/jar/gluegen-rt.jar">
+	<classpathentry kind="lib" path="/Users/hb/git/Trygg/JOGL/natives/macosx-universal/gluegen-rt.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Trygg/JOGL/natives"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Trygg/JOGL/natives/macosx-universal"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/Users/Max/eclipse-workspace/JavaOpenGL/jogamp-all-platforms/jar/jogl-all.jar">
+	<classpathentry kind="lib" path="/Users/hb/git/Trygg/JOGL/natives/macosx-universal/jogl-all.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Trygg/JOGL/natives"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Trygg/JOGL/natives/macosx-universal"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
