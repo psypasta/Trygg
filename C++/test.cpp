@@ -9,9 +9,8 @@ string messageString(int, int);
 string halfLine(int);
 string spaces(int, int);
 
-int main(){
-
-	int charSize = 25;
+void printone(int size){
+	int charSize = size;
 
 	string *triOne =		printTri(charSize);
 	string *rectOne =		printRect(charSize);
@@ -28,6 +27,32 @@ int main(){
 	for(int i = 0; i < charSize; i++){
 		cout << halfTri[i];
 	}
+}
+
+void printtwo(int size){
+	int charSize = size;
+
+	string *triOne =		printTri(charSize);
+	string *rectOne =		printRect(charSize);
+
+	string halfTri[charSize];
+
+	for(int i = 0; i < charSize; i++){
+			halfTri[i] += triOne[i];
+			halfTri[i] += triOne[i];
+
+			halfTri[i] += "\n";
+	}
+
+	for(int i = 0; i < charSize; i++){
+		cout << halfTri[i];
+	}
+}
+
+int main(){
+
+	printone(10);
+	printtwo(10);
 
 	return 0;
 }
@@ -38,11 +63,11 @@ string* printTri(int triangleSize){
 	for(int i = 0; i < triangleSize; i++){
 		messageArray[i]+=messageString(i, triangleSize);
 	}
-
+/*
 	for(int i = 0; i < triangleSize; i++){
 		cout << messageArray[i] << endl;
 	}
-
+*/
 	return messageArray;
 }
 
@@ -53,11 +78,11 @@ string* printRect(int charSize){
 		messageArray[i] += halfLine(charSize);
 		messageArray[i] += halfLine(charSize);
 	}
-
+/*
 	for(int i = 0; i < charSize; i++){
 		cout << messageArray[i] << endl;
 	}
-
+*/
 	return messageArray;
 }
 
