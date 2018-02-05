@@ -3,23 +3,38 @@
 
 using namespace std;
 
-void printTri(int);
+string* printTri(int);
+string* printRect(int);
 string messageString(int, int);
 string halfLine(int);
 string spaces(int, int);
 
 int main(){
 
-	printTri(5);
+	int charSize = 25;
+
+	string *triOne =		printTri(charSize);
+	string *rectOne =		printRect(charSize);
+
+	string halfTri[charSize];
+
+	for(int i = 0; i < charSize; i++){
+			halfTri[i] += rectOne[i];
+			halfTri[i] += triOne[i];
+			halfTri[i] += rectOne[i];
+			halfTri[i] += "\n";
+	}
+
+	for(int i = 0; i < charSize; i++){
+		cout << halfTri[i];
+	}
 
 	return 0;
 }
 
-void printTri(int triangleSize){
+string* printTri(int triangleSize){
+	string *messageArray = new string[triangleSize];
 
-
-
-	string messageArray[triangleSize];
 	for(int i = 0; i < triangleSize; i++){
 		messageArray[i]+=messageString(i, triangleSize);
 	}
@@ -27,6 +42,23 @@ void printTri(int triangleSize){
 	for(int i = 0; i < triangleSize; i++){
 		cout << messageArray[i] << endl;
 	}
+
+	return messageArray;
+}
+
+string* printRect(int charSize){
+	string *messageArray = new string[charSize];
+
+	for(int i = 0; i < charSize; i++){
+		messageArray[i] += halfLine(charSize);
+		messageArray[i] += halfLine(charSize);
+	}
+
+	for(int i = 0; i < charSize; i++){
+		cout << messageArray[i] << endl;
+	}
+
+	return messageArray;
 }
 
 string messageString(int lineIndex, int triangleSize){
