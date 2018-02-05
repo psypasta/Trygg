@@ -38,21 +38,26 @@ void printtwo(int size){
 	string halfTri[charSize];
 
 	for(int i = 0; i < charSize; i++){
+			halfTri[i] += rectOne[i].substr(0, (charSize));
 			halfTri[i] += triOne[i];
 			halfTri[i] += triOne[i];
-
+			halfTri[i] += rectOne[i].substr(0, (charSize));
 			halfTri[i] += "\n";
 	}
 
 	for(int i = 0; i < charSize; i++){
-		cout << halfTri[i];
+		if(i!=0){
+			cout << halfTri[i];
+		}
 	}
 }
 
 int main(){
 
-	printone(10);
-	printtwo(10);
+	int size = 25;
+
+	printone(size);
+	printtwo(size);
 
 	return 0;
 }
