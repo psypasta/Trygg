@@ -5,10 +5,11 @@ using namespace std;
 
 string sideways(int);
 string lineMake(int);
+string spaceMake(int, int);
 
 int main(){
 
-	cout << sideways(25);
+	cout << sideways(10);
 	return 0;
 }
 
@@ -24,7 +25,7 @@ string sideways(int size){
 			break;
 		}
 
-		sideTri += (lineMake(i) + '\n');
+		sideTri += (lineMake(i) + spaceMake(i, size) + lineMake(i) + '\n');
 
 		if(!swap){
 			i++;
@@ -35,6 +36,16 @@ string sideways(int size){
 
 
 	return sideTri;
+}
+
+string spaceMake(int index, int size){
+	string s;
+	char message = ' ';
+	int amount = size-index;
+	for(int i = 0; i < amount; i++){
+		s += message;
+	}
+	return s;
 }
 
 string lineMake(int size){
