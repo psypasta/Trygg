@@ -3,13 +3,14 @@
 
 using namespace std;
 
+string flip(int, int);
 string sideways(int);
 string lineMake(int);
 string spaceMake(int, int);
 
 int main(){
 
-	cout << sideways(10);
+	cout << sideways(25);
 	return 0;
 }
 
@@ -25,7 +26,7 @@ string sideways(int size){
 			break;
 		}
 
-		sideTri += (lineMake(i) + spaceMake(i, size) + lineMake(i) + '\n');
+		sideTri += (lineMake(i) + spaceMake(i, size) + lineMake(i) + flip(i, size) + '\n');
 
 		if(!swap){
 			i++;
@@ -41,6 +42,16 @@ string sideways(int size){
 string spaceMake(int index, int size){
 	string s;
 	char message = ' ';
+	int amount = size-index;
+	for(int i = 0; i < amount; i++){
+		s += message;
+	}
+	return s;
+}
+
+string flip(int index, int size){
+	string s;
+	char message = '#';
 	int amount = size-index;
 	for(int i = 0; i < amount; i++){
 		s += message;
