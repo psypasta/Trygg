@@ -62,17 +62,13 @@ int main(){
 	return 0;
 }
 
-string* printTri(int triangleSize){
-	string *messageArray = new string[triangleSize];
+string* printTri(int charSize){
+	string *messageArray = new string[charSize];
 
-	for(int i = 0; i < triangleSize; i++){
-		messageArray[i]+=messageString(i, triangleSize);
+	for(int i = 0; i < charSize; i++){
+		messageArray[i]+=messageString(i, charSize);
 	}
-/*
-	for(int i = 0; i < triangleSize; i++){
-		cout << messageArray[i] << endl;
-	}
-*/
+
 	return messageArray;
 }
 
