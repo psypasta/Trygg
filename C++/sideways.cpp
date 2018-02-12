@@ -10,13 +10,17 @@ string spaceMake(int, int);
 
 int main(){
 
-	cout << sideways(25);
+	cout << sideways(5);
+	
+	cout << sideways(5);
+
+	cout << sideways(5);
+
 	return 0;
 }
 
 string sideways(int size){
 	string sideTri;
-
 	int i = 1;
 	bool swap = false;
 	while(true){
@@ -26,8 +30,9 @@ string sideways(int size){
 			break;
 		}
 
-		sideTri += (lineMake(i) + spaceMake(i, size) + lineMake(i) + flip(i, size) + '\n');
 
+		//sideTri += (spaceMake(i, size) + lineMake(i) + lineMake(i) + '\n');
+		sideTri += (spaceMake(i, size) + lineMake(i) + lineMake(i) + '\n');
 		if(!swap){
 			i++;
 		}else{
@@ -39,7 +44,7 @@ string sideways(int size){
 	return sideTri;
 }
 
-string spaceMake(int index, int size){
+/*string spaceMake(int index, int size){
 	string s;
 	char message = ' ';
 	int amount = size-index;
@@ -47,7 +52,7 @@ string spaceMake(int index, int size){
 		s += message;
 	}
 	return s;
-}
+}*/
 
 string flip(int index, int size){
 	string s;
@@ -65,6 +70,17 @@ string lineMake(int size){
 
 	for(int i = 0; i < size; i++){
 		s += message;
+	}
+
+	return s;
+}
+
+string spaceMake(int index, int size){
+	string s;
+	char message = ' ';
+
+	for(int i = 0; i < size-index; i++){
+		s+=message;
 	}
 
 	return s;
