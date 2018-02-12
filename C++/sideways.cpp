@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<string> triToVec(int);
+vector<string> triToVec(int, bool);
 vector<string> quadToVec(int);
 string lineMake(int);
 string spaceMake(int, int);
@@ -16,10 +16,13 @@ int main(){
 
 		for(int i = 0; i < 1; i++){
 			vector<string> v;
-			v = quadToVec(15);
+			v = quadToVec(10);
 
 			vector<string> triVec;
-			triVec = triToVec(20);
+			triVec = triToVec(10, false);
+
+			vector<string> triVec2;
+			triVec2 = triToVec(10, true);
 
 		    for(string n : v) {
 		    //	n = n + n;
@@ -27,6 +30,11 @@ int main(){
 			}  
 
 			for(string n : triVec) {
+		    //	n = n + n;
+		        cout << n << '\n';
+			}
+
+			for(string n : triVec2) {
 		    //	n = n + n;
 		        cout << n << '\n';
 			}
@@ -40,13 +48,19 @@ int main(){
 	return 0;
 }
 
-vector<string> triToVec(int size){
+vector<string> triToVec(int size, bool orientation){
 	vector<string> tri;
 	
-	for(int i = size; i > size-size; i--){
-		tri.push_back(spaceMake(i, size) + lineMake(i) + lineMake(i) + spaceMake(i, size));
+	if(!orientation){
+		for(int i = size; i > size-size; i--){
+			tri.push_back(spaceMake(i, size) + lineMake(i*2) + spaceMake(i, size));
+		}
 	}
-
+	else{
+		for(int i = 0; i < size; i++){
+			tri.push_back(spaceMake(i, size-1) + lineMake(i*2+2)  + spaceMake(i, size-1));
+		}
+	}
 	return tri;
 }
 
@@ -62,6 +76,7 @@ vector<string> quadToVec(int size){
 		}
 
 		sideTri.push_back(spaceMake(i, size) + lineMake(i) + lineMake(i) + spaceMake(i, size));
+
 		if(!swap){
 			i++;
 		}else{
