@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -10,11 +11,38 @@ string spaceMake(int, int);
 
 int main(){
 
-	cout << sideways(5);
-	
-	cout << sideways(5);
+	string quad = sideways(5);
 
-	cout << sideways(5);
+	int lineCount = 1;
+	int charCount = 1;
+	for(char& c : quad) {
+	    if(c=='\n'){
+	    	lineCount++;
+	    }
+	    charCount++;
+	}
+
+	vector<string> lineVector = {}; 
+
+	int tempLine = 0;
+	for(int i = 0; i < charCount; i++){
+		string temp = "";
+
+		if(quad[i]=='\n'){
+			for(; tempLine < i; tempLine++){
+				temp += quad[tempLine];
+			}
+			lineVector.push_back(temp);
+			tempLine++;
+		}
+	}
+
+    for(string n : lineVector) {
+        std::cout << n << '\n';
+	}
+
+	cout << charCount << endl;
+	cout << lineCount << endl;
 
 	return 0;
 }
@@ -32,7 +60,7 @@ string sideways(int size){
 
 
 		//sideTri += (spaceMake(i, size) + lineMake(i) + lineMake(i) + '\n');
-		sideTri += (spaceMake(i, size) + lineMake(i) + lineMake(i) + '\n');
+		sideTri += (spaceMake(i, size) + lineMake(i) + lineMake(i) + spaceMake(i, size) + '\n');
 		if(!swap){
 			i++;
 		}else{
