@@ -19,10 +19,10 @@ int main(){
 			v = quadToVec(10);
 
 			vector<string> triVec;
-			triVec = triToVec(10, false);
+			triVec = triToVec(10, true);
 
 			vector<string> triVec2;
-			triVec2 = triToVec(10, true);
+			triVec2 = triToVec(10, false);
 
 		    for(string n : v) {
 		    //	n = n + n;
@@ -70,6 +70,7 @@ vector<string> quadToVec(int size){
 	bool swap = false;
 	while(true){
 		if(i == size){
+			sideTri.push_back(spaceMake(i, size) + lineMake(i) + lineMake(i) + spaceMake(i, size));
 			swap = true;
 		}else if(i == 0){
 			break;
