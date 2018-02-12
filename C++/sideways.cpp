@@ -10,13 +10,15 @@ string spaceMake(int, int);
 
 int main(){
 
-	vector<string> v;
-	v = quadToVec(10);
+	for(int i = 0; i < 5; i++){
+		vector<string> v;
+		v = quadToVec(10);
 
-    for(string n : v) {
-        cout << n << '\n';
+	    for(string n : v) {
+	    	n += n + n;
+	        cout << n << '\n';
+		}
 	}
-
 	return 0;
 }
 
