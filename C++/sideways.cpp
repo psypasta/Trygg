@@ -4,51 +4,24 @@
 
 using namespace std;
 
-string flip(int, int);
-string sideways(int);
+vector<string> quadToVec(int);
 string lineMake(int);
 string spaceMake(int, int);
 
 int main(){
 
-	string quad = sideways(5);
+	vector<string> v;
+	v = quadToVec(10);
 
-	int lineCount = 1;
-	int charCount = 1;
-	for(char& c : quad) {
-	    if(c=='\n'){
-	    	lineCount++;
-	    }
-	    charCount++;
+    for(string n : v) {
+        cout << n << '\n';
 	}
-
-	vector<string> lineVector = {}; 
-
-	int tempLine = 0;
-	for(int i = 0; i < charCount; i++){
-		string temp = "";
-
-		if(quad[i]=='\n'){
-			for(; tempLine < i; tempLine++){
-				temp += quad[tempLine];
-			}
-			lineVector.push_back(temp);
-			tempLine++;
-		}
-	}
-
-    for(string n : lineVector) {
-        std::cout << n << '\n';
-	}
-
-	cout << charCount << endl;
-	cout << lineCount << endl;
 
 	return 0;
 }
 
-string sideways(int size){
-	string sideTri;
+vector<string> quadToVec(int size){
+	vector<string> sideTri;
 	int i = 1;
 	bool swap = false;
 	while(true){
@@ -58,38 +31,14 @@ string sideways(int size){
 			break;
 		}
 
-
-		//sideTri += (spaceMake(i, size) + lineMake(i) + lineMake(i) + '\n');
-		sideTri += (spaceMake(i, size) + lineMake(i) + lineMake(i) + spaceMake(i, size) + '\n');
+		sideTri.push_back(spaceMake(i, size) + lineMake(i) + lineMake(i) + spaceMake(i, size));
 		if(!swap){
 			i++;
 		}else{
 			i--;
 		}
 	}
-
-
 	return sideTri;
-}
-
-/*string spaceMake(int index, int size){
-	string s;
-	char message = ' ';
-	int amount = size-index;
-	for(int i = 0; i < amount; i++){
-		s += message;
-	}
-	return s;
-}*/
-
-string flip(int index, int size){
-	string s;
-	char message = '#';
-	int amount = size-index;
-	for(int i = 0; i < amount; i++){
-		s += message;
-	}
-	return s;
 }
 
 string lineMake(int size){
@@ -113,3 +62,15 @@ string spaceMake(int index, int size){
 
 	return s;
 }
+
+/*
+string flip(int index, int size){
+	string s;
+	char message = '#';
+	int amount = size-index;
+	for(int i = 0; i < amount; i++){
+		s += message;
+	}
+	return s;
+}
+*/
