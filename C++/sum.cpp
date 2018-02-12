@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace std;
+int doubleDigitValue(int);
 
 int main(){
 
@@ -13,7 +14,7 @@ int main(){
 	for (int position = 1; position <= 6; position ++) {
 	 cin >> digit;   
 	 if (position % 2 == 0) checksum += digit - '0';
-	 else checksum += doubleDigitValue(digit - '0');
+	 else checksum += (doubleDigitValue(digit) - '0');
 	}
 
 	cout << "Checksum is " << checksum << ". \n";
@@ -24,4 +25,14 @@ int main(){
 		cout << "Checksum is not divisible by 10. Invalid. \n";
 	}
 
+}
+
+int doubleDigitValue(int digit) {   
+	int doubledDigit = digit * 2;
+   	int sum;   
+
+   	if (doubledDigit >= 10) sum = 1 + doubledDigit % 10;
+   	else sum = doubledDigit;
+ 
+ 	return sum;
 }
