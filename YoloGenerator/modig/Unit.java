@@ -2,8 +2,9 @@ package modig;
 
 public abstract class Unit {
 
-	private int health;
-	private String name;
+	protected int health;
+	protected int stamina = 100;
+	protected String name;
 /*	
  * private int agililty;
 	private int strength;
