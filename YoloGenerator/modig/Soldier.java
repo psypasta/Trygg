@@ -1,5 +1,5 @@
 package modig;
 
-public abstract class Soldier {
+public abstract class Soldier extends Unit{
 
 }
