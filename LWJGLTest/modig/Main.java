@@ -68,8 +68,6 @@ public class Main {
 		Renderer renderer = new Renderer();
 		StaticShader shader = new StaticShader();
 		
-		
-	
 		float[] vertices = {
 				-0.5f, 0.5f, 0,		//V0
 				-0.5f, -0.5f, 0,	//V1
