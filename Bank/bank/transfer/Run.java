@@ -47,7 +47,7 @@ public class Run {
 		if(amount < 0) {
 			System.out.println("Kan inte skicka minus pengar!");
 			amount = scan.nextDouble();
-		}
+		}//
 		
 		int toMatch = findAccount(accountList, to);
 		int fromMatch = findAccount(accountList, from);
