@@ -10,12 +10,7 @@ import bank.transfer.Account;
 import bank.transfer.Customer;
 public class FileGet {
 
-//	public static void main(String[] args) {
-	//	Map<String, String> m = (HashMap<String, String>) get();
-	//	System.out.println(m.containsKey("100-10000"));
-	//	System.out.println(m.get("100-10000"));
-//	}
-	
+	//plsfix this class
 public List<Customer> customerGet(List<Account> accountList) {
 		
 		List<Customer> customerList = new ArrayList();
@@ -34,7 +29,6 @@ public List<Customer> customerGet(List<Account> accountList) {
 		while (sc.hasNextLine()) {
 			String[] s = new String[2];
 			s = sc.nextLine().split(",");
-		//	System.out.println(s[0] + " " + s[1]);
 			Customer holdCustomer = new Customer(accountList.get(i), s[0], s[1]);
 			customerList.add(holdCustomer);
 			i+=1;
@@ -59,11 +53,9 @@ public List<Customer> customerGet(List<Account> accountList) {
 		while (sc.hasNextLine()) {
 			String[] s = new String[2];
 			s = sc.nextLine().split(",");
-		//	System.out.println(s[0] + " " + s[1]);
 			Account hold = new Account(s[0], s[1]);
 			accountList.add(hold);
    		}
-		
 		return customerGet(accountList);
 	}
 }

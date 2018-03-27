@@ -21,7 +21,6 @@ public class Account {
 		}
 		else {
 			this.accountBalance = this.accountBalance + amount;
-		//	System.out.println(this.accountBalance + " " + amount);
 		}
 	}
 	

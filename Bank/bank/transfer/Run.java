@@ -47,12 +47,11 @@ public class Run {
 		if(amount < 0) {
 			System.out.println("Kan inte skicka minus pengar!");
 			amount = scan.nextDouble();
-		}//test
+		}
 		
 		int toMatch = findAccount(accountList, to);
 		int fromMatch = findAccount(accountList, from);
-	//	System.out.println("toMatch: " + toMatch);
-	//	System.out.println("fromMatch: " + fromMatch);
+
 		if(toMatch!=-1 && fromMatch!=-1) {
 			Transfer p = new Transfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
 			p.finalize();
@@ -60,12 +59,7 @@ public class Run {
 		
 		System.out.println("Från: " + accountList.get(fromMatch).getAccountNumber() + " " + accountList.get(fromMatch).getBalance());
 		System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " " + accountList.get(toMatch).getBalance());
-		
-	//	System.out.println();
-	//	System.out.println(customerList.get(2).getFirstName() + " " + customerList.get(4).getFirstName());
-	//	System.out.println(customerList.get(2).getAccount().getBalance() + " " + customerList.get(4).getAccount().getBalance());
-	//	System.out.println(customerList.get(2).getAccount().getAccountNumber() + " " + customerList.get(4).getAccount().getAccountNumber());
-		
+
 		scan.close();
 	}
 	
