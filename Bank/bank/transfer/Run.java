@@ -45,9 +45,11 @@ public class Run {
 				e.printStackTrace();
 			}
 		}
+
 		else if(to.equals("3")) {
 			calendarPlan = false;
 		}
+		
 		
 		to = "";
 		
@@ -64,9 +66,14 @@ public class Run {
 			amount = scan.nextDouble();
 		}
 		
+		
+		
+		
 		scan.close();
 		
 		TransferManager tm = new TransferManager(calendar/*, calendarPlan*/);
+		
+		
 		
 		if(!calendarPlan) {
 			tm.accountTransfer(from, to, amount);
