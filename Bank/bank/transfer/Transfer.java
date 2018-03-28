@@ -16,7 +16,6 @@ public class Transfer {
 	private double amount;
 	private Calendar transactionDate;
 	
-	
 	public Transfer(Account to, Account from, double amount) {
 		this.to = to;
 		this.from = from;

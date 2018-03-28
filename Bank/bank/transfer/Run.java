@@ -12,13 +12,12 @@ import bank.util.DateBook;
 import bank.util.FileGet;
 public class Run {
 	
-	private static GregorianCalendar calendar;
+	private GregorianCalendar calendar;
+	private DateBook db = new DateBook();
+	private TransferManager tm;
+	
+	public Run() {
 
-	public static void main(String[] args) {
-		
-		System.out.println("3. Lägg in direkt betalning");
-		System.out.println("4. Lägg in calenderbokning");
-		
 		Scanner scan = new Scanner(System.in);
 		boolean calendarPlan = false;
 		//Select operation
@@ -28,10 +27,16 @@ public class Run {
 		String to = "";
 		double amount = 0;
 		
+		System.out.println("3. Lägg in direkt betalning");
+		System.out.println("4. Lägg in kalender betalning");
+		System.out.println("5. Ta bort kalender betalning");
+		
 		to = scan.nextLine();
-		if(to.equals("4")) {
+		if(to.equals("3")) {
+			calendarPlan = false;
+		}
+		else if(to.equals("4")) {
 			calendarPlan = true;
-			
 			String finalizeDate = "";
 			System.out.println("Välj datum för betalning(mm/dd/yyyy): ");
 			finalizeDate = scan.nextLine();
@@ -45,13 +50,13 @@ public class Run {
 				e.printStackTrace();
 			}
 		}
-		else if(to.equals("3")) {
-			calendarPlan = false;
+		else if(to.equals("5")) {
+		//	db.remove
 		}
 		
 		to = "";
 		
-		System.out.println("Fr�n konto: ");
+		System.out.println("Från konto: ");
 		from = scan.nextLine();
 		
 		System.out.println("Till konto: ");
@@ -66,7 +71,7 @@ public class Run {
 		
 		scan.close();
 		
-		TransferManager tm = new TransferManager(calendar/*, calendarPlan*/);
+		tm = new TransferManager(calendar/*, calendarPlan*/);
 		
 		if(!calendarPlan) {
 			tm.accountTransfer(from, to, amount);
@@ -74,18 +79,25 @@ public class Run {
 		else {
 			tm.dateTransfer(from, to, amount);
 		}
-		
+		finalizeDates();
+	}
+	
+	public void finalizeDates() {
 		List<String> finalizeDates = new ArrayList<String>();
-		DateBook db = new DateBook();
+		
 		finalizeDates = db.checkDates();
 		System.out.println("\nDates\n");
 		for(int i  = 0; i < finalizeDates.size(); i++) {
 			System.out.println(finalizeDates.get(i));
 			String[] hold = new String[4];
 			hold = finalizeDates.get(i).split(" ");
-			System.out.println(hold[0] + " " + hold[1] + " " + Double.parseDouble(hold[2]));
-			tm.accountTransfer(hold[0], hold[1], Double.parseDouble(hold[2]));
+		//	System.out.println(hold[0] + " " + hold[1] + " " + Double.parseDouble(hold[2]));
+			tm.accountTransfer(hold[1], hold[0], Double.parseDouble(hold[2]));
 		}
+	}
+	
+	public static void main(String[] args) {
+		new Run();
 	}
 }
 	

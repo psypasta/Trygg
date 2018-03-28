@@ -4,14 +4,19 @@ public class Account {
 	
 	private String accountNumber;
 	private String accountName;
-//	private Customer accountOwner;
+	private Customer accountOwner;
 	private double accountBalance;
 
 	public Account(String aNumber, String name) {
 		this.accountNumber = aNumber;
 		this.accountName = name;
-	//	this.accountOwner = owner;
 		this.accountBalance = 0;
+	}
+	public void setOwner(Customer owner) {
+		this.accountOwner = owner;
+	}
+	public Customer getOwner() {
+		return this.accountOwner;
 	}
 	
 	public void deposit(double amount) {

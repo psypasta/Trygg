@@ -50,14 +50,15 @@ public class FileGet {
 		while (sc.hasNextLine()) {
 			String[] s = new String[2];
 			s = sc.nextLine().split(",");
-			Customer holdCustomer = new Customer(accountList.get(i), s[0], s[1]);
+			Customer holdCustomer = new Customer(s[0], s[1]);
 			customerList.add(holdCustomer);
+			accountList.get(i).setOwner(holdCustomer);
 			i+=1;
    		}
 		return customerList;
 	}
 	
-	public List<Customer> customerList() {
+	public List<Account> accountList() {
 		
 		List<Account> accountList = new ArrayList<Account>();
 		// pass the path to the file as a parameter
@@ -77,6 +78,7 @@ public class FileGet {
 			Account hold = new Account(s[0], s[1]);
 			accountList.add(hold);
    		}
-		return customerGet(accountList);
+		customerGet(accountList);
+		return accountList;
 	}
 }

@@ -8,7 +8,6 @@ import bank.util.FileGet;
 
 public class TransferManager {
 	private List<Account> accountList = new ArrayList<Account>();
-	private List<Customer> customerList = new ArrayList<Customer>();
 	
 	private Calendar calendar;
 	
@@ -16,11 +15,15 @@ public class TransferManager {
 		
 		FileGet accountFile = new FileGet();
 
-		customerList = accountFile.customerList();
+		accountList = accountFile.accountList();
 		
-		for(int i = 0; i < customerList.size(); i++) {
-			accountList.add(customerList.get(i).getAccount());
-			accountList.get(i).deposit(100);
+		for(int i = 0; i < accountList.size(); i++) {
+	//		accountList.add(customerList.get(i).getAccount());
+	//		System.out.println(accountList.get(i).getAccountNumber());
+	//		System.out.println(accountList.get(i).getBalance());
+	//		System.out.println(accountList.get(i).getOwner().getFirstName());
+	//		System.out.println(accountList.get(i).getOwner().getLastName());
+			accountList.get(i).deposit(1000);
 		}
 	}
 	
@@ -39,7 +42,7 @@ public class TransferManager {
 		}
 		
 		if(toMatch!=-1 && fromMatch!=-1) {
-			System.out.println("Från: " + accountList.get(fromMatch).getAccountNumber() + " "
+			System.out.println("Frï¿½n: " + accountList.get(fromMatch).getAccountNumber() + " "
 										+ accountList.get(fromMatch).getBalance());
 			System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
 										+ accountList.get(toMatch).getBalance());
@@ -59,10 +62,16 @@ public class TransferManager {
 		System.out.println(toMatch);
 		System.out.println(fromMatch);
 		if(toMatch!=-1 && fromMatch!=-1) {
-			System.out.println("Från: " + accountList.get(fromMatch).getAccountNumber() + " "
-										+ accountList.get(fromMatch).getBalance());
-			System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
-										+ accountList.get(toMatch).getBalance());
+		/*	for(int i = 0; i < accountList.size(); i++) {
+				//		accountList.add(customerList.get(i).getAccount());
+				System.out.println("------");
+				System.out.println(accountList.get(i).getAccountNumber());
+				System.out.println(accountList.get(i).getBalance());
+				System.out.println(accountList.get(i).getOwner().getFirstName());
+				System.out.println(accountList.get(i).getOwner().getLastName());
+				accountList.get(i).deposit(100);
+				System.out.println("------");
+			}*/
 		}
 	}
 	

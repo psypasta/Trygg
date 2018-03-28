@@ -2,12 +2,10 @@ package bank.transfer;
 
 public class Customer {
 	
-	private Account customerAccount;
 	private String firstName;
 	private String lastName;
 	
-	public Customer(Account a, String f, String l) {
-		this.customerAccount = a;
+	public Customer(String f, String l) {
 		this.firstName = f;
 		this.lastName = l;
 	}
@@ -18,9 +16,5 @@ public class Customer {
 	
 	public String getLastName() {
 		return this.lastName;
-	}
-	
-	public Account getAccount() {
-		return this.customerAccount;
 	}
 }
