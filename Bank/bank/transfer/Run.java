@@ -42,7 +42,6 @@ public class Run {
 			try {
 				calendar.setTime(sdf.parse(finalizeDate));
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

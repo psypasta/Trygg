@@ -11,7 +11,6 @@ public class TransferManager {
 	private List<Customer> customerList = new ArrayList<Customer>();
 	
 	private Calendar calendar;
-//	private boolean calendarPlan = false;
 	
 	private void init() {
 		
@@ -25,10 +24,8 @@ public class TransferManager {
 		}
 	}
 	
-	public TransferManager(Calendar c/*, boolean calPlan*/) {
+	public TransferManager(Calendar c) {
 		init();
-		
-	//	this.calendarPlan = calPlan;
 		this.calendar = c;
 	}
 	
@@ -50,9 +47,6 @@ public class TransferManager {
 	}
 	
 	public void accountTransfer(String from, String to, double amount) {
-		//Select operation
-		//Select account
-		//Select amount
 
 		int toMatch = findAccount(accountList, to);
 		int fromMatch = findAccount(accountList, from);

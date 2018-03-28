@@ -5,7 +5,7 @@ import java.util.Locale;
 
 import bank.util.DateBook;
 
-//3. Lägg in direkt betalning		Från Konto:
+//3. Lägg in direkt betalning			Från Konto:
 //4. Lägg in datum betalning			Till Konto:
 //5. Ta bort datum betlaning			Belopp:
 

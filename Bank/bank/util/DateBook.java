@@ -11,7 +11,6 @@ import bank.transfer.Transfer;
 
 public class DateBook {
 
-	
 	//checkDates()
 	//bookDate()
 	//removeDate()
@@ -38,7 +37,6 @@ public class DateBook {
 	
 	public DateBook() {
 	
-		
 	}
 	
 	public void bookDate(Transfer transfer) {
@@ -46,9 +44,7 @@ public class DateBook {
 		    String filename= "Bankdata/DatedTransfers";
 		    FileWriter fw = new FileWriter(filename,true); //the true will append the new data
 		    
-		    
-		    
-		    fw.write(transfer.toString() + "\n");//appends the string to the file
+		    fw.write(transfer.toString() + "\n");		//appends the string to the file
 		    fw.close();
 		}
 		catch(IOException ioe){
