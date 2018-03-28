@@ -32,6 +32,23 @@ public class TransferManager {
 		this.calendar = c;
 	}
 	
+	public void dateTransfer(String from, String to, double amount) {
+		int toMatch = findAccount(accountList, to);
+		int fromMatch = findAccount(accountList, from);
+		
+		if(toMatch!=-1 && fromMatch!=-1) {
+			Transfer p = new Transfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
+			p.calendarFinalize(calendar);
+		}
+		
+		if(toMatch!=-1 && fromMatch!=-1) {
+			System.out.println("Från: " + accountList.get(fromMatch).getAccountNumber() + " "
+										+ accountList.get(fromMatch).getBalance());
+			System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
+										+ accountList.get(toMatch).getBalance());
+		}
+	}
+	
 	public void accountTransfer(String from, String to, double amount) {
 		//Select operation
 		//Select account
@@ -39,20 +56,20 @@ public class TransferManager {
 
 		int toMatch = findAccount(accountList, to);
 		int fromMatch = findAccount(accountList, from);
-		System.out.println(fromMatch);
+		
 		if(toMatch!=-1 && fromMatch!=-1/* && !calendarPlan*/) {
 			Transfer p = new Transfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
 			p.finalize();
 		}
-	/*	else if(toMatch!=-1 && fromMatch!=-1 && calendarPlan) {
-			Transfer p = new Transfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
-			p.calendarFinalize(calendar);
-		} */
+
+		System.out.println(toMatch);
 		System.out.println(fromMatch);
-		System.out.println("Från: " + accountList.get(fromMatch).getAccountNumber() + " "
-									+ accountList.get(fromMatch).getBalance());
-		System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
-									+ accountList.get(toMatch).getBalance());
+		if(toMatch!=-1 && fromMatch!=-1) {
+			System.out.println("Från: " + accountList.get(fromMatch).getAccountNumber() + " "
+										+ accountList.get(fromMatch).getBalance());
+			System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
+										+ accountList.get(toMatch).getBalance());
+		}
 	}
 	
 	public int findAccount(List<Account> aList, String find) {

@@ -72,15 +72,19 @@ public class Run {
 		if(!calendarPlan) {
 			tm.accountTransfer(from, to, amount);
 		}
+		else {
+			tm.dateTransfer(from, to, amount);
+		}
 		
 		List<String> finalizeDates = new ArrayList<String>();
 		DateBook db = new DateBook();
 		finalizeDates = db.checkDates();
-		System.out.println("\nDates: ");
+		System.out.println("\nDates\n");
 		for(int i  = 0; i < finalizeDates.size(); i++) {
 			System.out.println(finalizeDates.get(i));
 			String[] hold = new String[4];
 			hold = finalizeDates.get(i).split(" ");
+			System.out.println(hold[0] + " " + hold[1] + " " + Double.parseDouble(hold[2]));
 			tm.accountTransfer(hold[0], hold[1], Double.parseDouble(hold[2]));
 		}
 	}
