@@ -3,7 +3,6 @@ package bank.transfer;
 public class Account {
 	
 	private String accountNumber;
-	
 	private String accountName;
 //	private Customer accountOwner;
 	private double accountBalance;

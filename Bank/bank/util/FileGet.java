@@ -3,7 +3,6 @@ package bank.util;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ import bank.transfer.Customer;
 public class FileGet {
 
 	public List<String> bookingsGet(){
-		List<String> linesFromFile = new ArrayList();
+		List<String> linesFromFile = new ArrayList<String>();
 		// pass the path to the file as a parameter
 		File file =
     		new File("Bankdata/DatedTransfers");
@@ -29,12 +28,12 @@ public class FileGet {
 			s = sc.nextLine();
 			linesFromFile.add(s);
    		}
-		return linesFromFile;
+		return linesFromFile;	
 	}
 	//plsfix this class
 	public List<Customer> customerGet(List<Account> accountList) {
 		
-		List<Customer> customerList = new ArrayList();
+		List<Customer> customerList = new ArrayList<Customer>();
 		// pass the path to the file as a parameter
 		File file =
     		new File("Bankdata/customers");
@@ -57,9 +56,9 @@ public class FileGet {
 		return customerList;
 	}
 	
-	public List customerList() {
+	public List<Customer> customerList() {
 		
-		List<Account> accountList = new ArrayList();
+		List<Account> accountList = new ArrayList<Account>();
 		// pass the path to the file as a parameter
 		File file =
     		new File("Bankdata/accounts");

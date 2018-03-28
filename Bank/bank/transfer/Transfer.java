@@ -1,9 +1,7 @@
 package bank.transfer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.Locale;
-import java.util.Scanner;
 
 import bank.util.DateBook;
 
@@ -16,8 +14,7 @@ public class Transfer {
 	private Account to;
 	private Account from;
 	private double amount;
-	private GregorianCalendar timeOf;
-	private GregorianCalendar transactionDate;
+	private Calendar transactionDate;
 	
 	
 	public Transfer(Account to, Account from, double amount) {
@@ -31,10 +28,9 @@ public class Transfer {
 		if(hold!=0) {
 			to.deposit(hold);
 		}
-		this.timeOf = transactionDate;
 	}
 	
-	public void calendarFinalize(GregorianCalendar c) {
+	public void calendarFinalize(Calendar c) {
 
 		this.transactionDate = c;
 		DateBook dateToFile = new DateBook();
