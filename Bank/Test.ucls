@@ -62,7 +62,7 @@
   </class>  
   <package id="8" language="java" name="bank.util" project="modig" file="/modig/Bank/bank/util" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1159" y="56"/>    
+    <position height="-1" width="-1" x="920" y="181"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
   <class id="9" language="java" name="bank.transfer.Account" project="modig" 
