@@ -69,7 +69,9 @@ public class Run {
 		
 		TransferManager tm = new TransferManager(calendar/*, calendarPlan*/);
 		
-		tm.accountTransfer(from, to, amount);
+		if(!calendarPlan) {
+			tm.accountTransfer(from, to, amount);
+		}
 		
 		List<String> finalizeDates = new ArrayList<String>();
 		DateBook db = new DateBook();
@@ -79,7 +81,7 @@ public class Run {
 			System.out.println(finalizeDates.get(i));
 			String[] hold = new String[4];
 			hold = finalizeDates.get(i).split(" ");
-			tm.accountTransfer(from, to, amount);
+			tm.accountTransfer(hold[0], hold[1], Double.parseDouble(hold[2]));
 		}
 	}
 }
