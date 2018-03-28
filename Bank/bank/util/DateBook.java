@@ -11,6 +11,9 @@ import bank.transfer.Transfer;
 
 public class DateBook {
 
+	public DateBook() {
+	
+	}
 	//checkDates()
 	//bookDate()
 	//removeDate()
@@ -35,10 +38,6 @@ public class DateBook {
 		return bookingsDate;
 	}
 	
-	public DateBook() {
-	
-	}
-	
 	public void bookDate(Transfer transfer) {
 		try{
 		    String filename= "Bankdata/DatedTransfers";
@@ -50,6 +49,10 @@ public class DateBook {
 		catch(IOException ioe){
 		    System.err.println("IOException: " + ioe.getMessage());
 		}
+	}
+	
+	public void removeDate() {
+		
 	}
 	
 }
