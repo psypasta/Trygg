@@ -1,4 +1,4 @@
-package bank.view;
+package bank.accountCreation;
 
 public class Deposit {
 	

@@ -1,4 +1,4 @@
-package bank.view;
+package bank.accountCreation;
 
 import java.util.ArrayList;
 import java.util.List;
