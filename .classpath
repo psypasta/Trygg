@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
@@ -56,3 +57,25 @@
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Adventure"/>
+	<classpathentry kind="src" path="Animal"/>
+	<classpathentry kind="src" path="Bank"/>
+	<classpathentry kind="src" path="Data Types"/>
+	<classpathentry kind="src" path="Design Patterns"/>
+	<classpathentry kind="src" path="Euler"/>
+	<classpathentry kind="src" path="Exercises"/>
+	<classpathentry kind="src" path="Interface lecture"/>
+	<classpathentry kind="src" path="jdbcdemo"/>
+	<classpathentry kind="src" path="JOGL"/>
+	<classpathentry kind="src" path="library"/>
+	<classpathentry kind="src" path="LWJGLTest"/>
+	<classpathentry kind="src" path="Networking"/>
+	<classpathentry kind="src" path="pong"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin/bank"/>
+</classpath>
+>>>>>>> branch 'master' of https://github.com/fulsomenko/Trygg.git
