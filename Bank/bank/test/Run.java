@@ -1,4 +1,4 @@
-package bank.transfer;
+package bank.test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import bank.transfer.TransferManager;
 import bank.util.DateBook;
-import bank.util.FileGet;
 public class Run {
 	
 	private GregorianCalendar calendar;
@@ -51,7 +51,9 @@ public class Run {
 			}
 		}
 		else if(to.equals("5")) {
-		//	db.remove
+			System.out.println("Välj transaktion att ta bort : ");
+			String transacDelete = scan.nextLine();
+			System.out.println(": " + transacDelete);
 		}
 		
 		to = "";
@@ -79,6 +81,7 @@ public class Run {
 		else {
 			tm.dateTransfer(from, to, amount);
 		}
+		
 		finalizeDates();
 	}
 	

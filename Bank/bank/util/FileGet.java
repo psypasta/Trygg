@@ -11,7 +11,6 @@ import bank.transfer.Customer;
 
 public class FileGet {
 
-	
 	public String getLines(String path) {
 		String contents = null;
 		File file =
@@ -30,7 +29,6 @@ public class FileGet {
 			return contents;
 	}
 	
-	
 	public List<String> bookingsGet(){
 
 		List<String> bookingsList = new ArrayList<String>();
@@ -39,7 +37,7 @@ public class FileGet {
 		for (int i = 0; i < lines.length; i++) {
 			bookingsList.add(lines[i]);
    		}
-		return bookingsList;	
+		return bookingsList;
 	}
 	//plsfix this class
 	private List<Customer> customerGet(List<Account> accountList) {
