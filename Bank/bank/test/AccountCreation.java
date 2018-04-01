@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import bank.transfer.Account;
+import bank.transfer.Customer;
 
 public class AccountCreation {
 	
@@ -14,13 +15,13 @@ public class AccountCreation {
 	private String wealth;
 	
 	
-	Account account = new Account(accountNumber,accountName);
+//	Account account = new Account(accountNumber,accountName);
 	
 	
 	
 	public AccountCreation() {
 		
-		List<String> account = new ArrayList<String>();
+		List<String> accountList = new ArrayList<String>();
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -30,7 +31,7 @@ public class AccountCreation {
 		String temp;
 		
 		temp = sc.nextLine();
-	
+		Account account = null;
 		if(temp.equals("1")) {
 			//Skapa konto
 			System.out.println("Ange nummer: ");
@@ -43,8 +44,10 @@ public class AccountCreation {
 			wealth = sc.next();
 			//detta känns inte bra
 			
-		
-			System.out.println(accountNumber + " " + accountName + " " + accountOwner + " " + wealth);
+			String[] names = new String[2];
+			account = new Account(accountNumber,accountName);
+			account.setOwner(new Customer(names[0], names[1]));
+			System.out.println(account.getAccountNumber() + " " + account.getBalance() + " " + account.getOwner().getFirstName());
 			
 			
 		}
