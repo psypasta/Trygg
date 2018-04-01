@@ -1,27 +1,27 @@
 package bank.test;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import bank.transfer.Account;
+import bank.transfer.Customer;
 
 public class AccountCreation {
 	
 	private String accountNumber; 
 	private String accountName;
-	private String accountOwner;
+	private Customer accountOwner;
 	private String wealth;
 	
 	
-	Account account = new Account(accountNumber,accountName);
 	
 	
 	
 	public AccountCreation() {
 		
-		List<String> account = new ArrayList<String>();
+		Account account = new Account(accountNumber,accountName);
 		
+//		List<String> account = new ArrayList<String>();
+//		
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -56,7 +56,7 @@ public class AccountCreation {
 		
 		else if(temp.equals("INTAG".toUpperCase())) {
 			System.out.println("Ange konto: ");
-			
+			account.setOwner(accountOwner);
 			
 		}
 		
