@@ -10,13 +10,13 @@ import java.util.Scanner;
 
 import bank.transfer.TransferManager;
 import bank.util.DateBook;
-public class Run {
+public class TransactionTest {
 	
 	private GregorianCalendar calendar;
 	private DateBook db = new DateBook();
 	private TransferManager tm;
 	
-	public Run() {
+	public TransactionTest() {
 
 		Scanner scan = new Scanner(System.in);
 		boolean calendarPlan = false;
@@ -100,7 +100,7 @@ public class Run {
 	}
 	
 	public static void main(String[] args) {
-		new Run();
+		new TransactionTest();
 	}
 }
 	
