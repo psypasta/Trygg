@@ -11,7 +11,7 @@ import bank.util.DateBook;
 //4. Lägg in datum betalning			Till Konto:
 //5. Ta bort datum betlaning			Belopp:
 
-public class WireTransfer {
+public class WireTransfer implements Transfer{
 
 	private Account to;
 	private Account from;
@@ -30,16 +30,7 @@ public class WireTransfer {
 			to.deposit(hold);
 		}
 	}
-	
-	public void calendarFinalize(Calendar c) {
 
-		this.transactionDate = c;
-		DateBook dateToFile = new DateBook();
-		dateToFile.bookDate(this);
-	  /*System.out.println(sdf.format(transferDay.getTime()));
-	    System.out.println(sdf.format(transferDay.getTime()));*/
-	}
-	
     public String toString() {
     	String date = "";
 		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);

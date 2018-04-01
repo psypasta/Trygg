@@ -37,8 +37,8 @@ public class TransferManager {
 		int fromMatch = findAccount(accountList, from);
 		
 		if(toMatch!=-1 && fromMatch!=-1) {
-			WireTransfer p = new WireTransfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
-			p.calendarFinalize(calendar);
+			Transfer p = new DateTransfer(accountList.get(toMatch), accountList.get(fromMatch), amount, calendar);
+			p.finalize();
 		}
 		
 		if(toMatch!=-1 && fromMatch!=-1) {
@@ -55,23 +55,15 @@ public class TransferManager {
 		int fromMatch = findAccount(accountList, from);
 		
 		if(toMatch!=-1 && fromMatch!=-1/* && !calendarPlan*/) {
-			WireTransfer p = new WireTransfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
+			Transfer p = new WireTransfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
 			p.finalize();
 		}
-
-		System.out.println(toMatch);
-		System.out.println(fromMatch);
+		
 		if(toMatch!=-1 && fromMatch!=-1) {
-		/*	for(int i = 0; i < accountList.size(); i++) {
-				//		accountList.add(customerList.get(i).getAccount());
-				System.out.println("------");
-				System.out.println(accountList.get(i).getAccountNumber());
-				System.out.println(accountList.get(i).getBalance());
-				System.out.println(accountList.get(i).getOwner().getFirstName());
-				System.out.println(accountList.get(i).getOwner().getLastName());
-				accountList.get(i).deposit(100);
-				System.out.println("------");
-			}*/
+			System.out.println("Fr�n: " + accountList.get(fromMatch).getAccountNumber() + " "
+										+ accountList.get(fromMatch).getBalance());
+			System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
+										+ accountList.get(toMatch).getBalance());
 		}
 	}
 	

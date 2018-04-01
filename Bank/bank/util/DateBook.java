@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import bank.transfer.WireTransfer;
+import bank.transfer.Transfer;
 
 public class DateBook {
 
@@ -38,7 +38,7 @@ public class DateBook {
 		return bookingsDate;
 	}
 	
-	public void bookDate(WireTransfer transfer) {
+	public void bookDate(Transfer transfer) {
 		try{
 		    String filename= "Bankdata/DatedTransfers";
 		    FileWriter fw = new FileWriter(filename,true); //the true will append the new data
