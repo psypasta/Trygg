@@ -11,73 +11,62 @@ import bank.transfer.Customer;
 
 public class FileGet {
 
-	public List<String> bookingsGet(){
-		List<String> linesFromFile = new ArrayList<String>();
-		// pass the path to the file as a parameter
+	
+	public String getLines(String path) {
+		String contents = null;
 		File file =
-    		new File("Bankdata/DatedTransfers");
-    		Scanner sc = null;
-    	
-    		try {
-			sc = new Scanner(file);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
- 
-		while (sc.hasNextLine()) {
-			String s = "";
-			s = sc.nextLine();
-			linesFromFile.add(s);
+	    		new File(path);
+	    		Scanner sc = null;
+	    	
+	    		try {
+				sc = new Scanner(file);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+	 
+			while (sc.hasNextLine()) {
+				contents += sc.nextLine() + "\n";
+	   		}
+			return contents;
+	}
+	
+	
+	public List<String> bookingsGet(){
+
+		List<String> bookingsList = new ArrayList<String>();
+		List<Account> accountList = accountGet();
+		String[] lines = getLines("Bankdata/DatedTransfers").split("\n");
+		for (int i = 0; i < lines.length; i++) {
+			bookingsList.add(lines[i]);
    		}
-		return linesFromFile;	
+		return bookingsList;	
 	}
 	//plsfix this class
-	public List<Customer> customerGet(List<Account> accountList) {
-		
+	private List<Customer> customerGet(List<Account> accountList) {
 		List<Customer> customerList = new ArrayList<Customer>();
-		// pass the path to the file as a parameter
-		File file =
-    		new File("Bankdata/customers");
-    		Scanner sc = null;
-    	
-    		try {
-			sc = new Scanner(file);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
- 
-    	int i = 0;
-		while (sc.hasNextLine()) {
+		String[] lines = getLines("Bankdata/customers").split("\n");
+		for(int i = 0; i < lines.length; i++) {
 			String[] s = new String[2];
-			s = sc.nextLine().split(",");
+			s = lines[i].split(",");
 			Customer holdCustomer = new Customer(s[0], s[1]);
 			customerList.add(holdCustomer);
 			accountList.get(i).setOwner(holdCustomer);
-			i+=1;
-   		}
+		}
 		return customerList;
 	}
 	
-	public List<Account> accountList() {
+	public List<Account> accountGet() {
 		
 		List<Account> accountList = new ArrayList<Account>();
-		// pass the path to the file as a parameter
-		File file =
-    		new File("Bankdata/accounts");
-    		Scanner sc = null;
-    	
-    		try {
-			sc = new Scanner(file);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
- 
-		while (sc.hasNextLine()) {
+		String[] lines = getLines("Bankdata/accounts").split("\n");
+		
+		for(int i = 0; i < lines.length; i++) {
 			String[] s = new String[2];
-			s = sc.nextLine().split(",");
-			Account hold = new Account(s[0], s[1]);
-			accountList.add(hold);
-   		}
+			s = lines[i].split(",");
+			Account holdAccount = new Account(s[0], s[1]);
+			accountList.add(holdAccount);
+		}
+		
 		customerGet(accountList);
 		return accountList;
 	}

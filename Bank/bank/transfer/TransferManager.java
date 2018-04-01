@@ -15,7 +15,7 @@ public class TransferManager {
 		
 		FileGet accountFile = new FileGet();
 
-		accountList = accountFile.accountList();
+		accountList = accountFile.accountGet();
 		
 		for(int i = 0; i < accountList.size(); i++) {
 	//		accountList.add(customerList.get(i).getAccount());
