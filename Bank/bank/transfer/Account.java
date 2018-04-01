@@ -42,5 +42,9 @@ public class Account {
 	public String getAccountNumber() {
 		return this.accountNumber;
 	}
+	
+	public String toString() {
+		return this.accountNumber + "," + this.accountName;
+	}
 
 }

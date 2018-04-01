@@ -2,6 +2,8 @@ package bank.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -27,6 +29,22 @@ public class FileGet {
 				contents += sc.nextLine() + "\n";
 	   		}
 			return contents;
+	}
+	
+	public boolean deleteLine(String compare) throws FileNotFoundException, UnsupportedEncodingException {
+		ArrayList<String> lines = new ArrayList<String>();
+		
+		 Scanner scan = new Scanner(new File("Bankdata/accounts"));
+		 while (scan.hasNext())
+			    lines.add(scan.nextLine());
+		
+		 lines.remove(compare);
+		 PrintWriter writer = new PrintWriter("Bankdata/accounts", "UTF-8");
+		 for (int i = 0; i < lines.size(); i++)
+		     writer.println(lines.get(i));
+		 writer.close();
+		 
+		return false;
 	}
 	
 	public List<String> bookingsGet(){
