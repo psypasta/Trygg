@@ -29,7 +29,7 @@ public class Vaults {
 									accountList.get(i).getBalance() + " " +
 									accountList.get(i).getOwner().getFirstName());
 			}
-	//	}
+	//	}//
 //		else if(choice.equals("7")) {
 			System.out.println("Välj index att ta bort: ");
 			choice = scan.nextLine();
