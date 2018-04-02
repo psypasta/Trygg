@@ -1,5 +1,7 @@
 package bank.test;
 
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -10,6 +12,7 @@ import java.util.Scanner;
 
 import bank.transfer.TransferManager;
 import bank.util.DateBook;
+import bank.util.FileGet;
 public class TransactionTest {
 	
 	private GregorianCalendar calendar;
@@ -54,6 +57,16 @@ public class TransactionTest {
 			System.out.println("Välj transaktion att ta bort : ");
 			String transacDelete = scan.nextLine();
 			System.out.println(": " + transacDelete);
+			FileGet transac = new FileGet();
+			try {
+				transac.deleteLine("Bankdata/DatedTransfers", transacDelete);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		to = "";

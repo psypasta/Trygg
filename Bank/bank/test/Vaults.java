@@ -34,7 +34,7 @@ public class Vaults {
 			System.out.println("Välj index att ta bort: ");
 			choice = scan.nextLine();
 			try {
-				accounts.deleteLine(accountList.get(Integer.parseInt(choice)).toString());
+				accounts.deleteLine("Bankdata/accounts", accountList.get(Integer.parseInt(choice)).toString());
 			} catch (NumberFormatException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -46,7 +46,7 @@ public class Vaults {
 				e.printStackTrace();
 			}
 			
-//		}
+//		}	
 		
 //		else if(choice.equals("8")) {
 			

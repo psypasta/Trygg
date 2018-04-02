@@ -31,20 +31,18 @@ public class FileGet {
 			return contents;
 	}
 	
-	public boolean deleteLine(String compare) throws FileNotFoundException, UnsupportedEncodingException {
+	public void deleteLine(String path, String compare) throws FileNotFoundException, UnsupportedEncodingException {
 		ArrayList<String> lines = new ArrayList<String>();
 		
-		 Scanner scan = new Scanner(new File("Bankdata/accounts"));
+		 Scanner scan = new Scanner(new File(path));
 		 while (scan.hasNext())
 			    lines.add(scan.nextLine());
 		
 		 lines.remove(compare);
-		 PrintWriter writer = new PrintWriter("Bankdata/accounts", "UTF-8");
+		 PrintWriter writer = new PrintWriter(path, "UTF-8");
 		 for (int i = 0; i < lines.size(); i++)
 		     writer.println(lines.get(i));
 		 writer.close();
-		 
-		return false;
 	}
 	
 	public List<String> bookingsGet(){
