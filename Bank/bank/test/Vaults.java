@@ -24,7 +24,7 @@ public class Vaults {
 			FileGet accounts = new FileGet();
 			accountList = accounts.accountGet();
 			for(int i = 0; i < accountList.size(); i++) {
-				System.out.println(i+1 + ". " +
+				System.out.println(i + ". " +
 									accountList.get(i).getAccountNumber() + " " +
 									accountList.get(i).getBalance() + " " +
 									accountList.get(i).getOwner().getFirstName());
