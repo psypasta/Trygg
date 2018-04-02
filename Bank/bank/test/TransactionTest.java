@@ -18,6 +18,24 @@ public class TransactionTest {
 	private GregorianCalendar calendar;
 	private DateBook db = new DateBook();
 	private TransferManager tm;
+	/*
+	public TransactionTest(String from, String to, double amount) {
+		String operation = null;
+		String from = null;
+		String to = null;
+		String finalizeDate = null;
+		String transacDelete = null;
+		Double amount = null;
+	}
+	
+	public TransactionTest(String from, String to, double amount, String date) {
+		String operation = null;
+		String from = null;
+		String to = null;
+		String finalizeDate = null;
+		String transacDelete = null;
+		Double amount = null;
+	} */
 	
 	public TransactionTest() {
 
