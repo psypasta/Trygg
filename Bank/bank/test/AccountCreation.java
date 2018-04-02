@@ -12,24 +12,11 @@ public class AccountCreation {
 	private String accountNumber; 
 	private String accountName;
 	private Customer accountOwner;
-	private String wealth;
-	
-	
-
-//	Account account = new Account(accountNumber,accountName);
-
-	
 	
 	public AccountCreation() {
 		
+		List<Account> accountList = new ArrayList<Account>();
 
-		//Account account = new Account(accountNumber,accountName);
-
-		List<String> accountList = new ArrayList<String>();
-
-		
-//		List<String> account = new ArrayList<String>();
-//		
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -48,7 +35,7 @@ public class AccountCreation {
 			accountName = sc.next();
 			System.out.println("Ange ägarens förnamn: ");
 			names[0] = sc.next();
-			System.out.println("ANge ägarens efternamn: ");
+			System.out.println("Ange ägarens efternamn: ");
 			names[1] = sc.next();
 			//detta känns inte bra
 			
@@ -67,11 +54,19 @@ public class AccountCreation {
 		
 		else if(temp.equals("INTAG".toUpperCase())) {
 			System.out.println("Ange konto: ");
-			account.setOwner(accountOwner);
+			
 			
 		}
 		
 		else if(temp.equals("UTTAG".toUpperCase())) {
+			System.out.println("Ange konto: ");
+			String outAccountNumber = sc.nextLine();
+			System.out.println("Ange Saldo: ");
+			String outSaldo = sc.nextLine();
+			
+			for(int i = 0; i < accountList.size(); i++) {
+				
+			}
 			
 		}
 	
