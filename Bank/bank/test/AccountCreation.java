@@ -1,5 +1,7 @@
 package bank.test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import bank.transfer.Account;
@@ -13,12 +15,18 @@ public class AccountCreation {
 	private String wealth;
 	
 	
-	
+
+//	Account account = new Account(accountNumber,accountName);
+
 	
 	
 	public AccountCreation() {
 		
-		Account account = new Account(accountNumber,accountName);
+
+		//Account account = new Account(accountNumber,accountName);
+
+		List<String> accountList = new ArrayList<String>();
+
 		
 //		List<String> account = new ArrayList<String>();
 //		
@@ -30,21 +38,24 @@ public class AccountCreation {
 		String temp;
 		
 		temp = sc.nextLine();
-	
+		Account account = null;
 		if(temp.equals("1")) {
 			//Skapa konto
+			String[] names = new String[2];
 			System.out.println("Ange nummer: ");
 			accountNumber = sc.next();
 			System.out.println("Ange konto namn: ");
 			accountName = sc.next();
-			System.out.println("Ange ägarens namn: ");
-			accountOwner = sc.next();
-			System.out.println("Ange saldo: ");
-			wealth = sc.next();
+			System.out.println("Ange ägarens förnamn: ");
+			names[0] = sc.next();
+			System.out.println("ANge ägarens efternamn: ");
+			names[1] = sc.next();
 			//detta känns inte bra
 			
-		
-			System.out.println(accountNumber + " " + accountName + " " + accountOwner + " " + wealth);
+			
+			account = new Account(accountNumber,accountName);
+			account.setOwner(new Customer(names[0], names[1]));
+			System.out.println(account.getAccountNumber() + " " + account.getBalance() + " " + account.getOwner().getFirstName());
 			
 			
 		}
