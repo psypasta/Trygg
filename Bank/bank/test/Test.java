@@ -47,7 +47,7 @@ public class Test {
 		finalizeDate = scan.nextLine();
 		System.out.println("Betalning gÃ¥r igenom den: " + finalizeDate);
 			
-		System.out.println("Välj transaktion att ta bort : ");
+		System.out.println("Vï¿½lj transaktion att ta bort : ");
 		transacDelete = scan.nextLine();
 		System.out.println(": " + transacDelete);
 		
@@ -67,8 +67,8 @@ public class Test {
 			
 		}
 		else if(to.equals("5")) {
-			System.out.println("Välj transaktion att ta bort : ");
-			String transacDelete = scan.nextLine();
+			System.out.println("Vï¿½lj transaktion att ta bort : ");
+			transacDelete = scan.nextLine();
 			System.out.println(": " + transacDelete);
 			FileGet transac = new FileGet();
 			try {
@@ -104,7 +104,7 @@ public class Test {
 	 * 
 	 * 		Remove Calendar
 	 * 
-	 * 			System.out.println("Välj transaktion att ta bort : ");
+	 * 			System.out.println("Vï¿½lj transaktion att ta bort : ");
 	 * 
 	 */
 	
