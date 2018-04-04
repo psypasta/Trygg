@@ -53,7 +53,7 @@ public class TransferManager {
 				p.finalize();
 			}
 		}
-		
+
 		if(toMatch!=-1 && fromMatch!=-1) {
 			System.out.println("From: " + accountList.get(fromMatch).getAccountNumber() + " "
 										+ accountList.get(fromMatch).getBalance());
@@ -61,7 +61,7 @@ public class TransferManager {
 										+ accountList.get(toMatch).getBalance());
 		}
 	}
-	
+
 	public void accountTransfer(String from, String to, double amount) {
 
 		int toMatch = findAccount(accountList, to);
@@ -79,8 +79,8 @@ public class TransferManager {
 										+ accountList.get(toMatch).getBalance());
 		}
 	}
-	
-	public int findAccount(List<Account> aList, String find) {
+
+	public static int findAccount(List<Account> aList, String find) {
 		for(int i = 0; i < aList.size(); i++) {
 			if(aList.get(i).getAccountNumber().equals(find)) {
 				return i;

@@ -15,7 +15,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="bank.test.Vaults" project="Bank" file="/Bank/bank/test/Vaults.java" binary="false" 
+  <class id="3" language="java" name="bank.test.VaultsTest" project="Bank" file="/Bank/bank/test/Vaults.java" binary="false"
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="796" y="316"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
