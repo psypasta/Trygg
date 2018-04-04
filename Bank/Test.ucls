@@ -6,7 +6,7 @@
     <position height="52" width="114" x="114" y="76"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="2" language="java" name="bank.test.Test" project="Bank" file="/Bank/bank/test/Test.java" binary="false" 
+  <class id="2" language="java" name="bank.test.TransferTest" project="Bank" file="/Bank/bank/test/Test.java" binary="false"
     corner="BOTTOM_RIGHT">    
     <position height="119" width="181" x="271" y="76"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
