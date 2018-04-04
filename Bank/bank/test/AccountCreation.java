@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import bank.transfer.Account;
-import bank.transfer.Customer;
+import bank.accounts.Account;
+import bank.accounts.Customer;
 
 public class AccountCreation {
 	
@@ -13,12 +13,9 @@ public class AccountCreation {
 	private String accountName;
 	private Customer accountOwner;
 
-	
 	private List<Account> accountList;
-
 	
 	public AccountCreation() {
-
 
 		accountList = new ArrayList<Account>();
 
@@ -37,9 +34,9 @@ public class AccountCreation {
 			accountNumber = sc.next();
 			System.out.println("Ange konto namn: ");
 			accountName = sc.next();
-			System.out.println("Ange ägarens förnamn: ");
+			System.out.println("Ange ï¿½garens fï¿½rnamn: ");
 			names[0] = sc.next();
-			System.out.println("Ange ägarens efternamn: ");
+			System.out.println("Ange ï¿½garens efternamn: ");
 			names[1] = sc.next();
 			
 			account = new Account(accountNumber,accountName);
@@ -47,6 +44,7 @@ public class AccountCreation {
 			System.out.println(account.getAccountNumber() + " " + account.getBalance() + " " + account.getOwner().getFirstName());
 			accountList.add(account);
 		}
+		
 		else if(temp.equals("2")){
 			System.out.println("3.Intag");
 			System.out.println("4.Uttag");
@@ -55,7 +53,6 @@ public class AccountCreation {
 		
 		if(temp.equals("3")) {
 			System.out.println("Ange konto: ");
-
 			String inAccountNumber = sc.nextLine();
 			System.out.println("Ange saldo: ");
 			String inSaldo = sc.nextLine();
@@ -76,16 +73,11 @@ public class AccountCreation {
 				if(outAccountNumber.equals(accountList.get(i).getAccountNumber())){
 					accountList.get(i).withdraval(Double.parseDouble(outSaldo));
 				}
-				
 			}
-			
 		}
 	}
 	
 	public static void main(String[] args) {
-		
 		new AccountCreation();
-		
 	}
-
 }

@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import bank.accounts.Account;
 import bank.util.DateBook;
 
 public class DateTransfer implements Transfer {

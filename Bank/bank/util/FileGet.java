@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import bank.transfer.Account;
-import bank.transfer.Customer;
+import bank.accounts.Account;
+import bank.accounts.Customer;
 
 public class FileGet {
 

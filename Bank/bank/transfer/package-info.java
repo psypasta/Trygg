@@ -1,8 +1,5 @@
 /**
- * 
- */
-/**
- * @author Lisa Bäckström
+ * @author Max Blomstervall
  *
  */
 package bank.transfer;

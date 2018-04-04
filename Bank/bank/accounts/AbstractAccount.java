@@ -1,24 +1,26 @@
-package bank.transfer;
+package bank.accounts;
 
-public class Account {
+public abstract class AbstractAccount {
 	
 	private String accountNumber;
 	private String accountName;
 	private Customer accountOwner;
 	private double accountBalance;
-
-	public Account(String aNumber, String name) {
+    
+	public AbstractAccount(String aNumber, String name) {
 		this.accountNumber = aNumber;
 		this.accountName = name;
 		this.accountBalance = 0;
 	}
+	
 	public void setOwner(Customer owner) {
 		this.accountOwner = owner;
 	}
+	
 	public Customer getOwner() {
 		return this.accountOwner;
 	}
-	
+
 	public void deposit(double amount) {
 		if(amount < 0) {
 			System.out.println("invalid amount");
@@ -29,6 +31,13 @@ public class Account {
 	}
 	
 	public double withdraval(double amount) {
+
+		if(amount > this.accountBalance){
+			System.out.println("Medges ej");
+		}
+		else{
+			this.accountBalance = this.accountBalance - amount;
+		}
 		if(this.accountBalance >= amount && this.accountBalance > 0) {
 			this.accountBalance = this.accountBalance - amount;
 			return amount;

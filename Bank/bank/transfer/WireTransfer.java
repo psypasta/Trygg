@@ -4,8 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-import bank.transfer.Account;
-import bank.util.DateBook;
+import bank.accounts.Account;
 
 //3. Lägg in direkt betalning			Från Konto:
 //4. Lägg in datum betalning			Till Konto:
@@ -25,6 +24,9 @@ public class WireTransfer implements Transfer{
 	}
 	
 	public void finalize() {
+
+		to.deposit(from.withdraval(amount));
+		
 		double hold = from.withdraval(amount);
 		if(hold!=0) {
 			to.deposit(hold);

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import bank.accounts.Account;
 import bank.util.FileGet;
 
 public class TransferManager {
@@ -42,9 +43,9 @@ public class TransferManager {
 		}
 		
 		if(toMatch!=-1 && fromMatch!=-1) {
-			System.out.println("Fr�n: " + accountList.get(fromMatch).getAccountNumber() + " "
+			System.out.println("From: " + accountList.get(fromMatch).getAccountNumber() + " "
 										+ accountList.get(fromMatch).getBalance());
-			System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
+			System.out.println("To: " + accountList.get(toMatch).getAccountNumber() + " "
 										+ accountList.get(toMatch).getBalance());
 		}
 	}
@@ -60,9 +61,9 @@ public class TransferManager {
 		}
 		
 		if(toMatch!=-1 && fromMatch!=-1) {
-			System.out.println("Fr�n: " + accountList.get(fromMatch).getAccountNumber() + " "
+			System.out.println("From: " + accountList.get(fromMatch).getAccountNumber() + " "
 										+ accountList.get(fromMatch).getBalance());
-			System.out.println("Till: " + accountList.get(toMatch).getAccountNumber() + " "
+			System.out.println("To: " + accountList.get(toMatch).getAccountNumber() + " "
 										+ accountList.get(toMatch).getBalance());
 		}
 	}

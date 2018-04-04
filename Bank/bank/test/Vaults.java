@@ -5,7 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Scanner;
 
-import bank.transfer.Account;
+import bank.accounts.Account;
 import bank.util.FileGet;
 
 public class Vaults {
@@ -31,7 +31,7 @@ public class Vaults {
 			}
 	//	}
 //		else if(choice.equals("7")) {
-			System.out.println("Välj index att ta bort: ");
+			System.out.println("Vï¿½lj index att ta bort: ");
 			choice = scan.nextLine();
 			try {
 				accounts.deleteLine("Bankdata/accounts", accountList.get(Integer.parseInt(choice)).toString());

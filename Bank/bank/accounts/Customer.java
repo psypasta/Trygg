@@ -1,4 +1,4 @@
-package bank.transfer;
+package bank.accounts;
 
 public class Customer {
 	
@@ -16,5 +16,9 @@ public class Customer {
 	
 	public String getLastName() {
 		return this.lastName;
+	}
+	
+	public String toString() {
+		return this.firstName + "," + this.lastName;
 	}
 }

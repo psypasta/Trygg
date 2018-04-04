@@ -48,9 +48,9 @@ public class TransactionTest {
 		String to = "";
 		double amount = 0;
 		
-		System.out.println("3. Lägg in direkt betalning");
-		System.out.println("4. Lägg in kalender betalning");
-		System.out.println("5. Ta bort kalender betalning");
+		System.out.println("3. Make a wire transfer");
+		System.out.println("4. Add calendar payment");
+		System.out.println("5. Remove calendar payment");
 		
 		to = scan.nextLine();
 		if(to.equals("3")) {
@@ -59,9 +59,9 @@ public class TransactionTest {
 		else if(to.equals("4")) {
 			calendarPlan = true;
 			String finalizeDate = "";
-			System.out.println("Välj datum för betalning(mm/dd/yyyy): ");
+			System.out.println("Enter date for payment finalize: (mm/dd/yyyy): ");
 			finalizeDate = scan.nextLine();
-			System.out.println("Betalning går igenom den: " + finalizeDate);
+			System.out.println("Payment will finalize on: " + finalizeDate);
 			
 			calendar = new GregorianCalendar();
 			SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
@@ -72,7 +72,7 @@ public class TransactionTest {
 			}
 		}
 		else if(to.equals("5")) {
-			System.out.println("V�lj transaktion att ta bort : ");
+			System.out.println("Enter a dated transaction to be removed: ");
 			String transacDelete = scan.nextLine();
 			System.out.println(": " + transacDelete);
 			FileGet transac = new FileGet();
@@ -89,16 +89,16 @@ public class TransactionTest {
 		
 		to = "";
 		
-		System.out.println("Från konto: ");
+		System.out.println("From account: ");
 		from = scan.nextLine();
 		
-		System.out.println("Till konto: ");
+		System.out.println("To account: ");
 		to = scan.nextLine();
 		
-		System.out.println("Summa: ");
+		System.out.println("Amount: ");
 		amount = scan.nextDouble();
 		if(amount < 0) {
-			System.out.println("Kan inte skicka minus pengar!");
+			System.out.println("Can't transfer negative moneys!");
 			amount = scan.nextDouble();
 		}
 		
