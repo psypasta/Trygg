@@ -11,21 +11,20 @@ import bank.accounts.Customer;
 public class FileGet {
 
 	public String getLines(String path) {
-		String contents = null;
-		File file =
-	    		new File(path);
-	    		Scanner sc = null;
+		String contents = "";
+		File file = new File(path);
+		Scanner sc = null;
 	    	
-	    		try {
-				sc = new Scanner(file);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-	 
-			while (sc.hasNextLine()) {
-				contents += sc.nextLine() + "\n";
-	   		}
-			return contents;
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		while (sc.hasNextLine()) {
+			contents += sc.nextLine() + "\n";
+		}
+		return contents;
 	}
 
 	public void modLine(String path, String find, String mod){
