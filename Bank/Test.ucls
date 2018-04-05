@@ -101,7 +101,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="13" language="java" name="bank.test.AccountCreation" project="Bank" 
+  <class id="13" language="java" name="bank.test.throwaway.AccountCreation" project="Bank"
     file="/Bank/bank/test/AccountCreation.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1022" y="658"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

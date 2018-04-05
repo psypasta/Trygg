@@ -44,9 +44,9 @@ public class TransactionTest {
 		//Select operation
 		//Select accounts
 		//Select amount
-		String from = "";
-		String to = "";
-		double amount = 0;
+		String from;
+		String to;
+		double amount;
 		
 		System.out.println("3. Make a wire transfer");
 		System.out.println("4. Add calendar payment");
@@ -58,7 +58,7 @@ public class TransactionTest {
 		}
 		else if(to.equals("4")) {
 			calendarPlan = true;
-			String finalizeDate = "";
+			String finalizeDate;
 			System.out.println("Enter date for payment finalize: (mm/dd/yyyy): ");
 			finalizeDate = scan.nextLine();
 			System.out.println("Payment will finalize on: " + finalizeDate);
@@ -87,8 +87,6 @@ public class TransactionTest {
 			}
 		}
 		
-		to = "";
-		
 		System.out.println("From account: ");
 		from = scan.nextLine();
 		
@@ -115,17 +113,17 @@ public class TransactionTest {
 		
 		finalizeDates();
 	}
-	
+
 	public void finalizeDates() {
-		List<String> finalizeDates = new ArrayList<String>();
-		
+		List<String> finalizeDates;
+
 		finalizeDates = db.checkDates();
 		System.out.println("\nDates\n");
 		for(int i  = 0; i < finalizeDates.size(); i++) {
 			System.out.println(finalizeDates.get(i));
-			String[] hold = new String[4];
+			String[] hold;
 			hold = finalizeDates.get(i).split(" ");
-		//	System.out.println(hold[0] + " " + hold[1] + " " + Double.parseDouble(hold[2]));
+			//	System.out.println(hold[0] + " " + hold[1] + " " + Double.parseDouble(hold[2]));
 			tm.accountTransfer(hold[1], hold[0], Double.parseDouble(hold[2]));
 		}
 	}

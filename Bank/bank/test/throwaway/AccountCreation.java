@@ -1,4 +1,4 @@
-package bank.test;
+package bank.test.throwaway;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 import bank.accounts.Account;
 import bank.accounts.Customer;
+import bank.util.FileGet;
 
 public class AccountCreation {
 	
@@ -17,29 +18,24 @@ public class AccountCreation {
 
 	private List<Account> accountList;
 	
-	public AccountCreation() {
+	public AccountCreation(String operation, Scanner sc) {
 
 		accountList = new ArrayList<Account>();
 
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("1. Skapa konto");
-		System.out.println("2. Uttag / intag");
-		String temp;
-		temp = sc.nextLine();
+		String temp = operation;
 	
 		if(temp.equals("1")) {
 			//Skapa konto
-			Account account = null;
+			Account account;
 			String[] names = new String[2];
-			System.out.println("Ange nummer: ");
-			accountNumber = sc.next();
-			System.out.println("Ange konto namn: ");
-			accountName = sc.next();
-			System.out.println("Ange �garens f�rnamn: ");
-			names[0] = sc.next();
-			System.out.println("Ange �garens efternamn: ");
-			names[1] = sc.next();
+			System.out.println("Enter account number: ");
+			accountNumber = sc.nextLine();
+			System.out.println("Enter account name: ");
+			accountName = sc.nextLine();
+			System.out.println("Enter owners first name: ");
+			names[0] = sc.nextLine();
+			System.out.println("Enter owners last name: ");
+			names[1] = sc.nextLine();
 			
 			account = new Account(accountNumber,accountName);
 			Customer customer = new Customer(names[0], names[1]);
@@ -52,19 +48,24 @@ public class AccountCreation {
 		}
 		
 		else if(temp.equals("2")){
-			System.out.println("3.Intag");
-			System.out.println("4.Uttag");
+			System.out.println("3. Deposit");
+			System.out.println("4. Withdraval");
 			temp = sc.nextLine();
 		}
 		
 		if(temp.equals("3")) {
-			System.out.println("Ange konto: ");
+			System.out.println("Enter account: ");
 			String inAccountNumber = sc.nextLine();
-			System.out.println("Ange saldo: ");
+			System.out.println("Enter amount: ");
 			String inSaldo = sc.nextLine();
 			for(int i = 0; i < accountList.size(); i++) {
 				if(inAccountNumber.equals(accountList.get(i).getAccountNumber())) {
 					accountList.get(i).deposit(Double.parseDouble(inSaldo));
+
+					System.out.println(accountList.get(i).getAccountNumber() + " " + accountList.get(i).getBalance());
+					FileGet updateSafe = new FileGet();
+					updateSafe.modLine("Bankdata/safe", accountList.get(i).getAccountNumber(),
+													String.valueOf(accountList.get(i).getBalance()));
 				}
 			}
 		}
@@ -78,6 +79,10 @@ public class AccountCreation {
 			for(int i = 0; i < accountList.size(); i++) {
 				if(outAccountNumber.equals(accountList.get(i).getAccountNumber())){
 					accountList.get(i).withdraval(Double.parseDouble(outSaldo));
+
+					FileGet updateSafe = new FileGet();
+					updateSafe.modLine("Bankdata/safe", accountList.get(i).getAccountNumber(),
+							String.valueOf(accountList.get(i).getBalance()));
 				}
 			}
 		}
@@ -95,6 +100,6 @@ public class AccountCreation {
 	}
 
 	public static void main(String[] args) {
-		new AccountCreation();
+		new AccountCreation("1", new Scanner(System.in));
 	}
 }

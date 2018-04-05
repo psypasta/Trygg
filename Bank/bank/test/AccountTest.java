@@ -2,37 +2,82 @@ package bank.test;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 import bank.accounts.AbstractAccount;
 import bank.accounts.Account;
 import bank.accounts.Customer;
+import bank.transfer.TransferManager;
 import bank.util.FileGet;
 
 public class AccountTest {
 
 	public static void main(String[] args) {
-		new AccountTest();
+		new AccountTest("1", new Scanner(System.in));
 	}
 
-	private String accountNumber;
-	private String accountName;
 	private Customer accountOwner;
+	private List<Account> accountList;
+	public AccountTest(String operation, Scanner scan) {
+		init();
+		AbstractAccount a = null;
 
+		if(operation.equals("1")){
+			a = inputsToAccount(scan);
 
-	public AccountTest() {
+			System.out.println(a.toString());
+			System.out.println(accountOwner.toString());
+			stringToFile(a.toString(), "Bankdata/accounts");
+			stringToFile(accountOwner.toString(), "Bankdata/customers");
+			stringToFile(a.getAccountNumber() + "," + a.getBalance(), "Bankdata/safe");
+		}
+		else if(operation.equals("2")){
+			System.out.println("1. Deposit");
+			System.out.println("2. Withdrawal");
+			String choice = scan.nextLine();
 
-		AbstractAccount a = inputsToAccount();
+			if(choice.equals("1")) {
+				System.out.println("Enter account: ");
+				String accountNumber = scan.nextLine();
+				System.out.println("Enter amount: ");
+				String amount = scan.nextLine();
 
-		System.out.println(a.toString());
-		System.out.println(accountOwner.toString());
-		stringToFile(a.toString(), "Bankdata/accounts");
-		stringToFile(accountOwner.toString(), "Bankdata/customers");
-		stringToFile(a.getAccountNumber() + "," + a.getBalance(), "Bankdata/safe");
+				int indexOf = TransferManager.findAccount(accountList, accountNumber);
+				accountList.get(indexOf).deposit(Double.parseDouble(amount));
+
+				FileGet updateSafe = new FileGet();
+				updateSafe.modLine("Bankdata/safe", accountList.get(indexOf).getAccountNumber(),
+						String.valueOf(accountList.get(indexOf).getBalance()));
+			}
+			else if(choice.equals("2")){
+				System.out.println("Enter account: ");
+				String accountNumber = scan.nextLine();
+				System.out.println("Enter amount: ");
+				String amount = scan.nextLine();
+
+				int indexOf = TransferManager.findAccount(accountList, accountNumber);
+				accountList.get(indexOf).withdraval(Double.parseDouble(amount));
+
+				FileGet updateSafe = new FileGet();
+				updateSafe.modLine("Bankdata/safe", accountList.get(indexOf).getAccountNumber(),
+						String.valueOf(accountList.get(indexOf).getBalance()));
+			}
+		}
+
 	}
 
-	private AbstractAccount inputsToAccount(){
-		Scanner scan = new Scanner(System.in);
+	private void init() {
+
+		FileGet accountFile = new FileGet();
+		accountList = accountFile.accountGet();
+	}
+
+	private AbstractAccount inputsToAccount(Scanner scan){
+
+		String accountNumber;
+		String accountName;
+
 		FileGet fg = new FileGet();
 
 		String accountFile = fg.getLines("Bankdata/accounts");

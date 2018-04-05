@@ -7,7 +7,7 @@ public abstract class AbstractAccount {
 	private Customer accountOwner;
 	private double accountBalance;
     
-	public AbstractAccount(String aNumber, String name) {
+	AbstractAccount(String aNumber, String name) {
 		this.accountNumber = aNumber;
 		this.accountName = name;
 		this.accountBalance = 0;

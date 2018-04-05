@@ -2,6 +2,7 @@ package bank.util;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,8 +22,12 @@ public class FileGet {
 			e.printStackTrace();
 		}
 
-		while (sc.hasNextLine()) {
-			contents += sc.nextLine() + "\n";
+		try {
+			while (sc.hasNextLine()) {
+				contents += sc.nextLine() + "\n";
+			}
+		} catch(NullPointerException e){
+
 		}
 		return contents;
 	}
@@ -46,7 +51,7 @@ public class FileGet {
 			writer.print(contents);
 			writer.close();
 		} catch(FileNotFoundException e) {
-
+			e.printStackTrace();
 		}
 	}
 
@@ -66,12 +71,9 @@ public class FileGet {
 	
 	public List<String> bookingsGet(){
 
-		List<String> bookingsList = new ArrayList<String>();
-		List<Account> accountList = accountGet();
 		String[] lines = getLines("Bankdata/DatedTransfers").split("\n");
-		for (int i = 0; i < lines.length; i++) {
-			bookingsList.add(lines[i]);
-   		}
+		List<String> bookingsList = Arrays.asList(lines);
+
 		return bookingsList;
 	}
 	//plsfix this class
@@ -79,9 +81,9 @@ public class FileGet {
 		List<Customer> customerList = new ArrayList<Customer>();
 		String[] lines = getLines("Bankdata/customers").split("\n");
 		for(int i = 0; i < lines.length; i++) {
-			String[] s = new String[2];
-			s = lines[i].split(",");
-			Customer holdCustomer = new Customer(s[0], s[1]);
+			String[] words;
+			words = lines[i].split(",");
+			Customer holdCustomer = new Customer(words[0], words[1]);
 			customerList.add(holdCustomer);
 			accountList.get(i).setOwner(holdCustomer);
 		}
@@ -95,8 +97,8 @@ public class FileGet {
 		String[] safeLines = getLines("Bankdata/safe").split("\n");
 
 		for(int i = 0; i < accountLines.length; i++) {
-			String[] accountS = new String[2];
-			String[] safeS = new String[2];
+			String[] accountS;
+			String[] safeS;
 			accountS = accountLines[i].split(",");
 			safeS = safeLines[i].split(",");
 			Account holdAccount = new Account(accountS[0], accountS[1]);

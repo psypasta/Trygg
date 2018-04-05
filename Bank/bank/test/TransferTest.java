@@ -4,22 +4,20 @@ import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.GregorianCalendar;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 import bank.transfer.TransferManager;
 import bank.util.FileGet;
 
 public class TransferTest {
-	
-	private GregorianCalendar calendar;
+
+
 	
 	public TransferTest(String operation, Scanner scan) {
-		String from = null;
-		String to = null;
-		String finalizeDate = null;
-		double amount = 0;
+		String from;
+		String to;
+		String finalizeDate;
+		double amount;
 
 		System.out.println(operation);
 		if(operation.equals("3")) {
@@ -41,6 +39,8 @@ public class TransferTest {
 		}
 		
 		else if(operation.equals("4")) {
+			GregorianCalendar calendar;
+
 			System.out.println("From account: ");
 			from = scan.nextLine();
 			System.out.println("To account: ");
@@ -91,7 +91,7 @@ public class TransferTest {
 
 	public static void main(String[] args) {
 
-		String operation = "";
+		String operation;
 
 		System.out.println("3. Make a wire transfer");
 		System.out.println("4. Add calendar payment");

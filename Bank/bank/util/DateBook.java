@@ -20,7 +20,7 @@ public class DateBook {
 	
 	public List<String> checkDates() {
 		List<String> bookingsDate = new ArrayList<String>();
-		List<String> bookings = new ArrayList<String>();;
+		List<String> bookings;
 		FileGet bookFile = new FileGet();
 		bookings = bookFile.bookingsGet();
 		
@@ -30,14 +30,14 @@ public class DateBook {
 	    String dateFormatted = fmt.format(gCalendar.getTime());
 	    
 		for(int i = 0; i < bookings.size(); i++) {
-			String[] words = bookings.get(i).split(" ");;
+			String[] words = bookings.get(i).split(" ");
 			if(words[3].equals(dateFormatted)) {
 				bookingsDate.add(words[0] + " " + words[1] + " " + words[2] + " " + words[3]);
 			}
 		}
 		return bookingsDate;
 	}
-	
+
 	public void bookDate(Transfer transfer) {
 		try{
 		    String filename= "Bankdata/DatedTransfers";

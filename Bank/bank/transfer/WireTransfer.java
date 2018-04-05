@@ -39,7 +39,7 @@ public class WireTransfer implements Transfer{
 	}
 
     public String toString() {
-    	String date = "";
+    	String date;
 		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
 		sdf.setCalendar(this.transactionDate);
 	    date = sdf.format(this.transactionDate.getTime());

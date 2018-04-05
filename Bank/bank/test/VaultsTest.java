@@ -13,23 +13,18 @@ public class VaultsTest {
 	
 	private List<Account> accountList;
 	
-	public VaultsTest() {
+	public VaultsTest(String operation, Scanner scan) {
 		FileGet accountsFile = new FileGet();
 		accountList = accountsFile.accountGet();
 
-		System.out.println("6. Lista konton");
-		System.out.println("7. Avsluta konto");
-		System.out.println("8. Visa bankvalv");
-	
-		Scanner scan = new Scanner(System.in);
-		String choice = scan.nextLine();
+		String choice = operation;
 		
 		if(choice.equals("6")) {
 			printAccounts();
 
 		}
 		else if(choice.equals("7")) {
-			System.out.println("Välj konto att ta bort: (kontonummer)");
+			System.out.println("Enter account to remove to remove: (accountnumber)");
 			choice = scan.nextLine();
 
 			int match = TransferManager.findAccount(accountList, choice);
@@ -61,7 +56,7 @@ public class VaultsTest {
 				sum = sum + Double.parseDouble(columns[1]);
 			}
 
-			System.out.println("Summan av alla konton är: " + sum);
+			System.out.println("Sum of all accounts is: " + sum);
 		}
 		
 //		else if(choice.equals("8")) {
@@ -79,6 +74,6 @@ public class VaultsTest {
 	}
 	
 	public static void main(String[] args) {
-		new VaultsTest();
+		new VaultsTest("1", new Scanner(System.in));
 	}
 }

@@ -17,7 +17,6 @@ public class TransferManager {
 	private void init() {
 		
 		FileGet accountFile = new FileGet();
-
 		accountList = accountFile.accountGet();
 	}
 	
@@ -39,6 +38,7 @@ public class TransferManager {
 			System.out.println(new GregorianCalendar().getTime());
 			if(calendar.getTime().after(new GregorianCalendar().getTime())){
 				db.bookDate(p);
+				System.out.println("Date after");
 			}
 			else {
 				p.commit();
