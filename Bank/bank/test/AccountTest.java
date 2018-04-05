@@ -28,6 +28,7 @@ public class AccountTest {
 		System.out.println(accountOwner.toString());
 		stringToFile(a.toString(), "Bankdata/accounts");
 		stringToFile(accountOwner.toString(), "Bankdata/customers");
+		stringToFile(a.getAccountNumber() + "," + a.getBalance(), "Bankdata/safe");
 	}
 
 	private AbstractAccount inputs(){
@@ -53,7 +54,7 @@ public class AccountTest {
 
 	private void stringToFile(String input, String path) {
 		try{
-			String filename= path;
+			String filename = path;
 		    FileWriter fw = new FileWriter(filename,true); //the true will append the new data
 		    
 		    fw.write(input + "\n");		//appends the string to the file

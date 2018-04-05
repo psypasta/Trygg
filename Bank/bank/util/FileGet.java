@@ -1,9 +1,6 @@
 package bank.util;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,7 +27,30 @@ public class FileGet {
 	   		}
 			return contents;
 	}
-	
+
+	public void modLine(String path, String find, String mod){
+		String contents = getLines(path);
+	//	System.out.println(contents);
+		String[] lines = contents.split("\n");
+		contents = "";
+		for(int i = 0; i < lines.length; i++){
+			if(lines[i].contains(find)){
+				lines[i] = find + "," + mod;
+			}
+
+	//		System.out.println(lines[i]);
+			contents = contents + lines[i] + "\n";
+		}
+
+		try {
+			PrintWriter writer = new PrintWriter(path);
+			writer.print(contents);
+			writer.close();
+		} catch(FileNotFoundException e) {
+
+		}
+	}
+
 	public void deleteLine(String path, String compare) throws FileNotFoundException, UnsupportedEncodingException {
 		ArrayList<String> lines = new ArrayList<String>();
 		
@@ -72,12 +92,16 @@ public class FileGet {
 	public List<Account> accountGet() {
 		
 		List<Account> accountList = new ArrayList<Account>();
-		String[] lines = getLines("Bankdata/accounts").split("\n");
-		
-		for(int i = 0; i < lines.length; i++) {
-			String[] s = new String[2];
-			s = lines[i].split(",");
-			Account holdAccount = new Account(s[0], s[1]);
+		String[] accountLines = getLines("Bankdata/accounts").split("\n");
+		String[] safeLines = getLines("Bankdata/safe").split("\n");
+
+		for(int i = 0; i < accountLines.length; i++) {
+			String[] accountS = new String[2];
+			String[] safeS = new String[2];
+			accountS = accountLines[i].split(",");
+			safeS = safeLines[i].split(",");
+			Account holdAccount = new Account(accountS[0], accountS[1]);
+			holdAccount.deposit(Double.parseDouble(safeS[1]));
 			accountList.add(holdAccount);
 		}
 		

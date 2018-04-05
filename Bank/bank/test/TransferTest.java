@@ -16,7 +16,6 @@ public class TransferTest {
 	private GregorianCalendar calendar;
 	
 	public TransferTest(String operation, Scanner scan) {
-		boolean calendarPlan = false;
 		String from = null;
 		String to = null;
 		String finalizeDate = null;
@@ -37,6 +36,7 @@ public class TransferTest {
 			}
 
 			TransferManager wireTm = new TransferManager(new GregorianCalendar());
+			System.out.println(1 + " " + amount);
 			wireTm.accountTransfer(from, to, amount);
 		}
 		

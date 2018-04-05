@@ -2,6 +2,6 @@ package bank.transfer;
 
 public interface Transfer {
 	
-	public void finalize();
+	public void commit();
 	public String toString();
 } 

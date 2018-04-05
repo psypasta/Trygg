@@ -32,10 +32,8 @@ public class VaultsTest {
 			System.out.println("Välj konto att ta bort: (kontonummer)");
 			choice = scan.nextLine();
 
-
 			int match = TransferManager.findAccount(accountList, choice);
 			try {
-
 				accountsFile.deleteLine("Bankdata/accounts", accountList.get(match).toString());
 				accountsFile.deleteLine("Bankdata/customers", accountList.get(match).getOwner().toString());
 			} catch (NumberFormatException e) {
@@ -48,7 +46,20 @@ public class VaultsTest {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+		}
+		else if(choice.equals("8")){
+
+			double sum = 0;
+
+			FileGet countMoneys = new FileGet();
+			String contents = countMoneys.getLines("Bankdata/safe");
+			String[] lines = contents.split("\n");
+			for(int i = 0; i < lines.length; i++){
+				String[] columns = lines[i].split(",");
+				sum = sum + Double.parseDouble(columns[1]);
+			}
+
+			System.out.println("Summan av alla konton är: " + sum);
 		}
 		
 //		else if(choice.equals("8")) {

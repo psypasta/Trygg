@@ -20,14 +20,14 @@ public class TransferManager {
 
 		accountList = accountFile.accountGet();
 		
-		for(int i = 0; i < accountList.size(); i++) {
+	//	for(int i = 0; i < accountList.size(); i++) {
 	//		accountList.add(customerList.get(i).getAccount());
 	//		System.out.println(accountList.get(i).getAccountNumber());
 	//		System.out.println(accountList.get(i).getOwner().getFirstName());
 	//		System.out.println(accountList.get(i).getOwner().getLastName());
-			accountList.get(i).deposit(1000);
+	//		accountList.get(i).deposit(1000);
 	//		System.out.println(accountList.get(i).getBalance());
-		}
+	//	}
 	}
 	
 	public TransferManager(Calendar c) {
@@ -50,7 +50,7 @@ public class TransferManager {
 				db.bookDate(p);
 			}
 			else {
-				p.finalize();
+				p.commit();
 			}
 		}
 
@@ -63,13 +63,22 @@ public class TransferManager {
 	}
 
 	public void accountTransfer(String from, String to, double amount) {
-
+		System.out.println(2 + " " + amount);
 		int toMatch = findAccount(accountList, to);
 		int fromMatch = findAccount(accountList, from);
-		
+
 		if(toMatch!=-1 && fromMatch!=-1/* && !calendarPlan*/) {
+			System.out.println(3 + " " + amount);
 			Transfer p = new WireTransfer(accountList.get(toMatch), accountList.get(fromMatch), amount);
-			p.finalize();
+			p.commit();
+			System.out.println(4 + " " + amount);
+/*
+			FileGet updateSafe = new FileGet();
+			updateSafe.modLine("Bankdata/safe", accountList.get(toMatch).getAccountNumber()
+					,String.valueOf(accountList.get(toMatch).getBalance()));
+			updateSafe.modLine("Bankdata/safe", accountList.get(fromMatch).getAccountNumber()
+					,String.valueOf( accountList.get(fromMatch).getBalance()));
+*/
 		}
 		
 		if(toMatch!=-1 && fromMatch!=-1) {

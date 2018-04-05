@@ -20,13 +20,14 @@ public class DateTransfer implements Transfer {
 		this.transactionDate = transactionDate;
 	}
 	
-	public void finalize() {
+	public void commit() {
 		DateBook dateToFile = new DateBook();
 		dateToFile.bookDate(this);
 		double hold = from.withdraval(amount);
 		if(hold!=0) {
 			to.deposit(hold);
 		}
+
 	  /*System.out.println(sdf.format(transferDay.getTime()));
 	    System.out.println(sdf.format(transferDay.getTime()));*/
 	}

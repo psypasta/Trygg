@@ -22,10 +22,12 @@ public abstract class AbstractAccount {
 	}
 
 	public void deposit(double amount) {
+		System.out.println("7 " + amount);
 		if(amount < 0) {
 			System.out.println("invalid amount");
 		}
 		else {
+
 			this.accountBalance = this.accountBalance + amount;
 		}
 	}
@@ -34,15 +36,18 @@ public abstract class AbstractAccount {
 
 		if(amount > this.accountBalance){
 			System.out.println("Medges ej");
+			return 0;
 		}
 		else{
 			this.accountBalance = this.accountBalance - amount;
+			return amount;
 		}
-		if(this.accountBalance >= amount && this.accountBalance > 0) {
+
+	/*	if(this.accountBalance >= amount && this.accountBalance > 0) {
 			this.accountBalance = this.accountBalance - amount;
 			return amount;
 		}
-		else return 0;
+		else return 0;*/
 	}
 	
 	public double getBalance() {
