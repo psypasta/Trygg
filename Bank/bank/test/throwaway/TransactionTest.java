@@ -1,4 +1,4 @@
-package bank.test;
+package bank.test.throwaway;
 
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;

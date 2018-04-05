@@ -1,5 +1,7 @@
 package bank.test;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -40,9 +42,13 @@ public class AccountCreation {
 			names[1] = sc.next();
 			
 			account = new Account(accountNumber,accountName);
-			account.setOwner(new Customer(names[0], names[1]));
+			Customer customer = new Customer(names[0], names[1]);
+			account.setOwner(customer);
 			System.out.println(account.getAccountNumber() + " " + account.getBalance() + " " + account.getOwner().getFirstName());
 			accountList.add(account);
+			addLine("Bankdata/accounts", account.toString());
+			addLine("Bankdata/customers", customer.toString());
+			addLine("Bankdata/safe", account.getAccountNumber() + "," + account.getBalance());
 		}
 		
 		else if(temp.equals("2")){
@@ -76,7 +82,18 @@ public class AccountCreation {
 			}
 		}
 	}
-	
+
+	public void addLine(String path, String addLine) {
+		try{
+			FileWriter fw = new FileWriter(path, true); //the true will append the new data
+			fw.write(addLine + "\n");		//appends the string to the file
+			fw.close();
+		}
+		catch(IOException ioe){
+			System.err.println("IOException: " + ioe.getMessage());
+		}
+	}
+
 	public static void main(String[] args) {
 		new AccountCreation();
 	}

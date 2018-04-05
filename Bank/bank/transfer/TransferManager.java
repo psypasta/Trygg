@@ -19,15 +19,6 @@ public class TransferManager {
 		FileGet accountFile = new FileGet();
 
 		accountList = accountFile.accountGet();
-		
-	//	for(int i = 0; i < accountList.size(); i++) {
-	//		accountList.add(customerList.get(i).getAccount());
-	//		System.out.println(accountList.get(i).getAccountNumber());
-	//		System.out.println(accountList.get(i).getOwner().getFirstName());
-	//		System.out.println(accountList.get(i).getOwner().getLastName());
-	//		accountList.get(i).deposit(1000);
-	//		System.out.println(accountList.get(i).getBalance());
-	//	}
 	}
 	
 	public TransferManager(Calendar c) {

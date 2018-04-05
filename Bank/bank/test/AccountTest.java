@@ -22,7 +22,7 @@ public class AccountTest {
 
 	public AccountTest() {
 
-		AbstractAccount a = inputs();
+		AbstractAccount a = inputsToAccount();
 
 		System.out.println(a.toString());
 		System.out.println(accountOwner.toString());
@@ -31,15 +31,21 @@ public class AccountTest {
 		stringToFile(a.getAccountNumber() + "," + a.getBalance(), "Bankdata/safe");
 	}
 
-	private AbstractAccount inputs(){
+	private AbstractAccount inputsToAccount(){
 		Scanner scan = new Scanner(System.in);
 		FileGet fg = new FileGet();
 
 		String accountFile = fg.getLines("Bankdata/accounts");
 
+		System.out.println("Enter account number: ");
 		accountNumber = scan.nextLine();
+		System.out.print("Enter account name: ");
 		accountName = scan.nextLine();
-		accountOwner = new Customer(scan.nextLine(), scan.nextLine());
+		System.out.println("Enter first name: ");
+		String fName = scan.nextLine();
+		System.out.println("Enter last name: ");
+		String lName = scan.nextLine();
+		accountOwner = new Customer(fName, lName);
 		System.out.println(accountFile.contains(accountNumber));
 		while(accountFile.contains(accountNumber)){
 			System.out.println("Account number already exists, Re-enter: ");
@@ -54,8 +60,7 @@ public class AccountTest {
 
 	private void stringToFile(String input, String path) {
 		try{
-			String filename = path;
-		    FileWriter fw = new FileWriter(filename,true); //the true will append the new data
+		    FileWriter fw = new FileWriter(path,true); //the true will append the new data
 		    
 		    fw.write(input + "\n");		//appends the string to the file
 		    fw.close();

@@ -115,7 +115,7 @@
     <position height="52" width="114" x="959" y="76"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="15" language="java" name="bank.test.TransactionTest" project="Bank" 
+  <class id="15" language="java" name="bank.test.throwaway.TransactionTest" project="Bank"
     file="/Bank/bank/test/TransactionTest.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="137" width="181" x="1113" y="76"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

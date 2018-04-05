@@ -36,6 +36,8 @@ public class VaultsTest {
 			try {
 				accountsFile.deleteLine("Bankdata/accounts", accountList.get(match).toString());
 				accountsFile.deleteLine("Bankdata/customers", accountList.get(match).getOwner().toString());
+				accountsFile.deleteLine("Bankdata/safe", accountList.get(match).getAccountNumber() + ","
+						  											  + accountList.get(match).getBalance());
 			} catch (NumberFormatException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
