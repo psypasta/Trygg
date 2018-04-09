@@ -15,7 +15,7 @@ public class FileGet {
 		String contents = "";
 		File file = new File(path);
 		Scanner sc = null;
-	    	
+
 		try {
 			sc = new Scanner(file);
 		} catch (FileNotFoundException e) {
