@@ -3,22 +3,38 @@ package bank.transfer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import bank.accounts.Account;
 import bank.util.DateBook;
 import bank.util.FileGet;
 
-public class DateTransfer implements Transfer {
-	private Account to;
-	private Account from;
-	private double amount;
-	private Calendar transactionDate;
+public class DateTransfer extends Transfer {
 	
 	public DateTransfer(Account to, Account from, double amount, Calendar transactionDate) {
 		this.to = to;
 		this.from = from;
 		this.amount = amount;
 		this.transactionDate = transactionDate;
+
+		setId();
+	}
+
+	private void setId(){
+		FileGet fg = new FileGet();
+		String currentContent = fg.getLines("Bankdata/DatedTransfers");
+
+		AtomicInteger a = new AtomicInteger();
+		int id = a.incrementAndGet();
+
+		while (!currentContent.contains(Integer.toString(id))){
+			id = a.incrementAndGet();
+		}
+
+	//	if(!currentContent.contains(Integer.toString(id))){
+			this.transferId = id;
+			System.out.println("The Transfer id:  " + this.transferId);
+	//	}
 	}
 	
 	public void commit() {
@@ -43,6 +59,6 @@ public class DateTransfer implements Transfer {
 		sdf.setCalendar(this.transactionDate);
 	    date = sdf.format(this.transactionDate.getTime());
         return this.to.getAccountNumber() + " " + this.from.getAccountNumber() + " "
-                + this.amount + " " + date;
+                + this.amount + " " + date + " " + this.transferId;
     }
 }

@@ -1,6 +1,17 @@
 package bank.transfer;
 
-public interface Transfer {
-	void commit();
-	String toString();
+import bank.accounts.Account;
+
+import java.util.Calendar;
+
+public abstract class Transfer {
+
+	protected Account to;
+	protected Account from;
+	protected double amount;
+	protected Calendar transactionDate;
+	protected int transferId;
+
+	public abstract void commit();
+	public abstract String toString();
 } 
