@@ -61,7 +61,12 @@ public class FileGet {
 		 Scanner scan = new Scanner(new File(path));
 		 while (scan.hasNext())
 			    lines.add(scan.nextLine());
-		
+
+		/* for(int i = 0; i < lines.size(); i++){
+			if(lines.get(i).contains(compare)){
+
+			}
+		 }*/
 		 lines.remove(compare);
 		 PrintWriter writer = new PrintWriter(path, "UTF-8");
 		 for (int i = 0; i < lines.size(); i++)
