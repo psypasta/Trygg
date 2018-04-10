@@ -22,7 +22,6 @@ public abstract class AbstractAccount {
 	}
 
 	public void deposit(double amount) {
-		System.out.println("7 " + amount);
 		if(amount < 0) {
 			System.out.println("invalid amount");
 		}

@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import bank.accounts.Account;
 import bank.util.DateBook;
 import bank.util.FileGet;
+import bank.util.KeyGen;
 
 public class DateTransfer extends Transfer {
 	
@@ -20,20 +21,19 @@ public class DateTransfer extends Transfer {
 		setId();
 	}
 
-	private void setId(){
+	private void setId() {
 		FileGet fg = new FileGet();
 		String currentContent = fg.getLines("Bankdata/DatedTransfers");
 
-		AtomicInteger a = new AtomicInteger();
-		int id = a.incrementAndGet();
+		KeyGen k = new KeyGen();
+		String id = k.getKey();
 
-		while (!currentContent.contains(Integer.toString(id))){
-			id = a.incrementAndGet();
-		}
+		while (currentContent.contains(id))
+			id = k.getKey();
 
 	//	if(!currentContent.contains(Integer.toString(id))){
 			this.transferId = id;
-			System.out.println("The Transfer id:  " + this.transferId);
+			System.out.println("Your reference number is:  " + this.transferId);
 	//	}
 	}
 	

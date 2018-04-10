@@ -10,7 +10,7 @@ public abstract class Transfer {
 	protected Account from;
 	protected double amount;
 	protected Calendar transactionDate;
-	protected int transferId;
+	protected String transferId;
 
 	public abstract void commit();
 	public abstract String toString();

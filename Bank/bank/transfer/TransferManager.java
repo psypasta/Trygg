@@ -1,5 +1,6 @@
 package bank.transfer;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -28,10 +29,9 @@ public class TransferManager {
 	public void dateTransfer(String from, String to, double amount) {
 		int toMatch = findAccount(accountList, to);
 		int fromMatch = findAccount(accountList, from);
-
 		DateBook db = new DateBook();
-		System.out.println(toMatch + "  " + fromMatch);
-		if(toMatch!=-1 && fromMatch!=-1) {
+		System.out.println(toMatch + " " + fromMatch);
+		if(toMatch != -1 && fromMatch != -1) {
 			Transfer p = new DateTransfer(accountList.get(toMatch), accountList.get(fromMatch), amount, calendar);
 
 			System.out.println(calendar.getTime());

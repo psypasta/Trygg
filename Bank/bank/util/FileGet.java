@@ -55,23 +55,33 @@ public class FileGet {
 		}
 	}
 
+	private int findIndexMatch(List<String> aList, String find) {
+		for(int i = 0; i < aList.size(); i++) {
+			String[] splitLines = aList.get(i).split(" ");
+			if(splitLines[4].toLowerCase().matches(find.toLowerCase())) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
 	public void deleteLine(String path, String compare) throws FileNotFoundException, UnsupportedEncodingException {
 		ArrayList<String> lines = new ArrayList<String>();
 		
-		 Scanner scan = new Scanner(new File(path));
-		 while (scan.hasNext())
+		Scanner scan = new Scanner(new File(path));
+		while (scan.hasNext())
 			    lines.add(scan.nextLine());
-
-		/* for(int i = 0; i < lines.size(); i++){
-			if(lines.get(i).contains(compare)){
-
+		int indexToRemove = findIndexMatch(lines, compare);
+		if(indexToRemove != -1) {
+			lines.remove(indexToRemove);
+			PrintWriter writer = new PrintWriter(path, "UTF-8");
+			for (int i = 0; i < lines.size(); i++) {
+				writer.println(lines.get(i));
+				System.out.println(lines.get(i));
 			}
-		 }*/
-		 lines.remove(compare);
-		 PrintWriter writer = new PrintWriter(path, "UTF-8");
-		 for (int i = 0; i < lines.size(); i++)
-		     writer.println(lines.get(i));
-		 writer.close();
+
+			writer.close();
+		}
 	}
 	
 	public List<String> bookingsGet(){

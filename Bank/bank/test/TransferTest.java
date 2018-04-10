@@ -49,7 +49,7 @@ public class TransferTest {
 			amount = Double.parseDouble(scan.nextLine());
 			
 			if(amount < 0) {
-				System.out.println("Can't transfer negative moenys!");
+				System.out.println("Can't transfer negative moneys!");
 				amount = scan.nextDouble();
 			}
 
@@ -70,12 +70,12 @@ public class TransferTest {
 		}
 		
 		else if(operation.equals("5")) {
-			System.out.println("Enter a dated transaction to be removed: ");
+			System.out.println("Enter your reference number to remove a transaction (xxxxx): ");
 			String transacDelete = scan.nextLine();
 
 			scan.close();
 
-			System.out.println(": " + transacDelete);
+			System.out.println("Removing: " + transacDelete);
 			FileGet transac = new FileGet();
 			try {
 				transac.deleteLine("Bankdata/DatedTransfers", transacDelete);
