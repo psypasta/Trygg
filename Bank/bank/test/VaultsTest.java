@@ -29,9 +29,9 @@ public class VaultsTest {
 
 			int match = TransferManager.findAccount(accountList, choice);
 			try {
-				accountsFile.deleteLine("Bankdata/accounts", accountList.get(match).toString());
-				accountsFile.deleteLine("Bankdata/customers", accountList.get(match).getOwner().toString());
-				accountsFile.deleteLine("Bankdata/safe", accountList.get(match).getAccountNumber() + ","
+				accountsFile.deleteLineTwo("Bankdata/accounts", accountList.get(match).toString());
+				accountsFile.deleteLineTwo("Bankdata/customers", accountList.get(match).getOwner().toString());
+				accountsFile.deleteLineTwo("Bankdata/safe", accountList.get(match).getAccountNumber() + ","
 						  											  + accountList.get(match).getBalance());
 			} catch (NumberFormatException e) {
 				// TODO Auto-generated catch block

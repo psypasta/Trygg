@@ -65,6 +65,20 @@ public class FileGet {
 		return -1;
 	}
 
+	//Fucked this shit yesterday.
+	public void deleteLineTwo(String path, String compare) throws FileNotFoundException, UnsupportedEncodingException {
+		ArrayList<String> lines = new ArrayList<String>();
+		Scanner scan = new Scanner(new File(path));
+		while (scan.hasNext())
+			lines.add(scan.nextLine());
+
+		lines.remove(compare);
+		PrintWriter writer = new PrintWriter(path, "UTF-8");
+		for (int i = 0; i < lines.size(); i++)
+			writer.println(lines.get(i));
+		writer.close();
+	}
+
 	public void deleteLine(String path, String compare) throws FileNotFoundException, UnsupportedEncodingException {
 		ArrayList<String> lines = new ArrayList<String>();
 		
@@ -79,7 +93,6 @@ public class FileGet {
 				writer.println(lines.get(i));
 				System.out.println(lines.get(i));
 			}
-
 			writer.close();
 		}
 	}

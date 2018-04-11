@@ -2,7 +2,10 @@ package bank.test;
 
 import bank.transfer.TransferManager;
 import bank.util.DateBook;
+import bank.util.FileGet;
 
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Scanner;
@@ -44,16 +47,23 @@ public class RunTest {
     public void commitDates() {
         DateBook db = new DateBook();
         TransferManager tm = new TransferManager(new GregorianCalendar());
-
+        FileGet datedDelete = new FileGet();
         List<String> finalizeDates = db.checkDates();;
 
         System.out.println("\nDates\n");
         for(int i  = 0; i < finalizeDates.size(); i++) {
             System.out.println(finalizeDates.get(i));
-            String[] words;
-            words = finalizeDates.get(i).split(" ");
+            String[] words= finalizeDates.get(i).split(" ");
             //	System.out.println(hold[0] + " " + hold[1] + " " + Double.parseDouble(hold[2]));
             tm.accountTransfer(words[1], words[0], Double.parseDouble(words[2]));
+            try{
+                System.out.println(words[words.length-1] + " HJÄLP!");
+                datedDelete.deleteLine("Bankdata/DatedTransfers", words[words.length-1]);
+            } catch (FileNotFoundException e){
+                e.printStackTrace();
+            } catch (UnsupportedEncodingException e){
+                e.printStackTrace();
+            }
         }
     }
 

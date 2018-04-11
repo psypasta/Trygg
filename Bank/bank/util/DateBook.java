@@ -32,7 +32,7 @@ public class DateBook {
 		for(int i = 0; i < bookings.size(); i++) {
 			String[] words = bookings.get(i).split(" ");
 			if(words[3].equals(dateFormatted)) {
-				bookingsDate.add(words[0] + " " + words[1] + " " + words[2] + " " + words[3]);
+				bookingsDate.add(words[0] + " " + words[1] + " " + words[2] + " " + words[3] + " " + words[4]);
 			}
 		}
 		return bookingsDate;
