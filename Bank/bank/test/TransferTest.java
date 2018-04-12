@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import bank.transfer.TransferManager;
+import bank.util.DateBook;
 import bank.util.FileGet;
 
 public class TransferTest {
@@ -76,9 +77,9 @@ public class TransferTest {
 			scan.close();
 
 			System.out.println("Removing: " + transacDelete);
-			FileGet transac = new FileGet();
+			DateBook transac = new DateBook();
 			try {
-				transac.deleteLine("Bankdata/DatedTransfers", transacDelete);
+				transac.removeDate("Bankdata/DatedTransfers", transacDelete);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

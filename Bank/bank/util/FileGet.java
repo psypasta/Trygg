@@ -55,17 +55,6 @@ public class FileGet {
 		}
 	}
 
-	private int findIndexMatch(List<String> aList, String find) {
-		for(int i = 0; i < aList.size(); i++) {
-			String[] splitLines = aList.get(i).split(" ");
-			if(splitLines[4].toLowerCase().matches(find.toLowerCase())) {
-				return i;
-			}
-		}
-		return -1;
-	}
-
-	//Fucked this shit yesterday.
 	public void deleteLineTwo(String path, String compare) throws FileNotFoundException, UnsupportedEncodingException {
 		ArrayList<String> lines = new ArrayList<String>();
 		Scanner scan = new Scanner(new File(path));
@@ -77,24 +66,6 @@ public class FileGet {
 		for (int i = 0; i < lines.size(); i++)
 			writer.println(lines.get(i));
 		writer.close();
-	}
-
-	public void deleteLine(String path, String compare) throws FileNotFoundException, UnsupportedEncodingException {
-		ArrayList<String> lines = new ArrayList<String>();
-		
-		Scanner scan = new Scanner(new File(path));
-		while (scan.hasNext())
-			    lines.add(scan.nextLine());
-		int indexToRemove = findIndexMatch(lines, compare);
-		if(indexToRemove != -1) {
-			lines.remove(indexToRemove);
-			PrintWriter writer = new PrintWriter(path, "UTF-8");
-			for (int i = 0; i < lines.size(); i++) {
-				writer.println(lines.get(i));
-				System.out.println(lines.get(i));
-			}
-			writer.close();
-		}
 	}
 	
 	public List<String> bookingsGet(){
