@@ -47,7 +47,7 @@ public class RunTest {
     public void commitDates() {
         DateBook db = new DateBook();
         TransferManager tm = new TransferManager(new GregorianCalendar());
-        FileGet datedDelete = new FileGet();
+        DateBook datedDelete = new DateBook();
         List<String> finalizeDates = db.checkDates();;
 
         System.out.println("\nDates\n");
@@ -58,7 +58,7 @@ public class RunTest {
             tm.accountTransfer(words[1], words[0], Double.parseDouble(words[2]));
             try{
                 System.out.println(words[words.length-1] + " HJÄLP!");
-                datedDelete.deleteLine("Bankdata/DatedTransfers", words[words.length-1]);
+                datedDelete.removeDate("Bankdata/DatedTransfers", words[words.length-1]);
             } catch (FileNotFoundException e){
                 e.printStackTrace();
             } catch (UnsupportedEncodingException e){
