@@ -13,7 +13,7 @@ import java.util.Random;
 !!!
 !!!
  */
-class RandomInRanges
+public class RandomInRanges
 {
     private final List<Integer> range = new ArrayList<>();
 
